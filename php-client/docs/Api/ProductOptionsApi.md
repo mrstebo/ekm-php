@@ -1,4 +1,4 @@
-# Mrstebo\EkmPHP\ProductOptionsApi
+# EkmPHP\ProductOptionsApi
 
 All URIs are relative to https://api.ekm.net.
 
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 ## `productOptionsCreate()`
 
 ```php
-productOptionsCreate($id, $v1AddProductOption): \Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption
+productOptionsCreate($id, $v1AddProductOption): \EkmPHP\Models\TempestResponseV1ProductOption
 ```
 
 Add an option to a product
@@ -29,17 +29,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductOptionsApi(
+$apiInstance = new EkmPHP\Api\ProductOptionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | The product ID
-$v1AddProductOption = new \Mrstebo\EkmPHP\Models\V1AddProductOption(); // \Mrstebo\EkmPHP\Models\V1AddProductOption
+$v1AddProductOption = new \EkmPHP\Models\V1AddProductOption(); // \EkmPHP\Models\V1AddProductOption
 
 try {
     $result = $apiInstance->productOptionsCreate($id, $v1AddProductOption);
@@ -54,11 +54,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The product ID |
- **v1AddProductOption** | [**\Mrstebo\EkmPHP\Models\V1AddProductOption**](../Model/V1AddProductOption.md)|  | [optional]
+ **v1AddProductOption** | [**\EkmPHP\Models\V1AddProductOption**](../Model/V1AddProductOption.md)|  | [optional]
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption**](../Model/TempestResponseV1ProductOption.md)
+[**\EkmPHP\Models\TempestResponseV1ProductOption**](../Model/TempestResponseV1ProductOption.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 ## `productOptionsDelete()`
 
 ```php
-productOptionsDelete($id, $optionId): \Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption
+productOptionsDelete($id, $optionId): \EkmPHP\Models\TempestResponseV1ProductOption
 ```
 
 Delete an option
@@ -89,10 +89,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductOptionsApi(
+$apiInstance = new EkmPHP\Api\ProductOptionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption**](../Model/TempestResponseV1ProductOption.md)
+[**\EkmPHP\Models\TempestResponseV1ProductOption**](../Model/TempestResponseV1ProductOption.md)
 
 ### Authorization
 
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 ## `productOptionsGet()`
 
 ```php
-productOptionsGet($id, $optionId): \Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption
+productOptionsGet($id, $optionId): \EkmPHP\Models\TempestResponseV1ProductOption
 ```
 
 Get a product option
@@ -149,10 +149,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductOptionsApi(
+$apiInstance = new EkmPHP\Api\ProductOptionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption**](../Model/TempestResponseV1ProductOption.md)
+[**\EkmPHP\Models\TempestResponseV1ProductOption**](../Model/TempestResponseV1ProductOption.md)
 
 ### Authorization
 
@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 ## `productOptionsGetAll()`
 
 ```php
-productOptionsGetAll($id): \Mrstebo\EkmPHP\Models\TempestResponseListV1ProductOption
+productOptionsGetAll($id): \EkmPHP\Models\TempestResponseListV1ProductOption
 ```
 
 Get a products options
@@ -209,10 +209,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductOptionsApi(
+$apiInstance = new EkmPHP\Api\ProductOptionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseListV1ProductOption**](../Model/TempestResponseListV1ProductOption.md)
+[**\EkmPHP\Models\TempestResponseListV1ProductOption**](../Model/TempestResponseListV1ProductOption.md)
 
 ### Authorization
 
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 ## `productOptionsUpdate()`
 
 ```php
-productOptionsUpdate($id, $optionId, $v1UpdateProductOption): \Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption
+productOptionsUpdate($id, $optionId, $v1UpdateProductOption): \EkmPHP\Models\TempestResponseV1ProductOption
 ```
 
 Update a product option
@@ -269,10 +269,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductOptionsApi(
+$apiInstance = new EkmPHP\Api\ProductOptionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -280,7 +280,7 @@ $apiInstance = new Mrstebo\EkmPHP\Api\ProductOptionsApi(
 );
 $id = 56; // int | The product ID
 $optionId = 56; // int | The option ID
-$v1UpdateProductOption = new \Mrstebo\EkmPHP\Models\V1UpdateProductOption(); // \Mrstebo\EkmPHP\Models\V1UpdateProductOption
+$v1UpdateProductOption = new \EkmPHP\Models\V1UpdateProductOption(); // \EkmPHP\Models\V1UpdateProductOption
 
 try {
     $result = $apiInstance->productOptionsUpdate($id, $optionId, $v1UpdateProductOption);
@@ -296,11 +296,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The product ID |
  **optionId** | **int**| The option ID |
- **v1UpdateProductOption** | [**\Mrstebo\EkmPHP\Models\V1UpdateProductOption**](../Model/V1UpdateProductOption.md)|  | [optional]
+ **v1UpdateProductOption** | [**\EkmPHP\Models\V1UpdateProductOption**](../Model/V1UpdateProductOption.md)|  | [optional]
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption**](../Model/TempestResponseV1ProductOption.md)
+[**\EkmPHP\Models\TempestResponseV1ProductOption**](../Model/TempestResponseV1ProductOption.md)
 
 ### Authorization
 

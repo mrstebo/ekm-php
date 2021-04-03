@@ -4,7 +4,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Mrstebo\EkmPHP\API;
+namespace EkmPHP\API;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Mrstebo\EkmPHP\ApiException;
-use Mrstebo\EkmPHP\Configuration;
-use Mrstebo\EkmPHP\HeaderSelector;
-use Mrstebo\EkmPHP\ObjectSerializer;
+use EkmPHP\ApiException;
+use EkmPHP\Configuration;
+use EkmPHP\HeaderSelector;
+use EkmPHP\ObjectSerializer;
 
 /**
  * CategoriesApi Class Doc Comment
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -120,11 +120,11 @@ class CategoriesApi
      *
      * Add a category
      *
-     * @param  \Mrstebo\EkmPHP\Models\V1AddCategory $v1AddCategory v1AddCategory (optional)
+     * @param  \EkmPHP\Models\V1AddCategory $v1AddCategory v1AddCategory (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseV1Category|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseV1Category|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function categoriesCreate($v1AddCategory = null)
     {
@@ -137,11 +137,11 @@ class CategoriesApi
      *
      * Add a category
      *
-     * @param  \Mrstebo\EkmPHP\Models\V1AddCategory $v1AddCategory (optional)
+     * @param  \EkmPHP\Models\V1AddCategory $v1AddCategory (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseV1Category|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseV1Category|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function categoriesCreateWithHttpInfo($v1AddCategory = null)
     {
@@ -177,32 +177,32 @@ class CategoriesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV1Category' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV1Category' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV1Category', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV1Category', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1Category';
+            $returnType = '\EkmPHP\Models\TempestResponseV1Category';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -220,7 +220,7 @@ class CategoriesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV1Category',
+                        '\EkmPHP\Models\TempestResponseV1Category',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -228,7 +228,7 @@ class CategoriesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -243,7 +243,7 @@ class CategoriesApi
      *
      * Add a category
      *
-     * @param  \Mrstebo\EkmPHP\Models\V1AddCategory $v1AddCategory (optional)
+     * @param  \EkmPHP\Models\V1AddCategory $v1AddCategory (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -263,14 +263,14 @@ class CategoriesApi
      *
      * Add a category
      *
-     * @param  \Mrstebo\EkmPHP\Models\V1AddCategory $v1AddCategory (optional)
+     * @param  \EkmPHP\Models\V1AddCategory $v1AddCategory (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function categoriesCreateAsyncWithHttpInfo($v1AddCategory = null)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1Category';
+        $returnType = '\EkmPHP\Models\TempestResponseV1Category';
         $request = $this->categoriesCreateRequest($v1AddCategory);
 
         return $this->client
@@ -309,7 +309,7 @@ class CategoriesApi
     /**
      * Create request for operation 'categoriesCreate'
      *
-     * @param  \Mrstebo\EkmPHP\Models\V1AddCategory $v1AddCategory (optional)
+     * @param  \EkmPHP\Models\V1AddCategory $v1AddCategory (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -402,9 +402,9 @@ class CategoriesApi
      *
      * @param  int $id The category ID (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseV1Category
+     * @return \EkmPHP\Models\TempestResponseV1Category
      */
     public function categoriesDelete($id)
     {
@@ -419,9 +419,9 @@ class CategoriesApi
      *
      * @param  int $id The category ID (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseV1Category, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseV1Category, HTTP status code, HTTP response headers (array of strings)
      */
     public function categoriesDeleteWithHttpInfo($id)
     {
@@ -457,20 +457,20 @@ class CategoriesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV1Category' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV1Category' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV1Category', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV1Category', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1Category';
+            $returnType = '\EkmPHP\Models\TempestResponseV1Category';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -488,7 +488,7 @@ class CategoriesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV1Category',
+                        '\EkmPHP\Models\TempestResponseV1Category',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -530,7 +530,7 @@ class CategoriesApi
      */
     public function categoriesDeleteAsyncWithHttpInfo($id)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1Category';
+        $returnType = '\EkmPHP\Models\TempestResponseV1Category';
         $request = $this->categoriesDeleteRequest($id);
 
         return $this->client
@@ -671,9 +671,9 @@ class CategoriesApi
      * @param  int $id id (required)
      * @param  int $childCategoryId childCategoryId (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseV1SubCategory|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseV1SubCategory|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function categoriesDeleteCategoryManaged($id, $childCategoryId)
     {
@@ -689,9 +689,9 @@ class CategoriesApi
      * @param  int $id (required)
      * @param  int $childCategoryId (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseV1SubCategory|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseV1SubCategory|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function categoriesDeleteCategoryManagedWithHttpInfo($id, $childCategoryId)
     {
@@ -727,32 +727,32 @@ class CategoriesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV1SubCategory' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV1SubCategory' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV1SubCategory', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV1SubCategory', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1SubCategory';
+            $returnType = '\EkmPHP\Models\TempestResponseV1SubCategory';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -770,7 +770,7 @@ class CategoriesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV1SubCategory',
+                        '\EkmPHP\Models\TempestResponseV1SubCategory',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -778,7 +778,7 @@ class CategoriesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -822,7 +822,7 @@ class CategoriesApi
      */
     public function categoriesDeleteCategoryManagedAsyncWithHttpInfo($id, $childCategoryId)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1SubCategory';
+        $returnType = '\EkmPHP\Models\TempestResponseV1SubCategory';
         $request = $this->categoriesDeleteCategoryManagedRequest($id, $childCategoryId);
 
         return $this->client
@@ -977,9 +977,9 @@ class CategoriesApi
      *
      * @param  int $id The category ID (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseV1Category|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseV1Category|\EkmPHP\Models\TempestResponseTempestValidationError|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function categoriesGet($id)
     {
@@ -994,9 +994,9 @@ class CategoriesApi
      *
      * @param  int $id The category ID (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseV1Category|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseV1Category|\EkmPHP\Models\TempestResponseTempestValidationError|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function categoriesGetWithHttpInfo($id)
     {
@@ -1032,44 +1032,44 @@ class CategoriesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV1Category' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV1Category' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV1Category', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV1Category', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1Category';
+            $returnType = '\EkmPHP\Models\TempestResponseV1Category';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1087,7 +1087,7 @@ class CategoriesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV1Category',
+                        '\EkmPHP\Models\TempestResponseV1Category',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1095,7 +1095,7 @@ class CategoriesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1103,7 +1103,7 @@ class CategoriesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1145,7 +1145,7 @@ class CategoriesApi
      */
     public function categoriesGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1Category';
+        $returnType = '\EkmPHP\Models\TempestResponseV1Category';
         $request = $this->categoriesGetRequest($id);
 
         return $this->client
@@ -1286,9 +1286,9 @@ class CategoriesApi
      * @param  int $page Page number to display (optional)
      * @param  int $limit Items per page (maximum 20) (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseListV1Category
+     * @return \EkmPHP\Models\TempestResponseListV1Category
      */
     public function categoriesGetAll($page = null, $limit = null)
     {
@@ -1304,9 +1304,9 @@ class CategoriesApi
      * @param  int $page Page number to display (optional)
      * @param  int $limit Items per page (maximum 20) (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseListV1Category, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseListV1Category, HTTP status code, HTTP response headers (array of strings)
      */
     public function categoriesGetAllWithHttpInfo($page = null, $limit = null)
     {
@@ -1342,20 +1342,20 @@ class CategoriesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseListV1Category' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseListV1Category' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseListV1Category', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseListV1Category', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseListV1Category';
+            $returnType = '\EkmPHP\Models\TempestResponseListV1Category';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1373,7 +1373,7 @@ class CategoriesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseListV1Category',
+                        '\EkmPHP\Models\TempestResponseListV1Category',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1417,7 +1417,7 @@ class CategoriesApi
      */
     public function categoriesGetAllAsyncWithHttpInfo($page = null, $limit = null)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseListV1Category';
+        $returnType = '\EkmPHP\Models\TempestResponseListV1Category';
         $request = $this->categoriesGetAllRequest($page, $limit);
 
         return $this->client
@@ -1564,9 +1564,9 @@ class CategoriesApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseV1CategoryFilters|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseV1CategoryFilters|\EkmPHP\Models\TempestResponseTempestValidationError|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function categoriesGetCategoryFilters($id)
     {
@@ -1579,9 +1579,9 @@ class CategoriesApi
      *
      * @param  int $id (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseV1CategoryFilters|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseV1CategoryFilters|\EkmPHP\Models\TempestResponseTempestValidationError|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function categoriesGetCategoryFiltersWithHttpInfo($id)
     {
@@ -1617,44 +1617,44 @@ class CategoriesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV1CategoryFilters' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV1CategoryFilters' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV1CategoryFilters', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV1CategoryFilters', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1CategoryFilters';
+            $returnType = '\EkmPHP\Models\TempestResponseV1CategoryFilters';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1672,7 +1672,7 @@ class CategoriesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV1CategoryFilters',
+                        '\EkmPHP\Models\TempestResponseV1CategoryFilters',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1680,7 +1680,7 @@ class CategoriesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1688,7 +1688,7 @@ class CategoriesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1726,7 +1726,7 @@ class CategoriesApi
      */
     public function categoriesGetCategoryFiltersAsyncWithHttpInfo($id)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1CategoryFilters';
+        $returnType = '\EkmPHP\Models\TempestResponseV1CategoryFilters';
         $request = $this->categoriesGetCategoryFiltersRequest($id);
 
         return $this->client
@@ -1869,9 +1869,9 @@ class CategoriesApi
      * @param  string $query A &lt;a href&#x3D;\&quot;#tag/OData\&quot; target&#x3D;\&quot;_blank\&quot;&gt;search&lt;/a&gt; query e.g. live eq true (optional)
      * @param  string $orderby Field to order results. Prefix with a - (dash) for descending e.g. -id (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseListV1Category|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseListV1Category|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function categoriesSearch($page = null, $limit = null, $query = null, $orderby = null)
     {
@@ -1889,9 +1889,9 @@ class CategoriesApi
      * @param  string $query A &lt;a href&#x3D;\&quot;#tag/OData\&quot; target&#x3D;\&quot;_blank\&quot;&gt;search&lt;/a&gt; query e.g. live eq true (optional)
      * @param  string $orderby Field to order results. Prefix with a - (dash) for descending e.g. -id (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseListV1Category|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseListV1Category|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function categoriesSearchWithHttpInfo($page = null, $limit = null, $query = null, $orderby = null)
     {
@@ -1927,32 +1927,32 @@ class CategoriesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseListV1Category' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseListV1Category' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseListV1Category', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseListV1Category', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseListV1Category';
+            $returnType = '\EkmPHP\Models\TempestResponseListV1Category';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1970,7 +1970,7 @@ class CategoriesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseListV1Category',
+                        '\EkmPHP\Models\TempestResponseListV1Category',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1978,7 +1978,7 @@ class CategoriesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2026,7 +2026,7 @@ class CategoriesApi
      */
     public function categoriesSearchAsyncWithHttpInfo($page = null, $limit = null, $query = null, $orderby = null)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseListV1Category';
+        $returnType = '\EkmPHP\Models\TempestResponseListV1Category';
         $request = $this->categoriesSearchRequest($page, $limit, $query, $orderby);
 
         return $this->client
@@ -2200,9 +2200,9 @@ class CategoriesApi
      * @param  int $id id (required)
      * @param  int $childCategoryId childCategoryId (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseV1SubCategory|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseV1SubCategory|\EkmPHP\Models\TempestResponseTempestValidationError|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function categoriesSetCategoryManaged($id, $childCategoryId)
     {
@@ -2218,9 +2218,9 @@ class CategoriesApi
      * @param  int $id (required)
      * @param  int $childCategoryId (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseV1SubCategory|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseV1SubCategory|\EkmPHP\Models\TempestResponseTempestValidationError|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function categoriesSetCategoryManagedWithHttpInfo($id, $childCategoryId)
     {
@@ -2256,44 +2256,44 @@ class CategoriesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV1SubCategory' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV1SubCategory' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV1SubCategory', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV1SubCategory', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1SubCategory';
+            $returnType = '\EkmPHP\Models\TempestResponseV1SubCategory';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2311,7 +2311,7 @@ class CategoriesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV1SubCategory',
+                        '\EkmPHP\Models\TempestResponseV1SubCategory',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2319,7 +2319,7 @@ class CategoriesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2327,7 +2327,7 @@ class CategoriesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2371,7 +2371,7 @@ class CategoriesApi
      */
     public function categoriesSetCategoryManagedAsyncWithHttpInfo($id, $childCategoryId)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1SubCategory';
+        $returnType = '\EkmPHP\Models\TempestResponseV1SubCategory';
         $request = $this->categoriesSetCategoryManagedRequest($id, $childCategoryId);
 
         return $this->client
@@ -2528,9 +2528,9 @@ class CategoriesApi
      * @param  int $page Page number to display (optional)
      * @param  int $limit Items per page (maximum 20) (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseListV1SubCategory|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseListV1SubCategory|\EkmPHP\Models\TempestResponseTempestValidationError|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function categoriesSubcategories($id, $page = null, $limit = null)
     {
@@ -2547,9 +2547,9 @@ class CategoriesApi
      * @param  int $page Page number to display (optional)
      * @param  int $limit Items per page (maximum 20) (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseListV1SubCategory|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseListV1SubCategory|\EkmPHP\Models\TempestResponseTempestValidationError|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function categoriesSubcategoriesWithHttpInfo($id, $page = null, $limit = null)
     {
@@ -2585,44 +2585,44 @@ class CategoriesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseListV1SubCategory' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseListV1SubCategory' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseListV1SubCategory', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseListV1SubCategory', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseListV1SubCategory';
+            $returnType = '\EkmPHP\Models\TempestResponseListV1SubCategory';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2640,7 +2640,7 @@ class CategoriesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseListV1SubCategory',
+                        '\EkmPHP\Models\TempestResponseListV1SubCategory',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2648,7 +2648,7 @@ class CategoriesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2656,7 +2656,7 @@ class CategoriesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2702,7 +2702,7 @@ class CategoriesApi
      */
     public function categoriesSubcategoriesAsyncWithHttpInfo($id, $page = null, $limit = null)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseListV1SubCategory';
+        $returnType = '\EkmPHP\Models\TempestResponseListV1SubCategory';
         $request = $this->categoriesSubcategoriesRequest($id, $page, $limit);
 
         return $this->client
@@ -2865,11 +2865,11 @@ class CategoriesApi
      * Update a category
      *
      * @param  int $id The category ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1UpdateCategory $v1UpdateCategory v1UpdateCategory (optional)
+     * @param  \EkmPHP\Models\V1UpdateCategory $v1UpdateCategory v1UpdateCategory (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseV1Category|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseV1Category|\EkmPHP\Models\TempestResponseTempestValidationError|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function categoriesUpdate($id, $v1UpdateCategory = null)
     {
@@ -2883,11 +2883,11 @@ class CategoriesApi
      * Update a category
      *
      * @param  int $id The category ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1UpdateCategory $v1UpdateCategory (optional)
+     * @param  \EkmPHP\Models\V1UpdateCategory $v1UpdateCategory (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseV1Category|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseV1Category|\EkmPHP\Models\TempestResponseTempestValidationError|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function categoriesUpdateWithHttpInfo($id, $v1UpdateCategory = null)
     {
@@ -2923,44 +2923,44 @@ class CategoriesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV1Category' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV1Category' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV1Category', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV1Category', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1Category';
+            $returnType = '\EkmPHP\Models\TempestResponseV1Category';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2978,7 +2978,7 @@ class CategoriesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV1Category',
+                        '\EkmPHP\Models\TempestResponseV1Category',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2986,7 +2986,7 @@ class CategoriesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2994,7 +2994,7 @@ class CategoriesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3010,7 +3010,7 @@ class CategoriesApi
      * Update a category
      *
      * @param  int $id The category ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1UpdateCategory $v1UpdateCategory (optional)
+     * @param  \EkmPHP\Models\V1UpdateCategory $v1UpdateCategory (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3031,14 +3031,14 @@ class CategoriesApi
      * Update a category
      *
      * @param  int $id The category ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1UpdateCategory $v1UpdateCategory (optional)
+     * @param  \EkmPHP\Models\V1UpdateCategory $v1UpdateCategory (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function categoriesUpdateAsyncWithHttpInfo($id, $v1UpdateCategory = null)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1Category';
+        $returnType = '\EkmPHP\Models\TempestResponseV1Category';
         $request = $this->categoriesUpdateRequest($id, $v1UpdateCategory);
 
         return $this->client
@@ -3078,7 +3078,7 @@ class CategoriesApi
      * Create request for operation 'categoriesUpdate'
      *
      * @param  int $id The category ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1UpdateCategory $v1UpdateCategory (optional)
+     * @param  \EkmPHP\Models\V1UpdateCategory $v1UpdateCategory (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3182,11 +3182,11 @@ class CategoriesApi
      * Operation categoriesUpdateCategoryFilters
      *
      * @param  int $id id (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1CategoryFilters $v1CategoryFilters v1CategoryFilters (optional)
+     * @param  \EkmPHP\Models\V1CategoryFilters $v1CategoryFilters v1CategoryFilters (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseV1Category|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseV1Category|\EkmPHP\Models\TempestResponseTempestValidationError|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function categoriesUpdateCategoryFilters($id, $v1CategoryFilters = null)
     {
@@ -3198,11 +3198,11 @@ class CategoriesApi
      * Operation categoriesUpdateCategoryFiltersWithHttpInfo
      *
      * @param  int $id (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1CategoryFilters $v1CategoryFilters (optional)
+     * @param  \EkmPHP\Models\V1CategoryFilters $v1CategoryFilters (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseV1Category|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseV1Category|\EkmPHP\Models\TempestResponseTempestValidationError|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function categoriesUpdateCategoryFiltersWithHttpInfo($id, $v1CategoryFilters = null)
     {
@@ -3238,44 +3238,44 @@ class CategoriesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV1Category' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV1Category' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV1Category', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV1Category', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1Category';
+            $returnType = '\EkmPHP\Models\TempestResponseV1Category';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3293,7 +3293,7 @@ class CategoriesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV1Category',
+                        '\EkmPHP\Models\TempestResponseV1Category',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3301,7 +3301,7 @@ class CategoriesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3309,7 +3309,7 @@ class CategoriesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3323,7 +3323,7 @@ class CategoriesApi
      * Operation categoriesUpdateCategoryFiltersAsync
      *
      * @param  int $id (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1CategoryFilters $v1CategoryFilters (optional)
+     * @param  \EkmPHP\Models\V1CategoryFilters $v1CategoryFilters (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3342,14 +3342,14 @@ class CategoriesApi
      * Operation categoriesUpdateCategoryFiltersAsyncWithHttpInfo
      *
      * @param  int $id (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1CategoryFilters $v1CategoryFilters (optional)
+     * @param  \EkmPHP\Models\V1CategoryFilters $v1CategoryFilters (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function categoriesUpdateCategoryFiltersAsyncWithHttpInfo($id, $v1CategoryFilters = null)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1Category';
+        $returnType = '\EkmPHP\Models\TempestResponseV1Category';
         $request = $this->categoriesUpdateCategoryFiltersRequest($id, $v1CategoryFilters);
 
         return $this->client
@@ -3389,7 +3389,7 @@ class CategoriesApi
      * Create request for operation 'categoriesUpdateCategoryFilters'
      *
      * @param  int $id (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1CategoryFilters $v1CategoryFilters (optional)
+     * @param  \EkmPHP\Models\V1CategoryFilters $v1CategoryFilters (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

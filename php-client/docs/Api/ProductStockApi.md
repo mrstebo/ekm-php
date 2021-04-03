@@ -1,4 +1,4 @@
-# Mrstebo\EkmPHP\ProductStockApi
+# EkmPHP\ProductStockApi
 
 All URIs are relative to https://api.ekm.net.
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 ## `productStockGet()`
 
 ```php
-productStockGet($id): \Mrstebo\EkmPHP\Models\TempestResponseV1ProductStock
+productStockGet($id): \EkmPHP\Models\TempestResponseV1ProductStock
 ```
 
 Get the stock for a product
@@ -24,10 +24,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductStockApi(
+$apiInstance = new EkmPHP\Api\ProductStockApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1ProductStock**](../Model/TempestResponseV1ProductStock.md)
+[**\EkmPHP\Models\TempestResponseV1ProductStock**](../Model/TempestResponseV1ProductStock.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 ## `productStockUpdate()`
 
 ```php
-productStockUpdate($id, $v1ProductStock): \Mrstebo\EkmPHP\Models\TempestResponseV1ProductStock
+productStockUpdate($id, $v1ProductStock): \EkmPHP\Models\TempestResponseV1ProductStock
 ```
 
 Set the stock for a product
@@ -82,17 +82,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductStockApi(
+$apiInstance = new EkmPHP\Api\ProductStockApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | The product ID
-$v1ProductStock = new \Mrstebo\EkmPHP\Models\V1ProductStock(); // \Mrstebo\EkmPHP\Models\V1ProductStock
+$v1ProductStock = new \EkmPHP\Models\V1ProductStock(); // \EkmPHP\Models\V1ProductStock
 
 try {
     $result = $apiInstance->productStockUpdate($id, $v1ProductStock);
@@ -107,11 +107,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The product ID |
- **v1ProductStock** | [**\Mrstebo\EkmPHP\Models\V1ProductStock**](../Model/V1ProductStock.md)|  | [optional]
+ **v1ProductStock** | [**\EkmPHP\Models\V1ProductStock**](../Model/V1ProductStock.md)|  | [optional]
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1ProductStock**](../Model/TempestResponseV1ProductStock.md)
+[**\EkmPHP\Models\TempestResponseV1ProductStock**](../Model/TempestResponseV1ProductStock.md)
 
 ### Authorization
 

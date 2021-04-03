@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Mrstebo\EkmPHP\Models;
+namespace EkmPHP\Models;
 
 use \ArrayAccess;
-use \Mrstebo\EkmPHP\ObjectSerializer;
+use \EkmPHP\ObjectSerializer;
 
 /**
  * TempestResponseListV1Customer Class Doc Comment
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -61,10 +61,10 @@ class TempestResponseListV1Customer implements ModelInterface, ArrayAccess, \Jso
       */
     protected static $openAPITypes = [
         'meta' => 'array<string,object>',
-        'links' => '\Mrstebo\EkmPHP\Models\TempestLink[]',
-        'validationResult' => '\Mrstebo\EkmPHP\Models\TempestValidationError[]',
+        'links' => '\EkmPHP\Models\TempestLink[]',
+        'validationResult' => '\EkmPHP\Models\TempestValidationError[]',
         'errors' => 'array<string,string>',
-        'data' => '\Mrstebo\EkmPHP\Models\V1Customer[]'
+        'data' => '\EkmPHP\Models\V1Customer[]'
     ];
 
     /**
@@ -257,7 +257,7 @@ class TempestResponseListV1Customer implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets links
      *
-     * @return \Mrstebo\EkmPHP\Models\TempestLink[]|null
+     * @return \EkmPHP\Models\TempestLink[]|null
      */
     public function getLinks()
     {
@@ -267,7 +267,7 @@ class TempestResponseListV1Customer implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets links
      *
-     * @param \Mrstebo\EkmPHP\Models\TempestLink[]|null $links links
+     * @param \EkmPHP\Models\TempestLink[]|null $links links
      *
      * @return self
      */
@@ -281,7 +281,7 @@ class TempestResponseListV1Customer implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets validationResult
      *
-     * @return \Mrstebo\EkmPHP\Models\TempestValidationError[]|null
+     * @return \EkmPHP\Models\TempestValidationError[]|null
      */
     public function getValidationResult()
     {
@@ -291,7 +291,7 @@ class TempestResponseListV1Customer implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets validationResult
      *
-     * @param \Mrstebo\EkmPHP\Models\TempestValidationError[]|null $validationResult validationResult
+     * @param \EkmPHP\Models\TempestValidationError[]|null $validationResult validationResult
      *
      * @return self
      */
@@ -329,7 +329,7 @@ class TempestResponseListV1Customer implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets data
      *
-     * @return \Mrstebo\EkmPHP\Models\V1Customer[]|null
+     * @return \EkmPHP\Models\V1Customer[]|null
      */
     public function getData()
     {
@@ -339,7 +339,7 @@ class TempestResponseListV1Customer implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets data
      *
-     * @param \Mrstebo\EkmPHP\Models\V1Customer[]|null $data data
+     * @param \EkmPHP\Models\V1Customer[]|null $data data
      *
      * @return self
      */

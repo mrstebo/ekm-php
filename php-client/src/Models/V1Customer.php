@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Mrstebo\EkmPHP\Models;
+namespace EkmPHP\Models;
 
 use \ArrayAccess;
-use \Mrstebo\EkmPHP\ObjectSerializer;
+use \EkmPHP\ObjectSerializer;
 
 /**
  * V1Customer Class Doc Comment
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -74,7 +74,7 @@ class V1Customer implements ModelInterface, ArrayAccess, \JsonSerializable
         'lockedDate' => '\DateTime',
         'lockedEndDate' => '\DateTime',
         'isSubscribedToNewsletter' => 'bool',
-        'addresses' => '\Mrstebo\EkmPHP\Models\V1CustomerAddress[]'
+        'addresses' => '\EkmPHP\Models\V1CustomerAddress[]'
     ];
 
     /**
@@ -635,7 +635,7 @@ class V1Customer implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets addresses
      *
-     * @return \Mrstebo\EkmPHP\Models\V1CustomerAddress[]|null
+     * @return \EkmPHP\Models\V1CustomerAddress[]|null
      */
     public function getAddresses()
     {
@@ -645,7 +645,7 @@ class V1Customer implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets addresses
      *
-     * @param \Mrstebo\EkmPHP\Models\V1CustomerAddress[]|null $addresses addresses
+     * @param \EkmPHP\Models\V1CustomerAddress[]|null $addresses addresses
      *
      * @return self
      */

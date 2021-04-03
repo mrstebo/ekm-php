@@ -4,7 +4,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Mrstebo\EkmPHP\API;
+namespace EkmPHP\API;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Mrstebo\EkmPHP\ApiException;
-use Mrstebo\EkmPHP\Configuration;
-use Mrstebo\EkmPHP\HeaderSelector;
-use Mrstebo\EkmPHP\ObjectSerializer;
+use EkmPHP\ApiException;
+use EkmPHP\Configuration;
+use EkmPHP\HeaderSelector;
+use EkmPHP\ObjectSerializer;
 
 /**
  * OrdersApi Class Doc Comment
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -123,9 +123,9 @@ class OrdersApi
      * @param  int $page Page number to display (optional)
      * @param  int $limit Items per page (maximum 20) (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseListV2Order
+     * @return \EkmPHP\Models\TempestResponseListV2Order
      */
     public function ordersGetAll($page = null, $limit = null)
     {
@@ -141,9 +141,9 @@ class OrdersApi
      * @param  int $page Page number to display (optional)
      * @param  int $limit Items per page (maximum 20) (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseListV2Order, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseListV2Order, HTTP status code, HTTP response headers (array of strings)
      */
     public function ordersGetAllWithHttpInfo($page = null, $limit = null)
     {
@@ -179,20 +179,20 @@ class OrdersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseListV2Order' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseListV2Order' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseListV2Order', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseListV2Order', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseListV2Order';
+            $returnType = '\EkmPHP\Models\TempestResponseListV2Order';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -210,7 +210,7 @@ class OrdersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseListV2Order',
+                        '\EkmPHP\Models\TempestResponseListV2Order',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class OrdersApi
      */
     public function ordersGetAllAsyncWithHttpInfo($page = null, $limit = null)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseListV2Order';
+        $returnType = '\EkmPHP\Models\TempestResponseListV2Order';
         $request = $this->ordersGetAllRequest($page, $limit);
 
         return $this->client
@@ -403,9 +403,9 @@ class OrdersApi
      *
      * @param  int $id The order ID (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseV2Order|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseV2Order|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function ordersGetById($id)
     {
@@ -420,9 +420,9 @@ class OrdersApi
      *
      * @param  int $id The order ID (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseV2Order|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseV2Order|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function ordersGetByIdWithHttpInfo($id)
     {
@@ -458,32 +458,32 @@ class OrdersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV2Order' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV2Order' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV2Order', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV2Order', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV2Order';
+            $returnType = '\EkmPHP\Models\TempestResponseV2Order';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -501,7 +501,7 @@ class OrdersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV2Order',
+                        '\EkmPHP\Models\TempestResponseV2Order',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -509,7 +509,7 @@ class OrdersApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -551,7 +551,7 @@ class OrdersApi
      */
     public function ordersGetByIdAsyncWithHttpInfo($id)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV2Order';
+        $returnType = '\EkmPHP\Models\TempestResponseV2Order';
         $request = $this->ordersGetByIdRequest($id);
 
         return $this->client
@@ -691,9 +691,9 @@ class OrdersApi
      *
      * @param  int $id The order&#39;s ID&#39; (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseListV2OrderItem
+     * @return \EkmPHP\Models\TempestResponseListV2OrderItem
      */
     public function ordersGetItems($id)
     {
@@ -708,9 +708,9 @@ class OrdersApi
      *
      * @param  int $id The order&#39;s ID&#39; (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseListV2OrderItem, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseListV2OrderItem, HTTP status code, HTTP response headers (array of strings)
      */
     public function ordersGetItemsWithHttpInfo($id)
     {
@@ -746,20 +746,20 @@ class OrdersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseListV2OrderItem' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseListV2OrderItem' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseListV2OrderItem', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseListV2OrderItem', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseListV2OrderItem';
+            $returnType = '\EkmPHP\Models\TempestResponseListV2OrderItem';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -777,7 +777,7 @@ class OrdersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseListV2OrderItem',
+                        '\EkmPHP\Models\TempestResponseListV2OrderItem',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -819,7 +819,7 @@ class OrdersApi
      */
     public function ordersGetItemsAsyncWithHttpInfo($id)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseListV2OrderItem';
+        $returnType = '\EkmPHP\Models\TempestResponseListV2OrderItem';
         $request = $this->ordersGetItemsRequest($id);
 
         return $this->client
@@ -961,9 +961,9 @@ class OrdersApi
      * @param  int $itemId The order item&#39;s ID&#39; (required)
      * @param  int $itemId2 The order item ID (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseV2OrderItem
+     * @return \EkmPHP\Models\TempestResponseV2OrderItem
      */
     public function ordersGetOrderItemById($id, $itemId, $itemId2)
     {
@@ -980,9 +980,9 @@ class OrdersApi
      * @param  int $itemId The order item&#39;s ID&#39; (required)
      * @param  int $itemId2 The order item ID (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseV2OrderItem, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseV2OrderItem, HTTP status code, HTTP response headers (array of strings)
      */
     public function ordersGetOrderItemByIdWithHttpInfo($id, $itemId, $itemId2)
     {
@@ -1018,20 +1018,20 @@ class OrdersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV2OrderItem' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV2OrderItem' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV2OrderItem', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV2OrderItem', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV2OrderItem';
+            $returnType = '\EkmPHP\Models\TempestResponseV2OrderItem';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1049,7 +1049,7 @@ class OrdersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV2OrderItem',
+                        '\EkmPHP\Models\TempestResponseV2OrderItem',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1095,7 +1095,7 @@ class OrdersApi
      */
     public function ordersGetOrderItemByIdAsyncWithHttpInfo($id, $itemId, $itemId2)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV2OrderItem';
+        $returnType = '\EkmPHP\Models\TempestResponseV2OrderItem';
         $request = $this->ordersGetOrderItemByIdRequest($id, $itemId, $itemId2);
 
         return $this->client
@@ -1271,9 +1271,9 @@ class OrdersApi
      * @param  string $query A &lt;a href&#x3D;\&quot;#tag/OData\&quot; target&#x3D;\&quot;_blank\&quot;&gt;search&lt;/a&gt; query e.g. status eq &#39;PENDING&#39; (optional)
      * @param  string $orderby Field to order results. Prefix with a - (dash) for descending e.g. -id (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseListV2Order|\Mrstebo\EkmPHP\Models\TempestResponseListV2Order
+     * @return \EkmPHP\Models\TempestResponseListV2Order|\EkmPHP\Models\TempestResponseListV2Order
      */
     public function ordersSearch($page = null, $limit = null, $query = null, $orderby = null)
     {
@@ -1291,9 +1291,9 @@ class OrdersApi
      * @param  string $query A &lt;a href&#x3D;\&quot;#tag/OData\&quot; target&#x3D;\&quot;_blank\&quot;&gt;search&lt;/a&gt; query e.g. status eq &#39;PENDING&#39; (optional)
      * @param  string $orderby Field to order results. Prefix with a - (dash) for descending e.g. -id (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseListV2Order|\Mrstebo\EkmPHP\Models\TempestResponseListV2Order, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseListV2Order|\EkmPHP\Models\TempestResponseListV2Order, HTTP status code, HTTP response headers (array of strings)
      */
     public function ordersSearchWithHttpInfo($page = null, $limit = null, $query = null, $orderby = null)
     {
@@ -1329,32 +1329,32 @@ class OrdersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseListV2Order' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseListV2Order' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseListV2Order', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseListV2Order', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseListV2Order' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseListV2Order' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseListV2Order', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseListV2Order', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseListV2Order';
+            $returnType = '\EkmPHP\Models\TempestResponseListV2Order';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1372,7 +1372,7 @@ class OrdersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseListV2Order',
+                        '\EkmPHP\Models\TempestResponseListV2Order',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1380,7 +1380,7 @@ class OrdersApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseListV2Order',
+                        '\EkmPHP\Models\TempestResponseListV2Order',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1428,7 +1428,7 @@ class OrdersApi
      */
     public function ordersSearchAsyncWithHttpInfo($page = null, $limit = null, $query = null, $orderby = null)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseListV2Order';
+        $returnType = '\EkmPHP\Models\TempestResponseListV2Order';
         $request = $this->ordersSearchRequest($page, $limit, $query, $orderby);
 
         return $this->client
@@ -1600,11 +1600,11 @@ class OrdersApi
      * Updates delivery tracking info for an order
      *
      * @param  int $id The order ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1OrderDeliveryTracking $v1OrderDeliveryTracking The delivery tracking info for an order (optional)
+     * @param  \EkmPHP\Models\V1OrderDeliveryTracking $v1OrderDeliveryTracking The delivery tracking info for an order (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseV2Order|\Mrstebo\EkmPHP\Models\TempestResponseV2Order
+     * @return \EkmPHP\Models\TempestResponseV2Order|\EkmPHP\Models\TempestResponseV2Order
      */
     public function ordersUpdateDeliveryTracking($id, $v1OrderDeliveryTracking = null)
     {
@@ -1618,11 +1618,11 @@ class OrdersApi
      * Updates delivery tracking info for an order
      *
      * @param  int $id The order ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1OrderDeliveryTracking $v1OrderDeliveryTracking The delivery tracking info for an order (optional)
+     * @param  \EkmPHP\Models\V1OrderDeliveryTracking $v1OrderDeliveryTracking The delivery tracking info for an order (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseV2Order|\Mrstebo\EkmPHP\Models\TempestResponseV2Order, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseV2Order|\EkmPHP\Models\TempestResponseV2Order, HTTP status code, HTTP response headers (array of strings)
      */
     public function ordersUpdateDeliveryTrackingWithHttpInfo($id, $v1OrderDeliveryTracking = null)
     {
@@ -1658,32 +1658,32 @@ class OrdersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV2Order' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV2Order' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV2Order', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV2Order', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV2Order' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV2Order' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV2Order', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV2Order', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV2Order';
+            $returnType = '\EkmPHP\Models\TempestResponseV2Order';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1701,7 +1701,7 @@ class OrdersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV2Order',
+                        '\EkmPHP\Models\TempestResponseV2Order',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1709,7 +1709,7 @@ class OrdersApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV2Order',
+                        '\EkmPHP\Models\TempestResponseV2Order',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1725,7 +1725,7 @@ class OrdersApi
      * Updates delivery tracking info for an order
      *
      * @param  int $id The order ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1OrderDeliveryTracking $v1OrderDeliveryTracking The delivery tracking info for an order (optional)
+     * @param  \EkmPHP\Models\V1OrderDeliveryTracking $v1OrderDeliveryTracking The delivery tracking info for an order (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1746,14 +1746,14 @@ class OrdersApi
      * Updates delivery tracking info for an order
      *
      * @param  int $id The order ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1OrderDeliveryTracking $v1OrderDeliveryTracking The delivery tracking info for an order (optional)
+     * @param  \EkmPHP\Models\V1OrderDeliveryTracking $v1OrderDeliveryTracking The delivery tracking info for an order (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function ordersUpdateDeliveryTrackingAsyncWithHttpInfo($id, $v1OrderDeliveryTracking = null)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV2Order';
+        $returnType = '\EkmPHP\Models\TempestResponseV2Order';
         $request = $this->ordersUpdateDeliveryTrackingRequest($id, $v1OrderDeliveryTracking);
 
         return $this->client
@@ -1793,7 +1793,7 @@ class OrdersApi
      * Create request for operation 'ordersUpdateDeliveryTracking'
      *
      * @param  int $id The order ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1OrderDeliveryTracking $v1OrderDeliveryTracking The delivery tracking info for an order (optional)
+     * @param  \EkmPHP\Models\V1OrderDeliveryTracking $v1OrderDeliveryTracking The delivery tracking info for an order (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1899,11 +1899,11 @@ class OrdersApi
      * Updates the status of an order
      *
      * @param  int $id The order ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1OrderStatus $v1OrderStatus The updated order status (optional)
+     * @param  \EkmPHP\Models\V1OrderStatus $v1OrderStatus The updated order status (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseV2Order|\Mrstebo\EkmPHP\Models\TempestResponseV2Order
+     * @return \EkmPHP\Models\TempestResponseV2Order|\EkmPHP\Models\TempestResponseV2Order
      */
     public function ordersUpdateStatus($id, $v1OrderStatus = null)
     {
@@ -1917,11 +1917,11 @@ class OrdersApi
      * Updates the status of an order
      *
      * @param  int $id The order ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1OrderStatus $v1OrderStatus The updated order status (optional)
+     * @param  \EkmPHP\Models\V1OrderStatus $v1OrderStatus The updated order status (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseV2Order|\Mrstebo\EkmPHP\Models\TempestResponseV2Order, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseV2Order|\EkmPHP\Models\TempestResponseV2Order, HTTP status code, HTTP response headers (array of strings)
      */
     public function ordersUpdateStatusWithHttpInfo($id, $v1OrderStatus = null)
     {
@@ -1957,32 +1957,32 @@ class OrdersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV2Order' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV2Order' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV2Order', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV2Order', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV2Order' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV2Order' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV2Order', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV2Order', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV2Order';
+            $returnType = '\EkmPHP\Models\TempestResponseV2Order';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2000,7 +2000,7 @@ class OrdersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV2Order',
+                        '\EkmPHP\Models\TempestResponseV2Order',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2008,7 +2008,7 @@ class OrdersApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV2Order',
+                        '\EkmPHP\Models\TempestResponseV2Order',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2024,7 +2024,7 @@ class OrdersApi
      * Updates the status of an order
      *
      * @param  int $id The order ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1OrderStatus $v1OrderStatus The updated order status (optional)
+     * @param  \EkmPHP\Models\V1OrderStatus $v1OrderStatus The updated order status (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2045,14 +2045,14 @@ class OrdersApi
      * Updates the status of an order
      *
      * @param  int $id The order ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1OrderStatus $v1OrderStatus The updated order status (optional)
+     * @param  \EkmPHP\Models\V1OrderStatus $v1OrderStatus The updated order status (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function ordersUpdateStatusAsyncWithHttpInfo($id, $v1OrderStatus = null)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV2Order';
+        $returnType = '\EkmPHP\Models\TempestResponseV2Order';
         $request = $this->ordersUpdateStatusRequest($id, $v1OrderStatus);
 
         return $this->client
@@ -2092,7 +2092,7 @@ class OrdersApi
      * Create request for operation 'ordersUpdateStatus'
      *
      * @param  int $id The order ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1OrderStatus $v1OrderStatus The updated order status (optional)
+     * @param  \EkmPHP\Models\V1OrderStatus $v1OrderStatus The updated order status (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

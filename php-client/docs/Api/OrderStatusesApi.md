@@ -1,4 +1,4 @@
-# Mrstebo\EkmPHP\OrderStatusesApi
+# EkmPHP\OrderStatusesApi
 
 All URIs are relative to https://api.ekm.net.
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 ## `orderStatusesGetOrderStatuses()`
 
 ```php
-orderStatusesGetOrderStatuses(): \Mrstebo\EkmPHP\Models\TempestResponseV1OrderStatuses
+orderStatusesGetOrderStatuses(): \EkmPHP\Models\TempestResponseV1OrderStatuses
 ```
 
 Get the current Order Statuses
@@ -23,10 +23,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\OrderStatusesApi(
+$apiInstance = new EkmPHP\Api\OrderStatusesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -47,7 +47,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1OrderStatuses**](../Model/TempestResponseV1OrderStatuses.md)
+[**\EkmPHP\Models\TempestResponseV1OrderStatuses**](../Model/TempestResponseV1OrderStatuses.md)
 
 ### Authorization
 

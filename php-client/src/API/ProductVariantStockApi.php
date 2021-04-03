@@ -4,7 +4,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Mrstebo\EkmPHP\API;
+namespace EkmPHP\API;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Mrstebo\EkmPHP\ApiException;
-use Mrstebo\EkmPHP\Configuration;
-use Mrstebo\EkmPHP\HeaderSelector;
-use Mrstebo\EkmPHP\ObjectSerializer;
+use EkmPHP\ApiException;
+use EkmPHP\Configuration;
+use EkmPHP\HeaderSelector;
+use EkmPHP\ObjectSerializer;
 
 /**
  * ProductVariantStockApi Class Doc Comment
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -123,9 +123,9 @@ class ProductVariantStockApi
      * @param  int $id The product ID (required)
      * @param  int $variantId The varaint ID (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseV1ProductVariantStock|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseV1ProductVariantStock|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function productVariantStockGet($id, $variantId)
     {
@@ -141,9 +141,9 @@ class ProductVariantStockApi
      * @param  int $id The product ID (required)
      * @param  int $variantId The varaint ID (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseV1ProductVariantStock|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseV1ProductVariantStock|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function productVariantStockGetWithHttpInfo($id, $variantId)
     {
@@ -179,32 +179,32 @@ class ProductVariantStockApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV1ProductVariantStock' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV1ProductVariantStock' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductVariantStock', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV1ProductVariantStock', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductVariantStock';
+            $returnType = '\EkmPHP\Models\TempestResponseV1ProductVariantStock';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -222,7 +222,7 @@ class ProductVariantStockApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductVariantStock',
+                        '\EkmPHP\Models\TempestResponseV1ProductVariantStock',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -230,7 +230,7 @@ class ProductVariantStockApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -274,7 +274,7 @@ class ProductVariantStockApi
      */
     public function productVariantStockGetAsyncWithHttpInfo($id, $variantId)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductVariantStock';
+        $returnType = '\EkmPHP\Models\TempestResponseV1ProductVariantStock';
         $request = $this->productVariantStockGetRequest($id, $variantId);
 
         return $this->client
@@ -429,11 +429,11 @@ class ProductVariantStockApi
      *
      * @param  int $id The product ID (required)
      * @param  int $variantId The varaint ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1ProductVariantStock $v1ProductVariantStock v1ProductVariantStock (optional)
+     * @param  \EkmPHP\Models\V1ProductVariantStock $v1ProductVariantStock v1ProductVariantStock (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseV1ProductVariantStock|\Mrstebo\EkmPHP\Models\TempestResponseV1ProductVariantStock|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseV1ProductVariantStock|\EkmPHP\Models\TempestResponseV1ProductVariantStock|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function productVariantStockUpdate($id, $variantId, $v1ProductVariantStock = null)
     {
@@ -448,11 +448,11 @@ class ProductVariantStockApi
      *
      * @param  int $id The product ID (required)
      * @param  int $variantId The varaint ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1ProductVariantStock $v1ProductVariantStock (optional)
+     * @param  \EkmPHP\Models\V1ProductVariantStock $v1ProductVariantStock (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseV1ProductVariantStock|\Mrstebo\EkmPHP\Models\TempestResponseV1ProductVariantStock|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseV1ProductVariantStock|\EkmPHP\Models\TempestResponseV1ProductVariantStock|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function productVariantStockUpdateWithHttpInfo($id, $variantId, $v1ProductVariantStock = null)
     {
@@ -488,44 +488,44 @@ class ProductVariantStockApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV1ProductVariantStock' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV1ProductVariantStock' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductVariantStock', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV1ProductVariantStock', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV1ProductVariantStock' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV1ProductVariantStock' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductVariantStock', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV1ProductVariantStock', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductVariantStock';
+            $returnType = '\EkmPHP\Models\TempestResponseV1ProductVariantStock';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -543,7 +543,7 @@ class ProductVariantStockApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductVariantStock',
+                        '\EkmPHP\Models\TempestResponseV1ProductVariantStock',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -551,7 +551,7 @@ class ProductVariantStockApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductVariantStock',
+                        '\EkmPHP\Models\TempestResponseV1ProductVariantStock',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -559,7 +559,7 @@ class ProductVariantStockApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -576,7 +576,7 @@ class ProductVariantStockApi
      *
      * @param  int $id The product ID (required)
      * @param  int $variantId The varaint ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1ProductVariantStock $v1ProductVariantStock (optional)
+     * @param  \EkmPHP\Models\V1ProductVariantStock $v1ProductVariantStock (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -598,14 +598,14 @@ class ProductVariantStockApi
      *
      * @param  int $id The product ID (required)
      * @param  int $variantId The varaint ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1ProductVariantStock $v1ProductVariantStock (optional)
+     * @param  \EkmPHP\Models\V1ProductVariantStock $v1ProductVariantStock (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function productVariantStockUpdateAsyncWithHttpInfo($id, $variantId, $v1ProductVariantStock = null)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductVariantStock';
+        $returnType = '\EkmPHP\Models\TempestResponseV1ProductVariantStock';
         $request = $this->productVariantStockUpdateRequest($id, $variantId, $v1ProductVariantStock);
 
         return $this->client
@@ -646,7 +646,7 @@ class ProductVariantStockApi
      *
      * @param  int $id The product ID (required)
      * @param  int $variantId The varaint ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1ProductVariantStock $v1ProductVariantStock (optional)
+     * @param  \EkmPHP\Models\V1ProductVariantStock $v1ProductVariantStock (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

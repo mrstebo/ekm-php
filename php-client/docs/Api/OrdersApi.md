@@ -1,4 +1,4 @@
-# Mrstebo\EkmPHP\OrdersApi
+# EkmPHP\OrdersApi
 
 All URIs are relative to https://api.ekm.net.
 
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 ## `ordersGetAll()`
 
 ```php
-ordersGetAll($page, $limit): \Mrstebo\EkmPHP\Models\TempestResponseListV2Order
+ordersGetAll($page, $limit): \EkmPHP\Models\TempestResponseListV2Order
 ```
 
 Get a paginated set of orders
@@ -29,10 +29,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\OrdersApi(
+$apiInstance = new EkmPHP\Api\OrdersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseListV2Order**](../Model/TempestResponseListV2Order.md)
+[**\EkmPHP\Models\TempestResponseListV2Order**](../Model/TempestResponseListV2Order.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 ## `ordersGetById()`
 
 ```php
-ordersGetById($id): \Mrstebo\EkmPHP\Models\TempestResponseV2Order
+ordersGetById($id): \EkmPHP\Models\TempestResponseV2Order
 ```
 
 Get an order by ID
@@ -89,10 +89,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\OrdersApi(
+$apiInstance = new EkmPHP\Api\OrdersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV2Order**](../Model/TempestResponseV2Order.md)
+[**\EkmPHP\Models\TempestResponseV2Order**](../Model/TempestResponseV2Order.md)
 
 ### Authorization
 
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 ## `ordersGetItems()`
 
 ```php
-ordersGetItems($id): \Mrstebo\EkmPHP\Models\TempestResponseListV2OrderItem
+ordersGetItems($id): \EkmPHP\Models\TempestResponseListV2OrderItem
 ```
 
 Get an order's items
@@ -147,10 +147,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\OrdersApi(
+$apiInstance = new EkmPHP\Api\OrdersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseListV2OrderItem**](../Model/TempestResponseListV2OrderItem.md)
+[**\EkmPHP\Models\TempestResponseListV2OrderItem**](../Model/TempestResponseListV2OrderItem.md)
 
 ### Authorization
 
@@ -192,7 +192,7 @@ Name | Type | Description  | Notes
 ## `ordersGetOrderItemById()`
 
 ```php
-ordersGetOrderItemById($id, $itemId, $itemId2): \Mrstebo\EkmPHP\Models\TempestResponseV2OrderItem
+ordersGetOrderItemById($id, $itemId, $itemId2): \EkmPHP\Models\TempestResponseV2OrderItem
 ```
 
 Get a specific item from an order
@@ -205,10 +205,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\OrdersApi(
+$apiInstance = new EkmPHP\Api\OrdersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV2OrderItem**](../Model/TempestResponseV2OrderItem.md)
+[**\EkmPHP\Models\TempestResponseV2OrderItem**](../Model/TempestResponseV2OrderItem.md)
 
 ### Authorization
 
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 ## `ordersSearch()`
 
 ```php
-ordersSearch($page, $limit, $query, $orderby): \Mrstebo\EkmPHP\Models\TempestResponseListV2Order
+ordersSearch($page, $limit, $query, $orderby): \EkmPHP\Models\TempestResponseListV2Order
 ```
 
 Searches orders based on search criteria
@@ -267,10 +267,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\OrdersApi(
+$apiInstance = new EkmPHP\Api\OrdersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -300,7 +300,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseListV2Order**](../Model/TempestResponseListV2Order.md)
+[**\EkmPHP\Models\TempestResponseListV2Order**](../Model/TempestResponseListV2Order.md)
 
 ### Authorization
 
@@ -318,7 +318,7 @@ Name | Type | Description  | Notes
 ## `ordersUpdateDeliveryTracking()`
 
 ```php
-ordersUpdateDeliveryTracking($id, $v1OrderDeliveryTracking): \Mrstebo\EkmPHP\Models\TempestResponseV2Order
+ordersUpdateDeliveryTracking($id, $v1OrderDeliveryTracking): \EkmPHP\Models\TempestResponseV2Order
 ```
 
 Updates delivery tracking info for an order
@@ -331,17 +331,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\OrdersApi(
+$apiInstance = new EkmPHP\Api\OrdersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | The order ID
-$v1OrderDeliveryTracking = new \Mrstebo\EkmPHP\Models\V1OrderDeliveryTracking(); // \Mrstebo\EkmPHP\Models\V1OrderDeliveryTracking | The delivery tracking info for an order
+$v1OrderDeliveryTracking = new \EkmPHP\Models\V1OrderDeliveryTracking(); // \EkmPHP\Models\V1OrderDeliveryTracking | The delivery tracking info for an order
 
 try {
     $result = $apiInstance->ordersUpdateDeliveryTracking($id, $v1OrderDeliveryTracking);
@@ -356,11 +356,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The order ID |
- **v1OrderDeliveryTracking** | [**\Mrstebo\EkmPHP\Models\V1OrderDeliveryTracking**](../Model/V1OrderDeliveryTracking.md)| The delivery tracking info for an order | [optional]
+ **v1OrderDeliveryTracking** | [**\EkmPHP\Models\V1OrderDeliveryTracking**](../Model/V1OrderDeliveryTracking.md)| The delivery tracking info for an order | [optional]
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV2Order**](../Model/TempestResponseV2Order.md)
+[**\EkmPHP\Models\TempestResponseV2Order**](../Model/TempestResponseV2Order.md)
 
 ### Authorization
 
@@ -378,7 +378,7 @@ Name | Type | Description  | Notes
 ## `ordersUpdateStatus()`
 
 ```php
-ordersUpdateStatus($id, $v1OrderStatus): \Mrstebo\EkmPHP\Models\TempestResponseV2Order
+ordersUpdateStatus($id, $v1OrderStatus): \EkmPHP\Models\TempestResponseV2Order
 ```
 
 Updates the status of an order
@@ -391,17 +391,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\OrdersApi(
+$apiInstance = new EkmPHP\Api\OrdersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | The order ID
-$v1OrderStatus = new \Mrstebo\EkmPHP\Models\V1OrderStatus(); // \Mrstebo\EkmPHP\Models\V1OrderStatus | The updated order status
+$v1OrderStatus = new \EkmPHP\Models\V1OrderStatus(); // \EkmPHP\Models\V1OrderStatus | The updated order status
 
 try {
     $result = $apiInstance->ordersUpdateStatus($id, $v1OrderStatus);
@@ -416,11 +416,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The order ID |
- **v1OrderStatus** | [**\Mrstebo\EkmPHP\Models\V1OrderStatus**](../Model/V1OrderStatus.md)| The updated order status | [optional]
+ **v1OrderStatus** | [**\EkmPHP\Models\V1OrderStatus**](../Model/V1OrderStatus.md)| The updated order status | [optional]
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV2Order**](../Model/TempestResponseV2Order.md)
+[**\EkmPHP\Models\TempestResponseV2Order**](../Model/TempestResponseV2Order.md)
 
 ### Authorization
 

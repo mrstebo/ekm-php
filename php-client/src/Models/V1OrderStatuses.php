@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Mrstebo\EkmPHP\Models;
+namespace EkmPHP\Models;
 
 use \ArrayAccess;
-use \Mrstebo\EkmPHP\ObjectSerializer;
+use \EkmPHP\ObjectSerializer;
 
 /**
  * V1OrderStatuses Class Doc Comment
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -60,7 +60,7 @@ class V1OrderStatuses implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'statuses' => '\Mrstebo\EkmPHP\Models\V1OrderStatusSetting[]'
+        'statuses' => '\EkmPHP\Models\V1OrderStatusSetting[]'
     ];
 
     /**
@@ -209,7 +209,7 @@ class V1OrderStatuses implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets statuses
      *
-     * @return \Mrstebo\EkmPHP\Models\V1OrderStatusSetting[]|null
+     * @return \EkmPHP\Models\V1OrderStatusSetting[]|null
      */
     public function getStatuses()
     {
@@ -219,7 +219,7 @@ class V1OrderStatuses implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets statuses
      *
-     * @param \Mrstebo\EkmPHP\Models\V1OrderStatusSetting[]|null $statuses statuses
+     * @param \EkmPHP\Models\V1OrderStatusSetting[]|null $statuses statuses
      *
      * @return self
      */

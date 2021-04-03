@@ -1,4 +1,4 @@
-# Mrstebo\EkmPHP\CategoriesApi
+# EkmPHP\CategoriesApi
 
 All URIs are relative to https://api.ekm.net.
 
@@ -20,7 +20,7 @@ Method | HTTP request | Description
 ## `categoriesCreate()`
 
 ```php
-categoriesCreate($v1AddCategory): \Mrstebo\EkmPHP\Models\TempestResponseV1Category
+categoriesCreate($v1AddCategory): \EkmPHP\Models\TempestResponseV1Category
 ```
 
 Add a category
@@ -33,16 +33,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\CategoriesApi(
+$apiInstance = new EkmPHP\Api\CategoriesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$v1AddCategory = new \Mrstebo\EkmPHP\Models\V1AddCategory(); // \Mrstebo\EkmPHP\Models\V1AddCategory
+$v1AddCategory = new \EkmPHP\Models\V1AddCategory(); // \EkmPHP\Models\V1AddCategory
 
 try {
     $result = $apiInstance->categoriesCreate($v1AddCategory);
@@ -56,11 +56,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **v1AddCategory** | [**\Mrstebo\EkmPHP\Models\V1AddCategory**](../Model/V1AddCategory.md)|  | [optional]
+ **v1AddCategory** | [**\EkmPHP\Models\V1AddCategory**](../Model/V1AddCategory.md)|  | [optional]
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1Category**](../Model/TempestResponseV1Category.md)
+[**\EkmPHP\Models\TempestResponseV1Category**](../Model/TempestResponseV1Category.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 ## `categoriesDelete()`
 
 ```php
-categoriesDelete($id): \Mrstebo\EkmPHP\Models\TempestResponseV1Category
+categoriesDelete($id): \EkmPHP\Models\TempestResponseV1Category
 ```
 
 Delete a category
@@ -91,10 +91,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\CategoriesApi(
+$apiInstance = new EkmPHP\Api\CategoriesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1Category**](../Model/TempestResponseV1Category.md)
+[**\EkmPHP\Models\TempestResponseV1Category**](../Model/TempestResponseV1Category.md)
 
 ### Authorization
 
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 ## `categoriesDeleteCategoryManaged()`
 
 ```php
-categoriesDeleteCategoryManaged($id, $childCategoryId): \Mrstebo\EkmPHP\Models\TempestResponseV1SubCategory
+categoriesDeleteCategoryManaged($id, $childCategoryId): \EkmPHP\Models\TempestResponseV1SubCategory
 ```
 
 Stops a category from being managed by another category
@@ -149,10 +149,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\CategoriesApi(
+$apiInstance = new EkmPHP\Api\CategoriesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1SubCategory**](../Model/TempestResponseV1SubCategory.md)
+[**\EkmPHP\Models\TempestResponseV1SubCategory**](../Model/TempestResponseV1SubCategory.md)
 
 ### Authorization
 
@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 ## `categoriesGet()`
 
 ```php
-categoriesGet($id): \Mrstebo\EkmPHP\Models\TempestResponseV1Category
+categoriesGet($id): \EkmPHP\Models\TempestResponseV1Category
 ```
 
 Get a category
@@ -209,10 +209,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\CategoriesApi(
+$apiInstance = new EkmPHP\Api\CategoriesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1Category**](../Model/TempestResponseV1Category.md)
+[**\EkmPHP\Models\TempestResponseV1Category**](../Model/TempestResponseV1Category.md)
 
 ### Authorization
 
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 ## `categoriesGetAll()`
 
 ```php
-categoriesGetAll($page, $limit): \Mrstebo\EkmPHP\Models\TempestResponseListV1Category
+categoriesGetAll($page, $limit): \EkmPHP\Models\TempestResponseListV1Category
 ```
 
 Get a paginated set of categories
@@ -267,10 +267,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\CategoriesApi(
+$apiInstance = new EkmPHP\Api\CategoriesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -296,7 +296,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseListV1Category**](../Model/TempestResponseListV1Category.md)
+[**\EkmPHP\Models\TempestResponseListV1Category**](../Model/TempestResponseListV1Category.md)
 
 ### Authorization
 
@@ -314,7 +314,7 @@ Name | Type | Description  | Notes
 ## `categoriesGetCategoryFilters()`
 
 ```php
-categoriesGetCategoryFilters($id): \Mrstebo\EkmPHP\Models\TempestResponseV1CategoryFilters
+categoriesGetCategoryFilters($id): \EkmPHP\Models\TempestResponseV1CategoryFilters
 ```
 
 
@@ -327,10 +327,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\CategoriesApi(
+$apiInstance = new EkmPHP\Api\CategoriesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -354,7 +354,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1CategoryFilters**](../Model/TempestResponseV1CategoryFilters.md)
+[**\EkmPHP\Models\TempestResponseV1CategoryFilters**](../Model/TempestResponseV1CategoryFilters.md)
 
 ### Authorization
 
@@ -372,7 +372,7 @@ Name | Type | Description  | Notes
 ## `categoriesSearch()`
 
 ```php
-categoriesSearch($page, $limit, $query, $orderby): \Mrstebo\EkmPHP\Models\TempestResponseListV1Category
+categoriesSearch($page, $limit, $query, $orderby): \EkmPHP\Models\TempestResponseListV1Category
 ```
 
 Searches categories based on search criteria
@@ -385,10 +385,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\CategoriesApi(
+$apiInstance = new EkmPHP\Api\CategoriesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -418,7 +418,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseListV1Category**](../Model/TempestResponseListV1Category.md)
+[**\EkmPHP\Models\TempestResponseListV1Category**](../Model/TempestResponseListV1Category.md)
 
 ### Authorization
 
@@ -436,7 +436,7 @@ Name | Type | Description  | Notes
 ## `categoriesSetCategoryManaged()`
 
 ```php
-categoriesSetCategoryManaged($id, $childCategoryId): \Mrstebo\EkmPHP\Models\TempestResponseV1SubCategory
+categoriesSetCategoryManaged($id, $childCategoryId): \EkmPHP\Models\TempestResponseV1SubCategory
 ```
 
 Set a category to be managed by another category
@@ -449,10 +449,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\CategoriesApi(
+$apiInstance = new EkmPHP\Api\CategoriesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -478,7 +478,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1SubCategory**](../Model/TempestResponseV1SubCategory.md)
+[**\EkmPHP\Models\TempestResponseV1SubCategory**](../Model/TempestResponseV1SubCategory.md)
 
 ### Authorization
 
@@ -496,7 +496,7 @@ Name | Type | Description  | Notes
 ## `categoriesSubcategories()`
 
 ```php
-categoriesSubcategories($id, $page, $limit): \Mrstebo\EkmPHP\Models\TempestResponseListV1SubCategory
+categoriesSubcategories($id, $page, $limit): \EkmPHP\Models\TempestResponseListV1SubCategory
 ```
 
 Get a paginated set of subcategories
@@ -509,10 +509,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\CategoriesApi(
+$apiInstance = new EkmPHP\Api\CategoriesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -540,7 +540,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseListV1SubCategory**](../Model/TempestResponseListV1SubCategory.md)
+[**\EkmPHP\Models\TempestResponseListV1SubCategory**](../Model/TempestResponseListV1SubCategory.md)
 
 ### Authorization
 
@@ -558,7 +558,7 @@ Name | Type | Description  | Notes
 ## `categoriesUpdate()`
 
 ```php
-categoriesUpdate($id, $v1UpdateCategory): \Mrstebo\EkmPHP\Models\TempestResponseV1Category
+categoriesUpdate($id, $v1UpdateCategory): \EkmPHP\Models\TempestResponseV1Category
 ```
 
 Update a category
@@ -571,17 +571,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\CategoriesApi(
+$apiInstance = new EkmPHP\Api\CategoriesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | The category ID
-$v1UpdateCategory = new \Mrstebo\EkmPHP\Models\V1UpdateCategory(); // \Mrstebo\EkmPHP\Models\V1UpdateCategory
+$v1UpdateCategory = new \EkmPHP\Models\V1UpdateCategory(); // \EkmPHP\Models\V1UpdateCategory
 
 try {
     $result = $apiInstance->categoriesUpdate($id, $v1UpdateCategory);
@@ -596,11 +596,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The category ID |
- **v1UpdateCategory** | [**\Mrstebo\EkmPHP\Models\V1UpdateCategory**](../Model/V1UpdateCategory.md)|  | [optional]
+ **v1UpdateCategory** | [**\EkmPHP\Models\V1UpdateCategory**](../Model/V1UpdateCategory.md)|  | [optional]
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1Category**](../Model/TempestResponseV1Category.md)
+[**\EkmPHP\Models\TempestResponseV1Category**](../Model/TempestResponseV1Category.md)
 
 ### Authorization
 
@@ -618,7 +618,7 @@ Name | Type | Description  | Notes
 ## `categoriesUpdateCategoryFilters()`
 
 ```php
-categoriesUpdateCategoryFilters($id, $v1CategoryFilters): \Mrstebo\EkmPHP\Models\TempestResponseV1Category
+categoriesUpdateCategoryFilters($id, $v1CategoryFilters): \EkmPHP\Models\TempestResponseV1Category
 ```
 
 
@@ -631,17 +631,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\CategoriesApi(
+$apiInstance = new EkmPHP\Api\CategoriesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int
-$v1CategoryFilters = new \Mrstebo\EkmPHP\Models\V1CategoryFilters(); // \Mrstebo\EkmPHP\Models\V1CategoryFilters
+$v1CategoryFilters = new \EkmPHP\Models\V1CategoryFilters(); // \EkmPHP\Models\V1CategoryFilters
 
 try {
     $result = $apiInstance->categoriesUpdateCategoryFilters($id, $v1CategoryFilters);
@@ -656,11 +656,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  |
- **v1CategoryFilters** | [**\Mrstebo\EkmPHP\Models\V1CategoryFilters**](../Model/V1CategoryFilters.md)|  | [optional]
+ **v1CategoryFilters** | [**\EkmPHP\Models\V1CategoryFilters**](../Model/V1CategoryFilters.md)|  | [optional]
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1Category**](../Model/TempestResponseV1Category.md)
+[**\EkmPHP\Models\TempestResponseV1Category**](../Model/TempestResponseV1Category.md)
 
 ### Authorization
 

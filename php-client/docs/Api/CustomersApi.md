@@ -1,4 +1,4 @@
-# Mrstebo\EkmPHP\CustomersApi
+# EkmPHP\CustomersApi
 
 All URIs are relative to https://api.ekm.net.
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 ## `customersCreate()`
 
 ```php
-customersCreate($v1AddCustomer): \Mrstebo\EkmPHP\Models\TempestResponseV1Customer
+customersCreate($v1AddCustomer): \EkmPHP\Models\TempestResponseV1Customer
 ```
 
 Add a customer
@@ -30,16 +30,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\CustomersApi(
+$apiInstance = new EkmPHP\Api\CustomersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$v1AddCustomer = new \Mrstebo\EkmPHP\Models\V1AddCustomer(); // \Mrstebo\EkmPHP\Models\V1AddCustomer
+$v1AddCustomer = new \EkmPHP\Models\V1AddCustomer(); // \EkmPHP\Models\V1AddCustomer
 
 try {
     $result = $apiInstance->customersCreate($v1AddCustomer);
@@ -53,11 +53,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **v1AddCustomer** | [**\Mrstebo\EkmPHP\Models\V1AddCustomer**](../Model/V1AddCustomer.md)|  | [optional]
+ **v1AddCustomer** | [**\EkmPHP\Models\V1AddCustomer**](../Model/V1AddCustomer.md)|  | [optional]
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1Customer**](../Model/TempestResponseV1Customer.md)
+[**\EkmPHP\Models\TempestResponseV1Customer**](../Model/TempestResponseV1Customer.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 ## `customersDelete()`
 
 ```php
-customersDelete($id): \Mrstebo\EkmPHP\Models\TempestResponseV1Customer
+customersDelete($id): \EkmPHP\Models\TempestResponseV1Customer
 ```
 
 Delete a Customer
@@ -88,10 +88,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\CustomersApi(
+$apiInstance = new EkmPHP\Api\CustomersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1Customer**](../Model/TempestResponseV1Customer.md)
+[**\EkmPHP\Models\TempestResponseV1Customer**](../Model/TempestResponseV1Customer.md)
 
 ### Authorization
 
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 ## `customersGetAll()`
 
 ```php
-customersGetAll($page, $limit): \Mrstebo\EkmPHP\Models\TempestResponseListV1Customer
+customersGetAll($page, $limit): \EkmPHP\Models\TempestResponseListV1Customer
 ```
 
 Get a paginated set of Customers
@@ -146,10 +146,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\CustomersApi(
+$apiInstance = new EkmPHP\Api\CustomersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseListV1Customer**](../Model/TempestResponseListV1Customer.md)
+[**\EkmPHP\Models\TempestResponseListV1Customer**](../Model/TempestResponseListV1Customer.md)
 
 ### Authorization
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 ## `customersGetById()`
 
 ```php
-customersGetById($id): \Mrstebo\EkmPHP\Models\TempestResponseV1Customer
+customersGetById($id): \EkmPHP\Models\TempestResponseV1Customer
 ```
 
 Get a single Customer by Id
@@ -206,10 +206,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\CustomersApi(
+$apiInstance = new EkmPHP\Api\CustomersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1Customer**](../Model/TempestResponseV1Customer.md)
+[**\EkmPHP\Models\TempestResponseV1Customer**](../Model/TempestResponseV1Customer.md)
 
 ### Authorization
 
@@ -251,7 +251,7 @@ Name | Type | Description  | Notes
 ## `customersSearch()`
 
 ```php
-customersSearch($page, $limit, $query, $orderby): \Mrstebo\EkmPHP\Models\TempestResponseListV1Customer
+customersSearch($page, $limit, $query, $orderby): \EkmPHP\Models\TempestResponseListV1Customer
 ```
 
 Searches customers based on search criteria
@@ -264,10 +264,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\CustomersApi(
+$apiInstance = new EkmPHP\Api\CustomersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -297,7 +297,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseListV1Customer**](../Model/TempestResponseListV1Customer.md)
+[**\EkmPHP\Models\TempestResponseListV1Customer**](../Model/TempestResponseListV1Customer.md)
 
 ### Authorization
 
@@ -315,7 +315,7 @@ Name | Type | Description  | Notes
 ## `customersUpdate()`
 
 ```php
-customersUpdate($id, $v1UpdateCustomer): \Mrstebo\EkmPHP\Models\TempestResponseV1Customer
+customersUpdate($id, $v1UpdateCustomer): \EkmPHP\Models\TempestResponseV1Customer
 ```
 
 Update a Customer
@@ -328,17 +328,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\CustomersApi(
+$apiInstance = new EkmPHP\Api\CustomersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int
-$v1UpdateCustomer = new \Mrstebo\EkmPHP\Models\V1UpdateCustomer(); // \Mrstebo\EkmPHP\Models\V1UpdateCustomer
+$v1UpdateCustomer = new \EkmPHP\Models\V1UpdateCustomer(); // \EkmPHP\Models\V1UpdateCustomer
 
 try {
     $result = $apiInstance->customersUpdate($id, $v1UpdateCustomer);
@@ -353,11 +353,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  |
- **v1UpdateCustomer** | [**\Mrstebo\EkmPHP\Models\V1UpdateCustomer**](../Model/V1UpdateCustomer.md)|  | [optional]
+ **v1UpdateCustomer** | [**\EkmPHP\Models\V1UpdateCustomer**](../Model/V1UpdateCustomer.md)|  | [optional]
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1Customer**](../Model/TempestResponseV1Customer.md)
+[**\EkmPHP\Models\TempestResponseV1Customer**](../Model/TempestResponseV1Customer.md)
 
 ### Authorization
 

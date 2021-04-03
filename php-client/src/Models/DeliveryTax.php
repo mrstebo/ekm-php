@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,14 +27,14 @@
  * Do not edit the class manually.
  */
 
-namespace Mrstebo\EkmPHP\Models;
-use \Mrstebo\EkmPHP\ObjectSerializer;
+namespace EkmPHP\Models;
+use \EkmPHP\ObjectSerializer;
 
 /**
  * DeliveryTax Class Doc Comment
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */

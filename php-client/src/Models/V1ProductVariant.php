@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Mrstebo\EkmPHP\Models;
+namespace EkmPHP\Models;
 
 use \ArrayAccess;
-use \Mrstebo\EkmPHP\ObjectSerializer;
+use \EkmPHP\ObjectSerializer;
 
 /**
  * V1ProductVariant Class Doc Comment
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -71,7 +71,7 @@ class V1ProductVariant implements ModelInterface, ArrayAccess, \JsonSerializable
         'gtin' => 'string',
         'mpn' => 'string',
         'live' => 'bool',
-        'variantCombinations' => '\Mrstebo\EkmPHP\Models\V1VariantCombination[]'
+        'variantCombinations' => '\EkmPHP\Models\V1VariantCombination[]'
     ];
 
     /**
@@ -557,7 +557,7 @@ class V1ProductVariant implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets variantCombinations
      *
-     * @return \Mrstebo\EkmPHP\Models\V1VariantCombination[]|null
+     * @return \EkmPHP\Models\V1VariantCombination[]|null
      */
     public function getVariantCombinations()
     {
@@ -567,7 +567,7 @@ class V1ProductVariant implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets variantCombinations
      *
-     * @param \Mrstebo\EkmPHP\Models\V1VariantCombination[]|null $variantCombinations variantCombinations
+     * @param \EkmPHP\Models\V1VariantCombination[]|null $variantCombinations variantCombinations
      *
      * @return self
      */

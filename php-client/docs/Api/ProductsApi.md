@@ -1,4 +1,4 @@
-# Mrstebo\EkmPHP\ProductsApi
+# EkmPHP\ProductsApi
 
 All URIs are relative to https://api.ekm.net.
 
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 ## `productsAssignImageByUrlToProduct()`
 
 ```php
-productsAssignImageByUrlToProduct($id, $imageNumber, $imageUrl): \Mrstebo\EkmPHP\Models\TempestResponseV1ProductImages
+productsAssignImageByUrlToProduct($id, $imageNumber, $imageUrl): \EkmPHP\Models\TempestResponseV1ProductImages
 ```
 
 Assign an image by Url to a product
@@ -34,10 +34,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductsApi(
+$apiInstance = new EkmPHP\Api\ProductsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1ProductImages**](../Model/TempestResponseV1ProductImages.md)
+[**\EkmPHP\Models\TempestResponseV1ProductImages**](../Model/TempestResponseV1ProductImages.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 ## `productsCreate()`
 
 ```php
-productsCreate($v1AddProduct): \Mrstebo\EkmPHP\Models\TempestResponseV1Product
+productsCreate($v1AddProduct): \EkmPHP\Models\TempestResponseV1Product
 ```
 
 Add a Product
@@ -98,16 +98,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductsApi(
+$apiInstance = new EkmPHP\Api\ProductsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$v1AddProduct = new \Mrstebo\EkmPHP\Models\V1AddProduct(); // \Mrstebo\EkmPHP\Models\V1AddProduct
+$v1AddProduct = new \EkmPHP\Models\V1AddProduct(); // \EkmPHP\Models\V1AddProduct
 
 try {
     $result = $apiInstance->productsCreate($v1AddProduct);
@@ -121,11 +121,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **v1AddProduct** | [**\Mrstebo\EkmPHP\Models\V1AddProduct**](../Model/V1AddProduct.md)|  | [optional]
+ **v1AddProduct** | [**\EkmPHP\Models\V1AddProduct**](../Model/V1AddProduct.md)|  | [optional]
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1Product**](../Model/TempestResponseV1Product.md)
+[**\EkmPHP\Models\TempestResponseV1Product**](../Model/TempestResponseV1Product.md)
 
 ### Authorization
 
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 ## `productsDelete()`
 
 ```php
-productsDelete($id, $categoryId): \Mrstebo\EkmPHP\Models\TempestResponseV1Product
+productsDelete($id, $categoryId): \EkmPHP\Models\TempestResponseV1Product
 ```
 
 Delete a Product
@@ -156,10 +156,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductsApi(
+$apiInstance = new EkmPHP\Api\ProductsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1Product**](../Model/TempestResponseV1Product.md)
+[**\EkmPHP\Models\TempestResponseV1Product**](../Model/TempestResponseV1Product.md)
 
 ### Authorization
 
@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
 ## `productsDeleteCategoryManaged()`
 
 ```php
-productsDeleteCategoryManaged($id, $categoryId): \Mrstebo\EkmPHP\Models\TempestResponseV1ProductCategory
+productsDeleteCategoryManaged($id, $categoryId): \EkmPHP\Models\TempestResponseV1ProductCategory
 ```
 
 Stops a product from being managed by another category
@@ -216,10 +216,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductsApi(
+$apiInstance = new EkmPHP\Api\ProductsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -245,7 +245,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1ProductCategory**](../Model/TempestResponseV1ProductCategory.md)
+[**\EkmPHP\Models\TempestResponseV1ProductCategory**](../Model/TempestResponseV1ProductCategory.md)
 
 ### Authorization
 
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 ## `productsGet()`
 
 ```php
-productsGet($id): \Mrstebo\EkmPHP\Models\TempestResponseV1Product
+productsGet($id): \EkmPHP\Models\TempestResponseV1Product
 ```
 
 Get a product
@@ -278,10 +278,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductsApi(
+$apiInstance = new EkmPHP\Api\ProductsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -305,7 +305,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1Product**](../Model/TempestResponseV1Product.md)
+[**\EkmPHP\Models\TempestResponseV1Product**](../Model/TempestResponseV1Product.md)
 
 ### Authorization
 
@@ -323,7 +323,7 @@ Name | Type | Description  | Notes
 ## `productsGetAll()`
 
 ```php
-productsGetAll($page, $limit): \Mrstebo\EkmPHP\Models\TempestResponseListV1Product
+productsGetAll($page, $limit): \EkmPHP\Models\TempestResponseListV1Product
 ```
 
 Get a paginated set of products
@@ -338,10 +338,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductsApi(
+$apiInstance = new EkmPHP\Api\ProductsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -367,7 +367,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseListV1Product**](../Model/TempestResponseListV1Product.md)
+[**\EkmPHP\Models\TempestResponseListV1Product**](../Model/TempestResponseListV1Product.md)
 
 ### Authorization
 
@@ -385,7 +385,7 @@ Name | Type | Description  | Notes
 ## `productsGetProductImages()`
 
 ```php
-productsGetProductImages($id): \Mrstebo\EkmPHP\Models\TempestResponseV1ProductImages
+productsGetProductImages($id): \EkmPHP\Models\TempestResponseV1ProductImages
 ```
 
 Get a product's images.
@@ -400,10 +400,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductsApi(
+$apiInstance = new EkmPHP\Api\ProductsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -427,7 +427,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1ProductImages**](../Model/TempestResponseV1ProductImages.md)
+[**\EkmPHP\Models\TempestResponseV1ProductImages**](../Model/TempestResponseV1ProductImages.md)
 
 ### Authorization
 
@@ -445,7 +445,7 @@ Name | Type | Description  | Notes
 ## `productsSearch()`
 
 ```php
-productsSearch($query, $page, $limit, $orderby): \Mrstebo\EkmPHP\Models\TempestResponseListV1Product
+productsSearch($query, $page, $limit, $orderby): \EkmPHP\Models\TempestResponseListV1Product
 ```
 
 Searches products based on search criteria
@@ -460,10 +460,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductsApi(
+$apiInstance = new EkmPHP\Api\ProductsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -493,7 +493,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseListV1Product**](../Model/TempestResponseListV1Product.md)
+[**\EkmPHP\Models\TempestResponseListV1Product**](../Model/TempestResponseListV1Product.md)
 
 ### Authorization
 
@@ -511,7 +511,7 @@ Name | Type | Description  | Notes
 ## `productsSetCategoryManaged()`
 
 ```php
-productsSetCategoryManaged($id, $categoryId): \Mrstebo\EkmPHP\Models\TempestResponseV1ProductCategory
+productsSetCategoryManaged($id, $categoryId): \EkmPHP\Models\TempestResponseV1ProductCategory
 ```
 
 Set a product to be managed by another category
@@ -524,10 +524,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductsApi(
+$apiInstance = new EkmPHP\Api\ProductsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -553,7 +553,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1ProductCategory**](../Model/TempestResponseV1ProductCategory.md)
+[**\EkmPHP\Models\TempestResponseV1ProductCategory**](../Model/TempestResponseV1ProductCategory.md)
 
 ### Authorization
 
@@ -571,7 +571,7 @@ Name | Type | Description  | Notes
 ## `productsUpdate()`
 
 ```php
-productsUpdate($id, $v1UpdateProduct): \Mrstebo\EkmPHP\Models\TempestResponseV1Product
+productsUpdate($id, $v1UpdateProduct): \EkmPHP\Models\TempestResponseV1Product
 ```
 
 Update a Product
@@ -586,17 +586,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductsApi(
+$apiInstance = new EkmPHP\Api\ProductsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | The product ID
-$v1UpdateProduct = new \Mrstebo\EkmPHP\Models\V1UpdateProduct(); // \Mrstebo\EkmPHP\Models\V1UpdateProduct
+$v1UpdateProduct = new \EkmPHP\Models\V1UpdateProduct(); // \EkmPHP\Models\V1UpdateProduct
 
 try {
     $result = $apiInstance->productsUpdate($id, $v1UpdateProduct);
@@ -611,11 +611,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The product ID |
- **v1UpdateProduct** | [**\Mrstebo\EkmPHP\Models\V1UpdateProduct**](../Model/V1UpdateProduct.md)|  | [optional]
+ **v1UpdateProduct** | [**\EkmPHP\Models\V1UpdateProduct**](../Model/V1UpdateProduct.md)|  | [optional]
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1Product**](../Model/TempestResponseV1Product.md)
+[**\EkmPHP\Models\TempestResponseV1Product**](../Model/TempestResponseV1Product.md)
 
 ### Authorization
 

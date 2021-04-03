@@ -4,7 +4,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,18 +26,18 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace Mrstebo\EkmPHP\Test\Api;
+namespace EkmPHP\Test\Api;
 
-use \Mrstebo\EkmPHP\Configuration;
-use \Mrstebo\EkmPHP\ApiException;
-use \Mrstebo\EkmPHP\ObjectSerializer;
+use \EkmPHP\Configuration;
+use \EkmPHP\ApiException;
+use \EkmPHP\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**
  * ProductOptionItemsApiTest Class Doc Comment
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */

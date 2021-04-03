@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Mrstebo\EkmPHP\Models;
+namespace EkmPHP\Models;
 
 use \ArrayAccess;
-use \Mrstebo\EkmPHP\ObjectSerializer;
+use \EkmPHP\ObjectSerializer;
 
 /**
  * TaxSettings Class Doc Comment
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -63,10 +63,10 @@ class TaxSettings implements ModelInterface, ArrayAccess, \JsonSerializable
         'chargeTax' => 'bool',
         'productsIncludeTax' => 'bool',
         'productsPriceIncludeExcludeTax' => 'bool',
-        'deliveryTax' => '\Mrstebo\EkmPHP\Models\DeliveryTax',
+        'deliveryTax' => '\EkmPHP\Models\DeliveryTax',
         'deliveryShowTax' => 'bool',
-        'taxRates' => '\Mrstebo\EkmPHP\Models\TaxRateModel[]',
-        'countryCodes' => '\Mrstebo\EkmPHP\Models\CountryCodeModel[]'
+        'taxRates' => '\EkmPHP\Models\TaxRateModel[]',
+        'countryCodes' => '\EkmPHP\Models\CountryCodeModel[]'
     ];
 
     /**
@@ -317,7 +317,7 @@ class TaxSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets deliveryTax
      *
-     * @return \Mrstebo\EkmPHP\Models\DeliveryTax|null
+     * @return \EkmPHP\Models\DeliveryTax|null
      */
     public function getDeliveryTax()
     {
@@ -327,7 +327,7 @@ class TaxSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets deliveryTax
      *
-     * @param \Mrstebo\EkmPHP\Models\DeliveryTax|null $deliveryTax deliveryTax
+     * @param \EkmPHP\Models\DeliveryTax|null $deliveryTax deliveryTax
      *
      * @return self
      */
@@ -365,7 +365,7 @@ class TaxSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets taxRates
      *
-     * @return \Mrstebo\EkmPHP\Models\TaxRateModel[]|null
+     * @return \EkmPHP\Models\TaxRateModel[]|null
      */
     public function getTaxRates()
     {
@@ -375,7 +375,7 @@ class TaxSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets taxRates
      *
-     * @param \Mrstebo\EkmPHP\Models\TaxRateModel[]|null $taxRates taxRates
+     * @param \EkmPHP\Models\TaxRateModel[]|null $taxRates taxRates
      *
      * @return self
      */
@@ -389,7 +389,7 @@ class TaxSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets countryCodes
      *
-     * @return \Mrstebo\EkmPHP\Models\CountryCodeModel[]|null
+     * @return \EkmPHP\Models\CountryCodeModel[]|null
      */
     public function getCountryCodes()
     {
@@ -399,7 +399,7 @@ class TaxSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets countryCodes
      *
-     * @param \Mrstebo\EkmPHP\Models\CountryCodeModel[]|null $countryCodes countryCodes
+     * @param \EkmPHP\Models\CountryCodeModel[]|null $countryCodes countryCodes
      *
      * @return self
      */

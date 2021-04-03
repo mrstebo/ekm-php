@@ -1,4 +1,4 @@
-# Mrstebo\EkmPHP\TaxApi
+# EkmPHP\TaxApi
 
 All URIs are relative to https://api.ekm.net.
 
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 ## `taxCreateTaxRate()`
 
 ```php
-taxCreateTaxRate($taxRateModel): \Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel
+taxCreateTaxRate($taxRateModel): \EkmPHP\Models\TempestResponseTaxRateModel
 ```
 
 Add a Tax Rate
@@ -29,16 +29,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\TaxApi(
+$apiInstance = new EkmPHP\Api\TaxApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$taxRateModel = new \Mrstebo\EkmPHP\Models\TaxRateModel(); // \Mrstebo\EkmPHP\Models\TaxRateModel
+$taxRateModel = new \EkmPHP\Models\TaxRateModel(); // \EkmPHP\Models\TaxRateModel
 
 try {
     $result = $apiInstance->taxCreateTaxRate($taxRateModel);
@@ -52,11 +52,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **taxRateModel** | [**\Mrstebo\EkmPHP\Models\TaxRateModel**](../Model/TaxRateModel.md)|  | [optional]
+ **taxRateModel** | [**\EkmPHP\Models\TaxRateModel**](../Model/TaxRateModel.md)|  | [optional]
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel**](../Model/TempestResponseTaxRateModel.md)
+[**\EkmPHP\Models\TempestResponseTaxRateModel**](../Model/TempestResponseTaxRateModel.md)
 
 ### Authorization
 
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 ## `taxDeleteTaxRate()`
 
 ```php
-taxDeleteTaxRate($id): \Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel
+taxDeleteTaxRate($id): \EkmPHP\Models\TempestResponseTaxRateModel
 ```
 
 Delete a Tax Rate
@@ -87,10 +87,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\TaxApi(
+$apiInstance = new EkmPHP\Api\TaxApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel**](../Model/TempestResponseTaxRateModel.md)
+[**\EkmPHP\Models\TempestResponseTaxRateModel**](../Model/TempestResponseTaxRateModel.md)
 
 ### Authorization
 
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 ## `taxGetTaxRate()`
 
 ```php
-taxGetTaxRate($id): \Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel
+taxGetTaxRate($id): \EkmPHP\Models\TempestResponseTaxRateModel
 ```
 
 Get a specific Tax Rate
@@ -145,10 +145,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\TaxApi(
+$apiInstance = new EkmPHP\Api\TaxApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel**](../Model/TempestResponseTaxRateModel.md)
+[**\EkmPHP\Models\TempestResponseTaxRateModel**](../Model/TempestResponseTaxRateModel.md)
 
 ### Authorization
 
@@ -190,7 +190,7 @@ Name | Type | Description  | Notes
 ## `taxGetTaxRates()`
 
 ```php
-taxGetTaxRates(): \Mrstebo\EkmPHP\Models\TempestResponseListTaxRateModel
+taxGetTaxRates(): \EkmPHP\Models\TempestResponseListTaxRateModel
 ```
 
 Get a list of Tax Rates
@@ -203,10 +203,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\TaxApi(
+$apiInstance = new EkmPHP\Api\TaxApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -227,7 +227,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseListTaxRateModel**](../Model/TempestResponseListTaxRateModel.md)
+[**\EkmPHP\Models\TempestResponseListTaxRateModel**](../Model/TempestResponseListTaxRateModel.md)
 
 ### Authorization
 
@@ -245,7 +245,7 @@ This endpoint does not need any parameter.
 ## `taxGetTaxSettings()`
 
 ```php
-taxGetTaxSettings(): \Mrstebo\EkmPHP\Models\TempestResponseTaxSettings
+taxGetTaxSettings(): \EkmPHP\Models\TempestResponseTaxSettings
 ```
 
 Get the current Tax Settings
@@ -258,10 +258,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\TaxApi(
+$apiInstance = new EkmPHP\Api\TaxApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -282,7 +282,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseTaxSettings**](../Model/TempestResponseTaxSettings.md)
+[**\EkmPHP\Models\TempestResponseTaxSettings**](../Model/TempestResponseTaxSettings.md)
 
 ### Authorization
 
@@ -300,7 +300,7 @@ This endpoint does not need any parameter.
 ## `taxUpdateTaxRate()`
 
 ```php
-taxUpdateTaxRate($id, $taxRateModel): \Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel
+taxUpdateTaxRate($id, $taxRateModel): \EkmPHP\Models\TempestResponseTaxRateModel
 ```
 
 Update a Tax Rate
@@ -313,17 +313,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\TaxApi(
+$apiInstance = new EkmPHP\Api\TaxApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int
-$taxRateModel = new \Mrstebo\EkmPHP\Models\TaxRateModel(); // \Mrstebo\EkmPHP\Models\TaxRateModel
+$taxRateModel = new \EkmPHP\Models\TaxRateModel(); // \EkmPHP\Models\TaxRateModel
 
 try {
     $result = $apiInstance->taxUpdateTaxRate($id, $taxRateModel);
@@ -338,11 +338,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  |
- **taxRateModel** | [**\Mrstebo\EkmPHP\Models\TaxRateModel**](../Model/TaxRateModel.md)|  | [optional]
+ **taxRateModel** | [**\EkmPHP\Models\TaxRateModel**](../Model/TaxRateModel.md)|  | [optional]
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel**](../Model/TempestResponseTaxRateModel.md)
+[**\EkmPHP\Models\TempestResponseTaxRateModel**](../Model/TempestResponseTaxRateModel.md)
 
 ### Authorization
 
@@ -360,7 +360,7 @@ Name | Type | Description  | Notes
 ## `taxUpdateTaxSettings()`
 
 ```php
-taxUpdateTaxSettings($taxSettings): \Mrstebo\EkmPHP\Models\TempestResponseTaxSettings
+taxUpdateTaxSettings($taxSettings): \EkmPHP\Models\TempestResponseTaxSettings
 ```
 
 Update the current Tax Settings
@@ -373,16 +373,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\TaxApi(
+$apiInstance = new EkmPHP\Api\TaxApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$taxSettings = new \Mrstebo\EkmPHP\Models\TaxSettings(); // \Mrstebo\EkmPHP\Models\TaxSettings
+$taxSettings = new \EkmPHP\Models\TaxSettings(); // \EkmPHP\Models\TaxSettings
 
 try {
     $result = $apiInstance->taxUpdateTaxSettings($taxSettings);
@@ -396,11 +396,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **taxSettings** | [**\Mrstebo\EkmPHP\Models\TaxSettings**](../Model/TaxSettings.md)|  | [optional]
+ **taxSettings** | [**\EkmPHP\Models\TaxSettings**](../Model/TaxSettings.md)|  | [optional]
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseTaxSettings**](../Model/TempestResponseTaxSettings.md)
+[**\EkmPHP\Models\TempestResponseTaxSettings**](../Model/TempestResponseTaxSettings.md)
 
 ### Authorization
 

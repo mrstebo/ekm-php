@@ -4,7 +4,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Mrstebo\EkmPHP\API;
+namespace EkmPHP\API;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Mrstebo\EkmPHP\ApiException;
-use Mrstebo\EkmPHP\Configuration;
-use Mrstebo\EkmPHP\HeaderSelector;
-use Mrstebo\EkmPHP\ObjectSerializer;
+use EkmPHP\ApiException;
+use EkmPHP\Configuration;
+use EkmPHP\HeaderSelector;
+use EkmPHP\ObjectSerializer;
 
 /**
  * TaxApi Class Doc Comment
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -120,11 +120,11 @@ class TaxApi
      *
      * Add a Tax Rate
      *
-     * @param  \Mrstebo\EkmPHP\Models\TaxRateModel $taxRateModel taxRateModel (optional)
+     * @param  \EkmPHP\Models\TaxRateModel $taxRateModel taxRateModel (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseTaxRateModel|\EkmPHP\Models\TempestResponseTempestValidationError|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function taxCreateTaxRate($taxRateModel = null)
     {
@@ -137,11 +137,11 @@ class TaxApi
      *
      * Add a Tax Rate
      *
-     * @param  \Mrstebo\EkmPHP\Models\TaxRateModel $taxRateModel (optional)
+     * @param  \EkmPHP\Models\TaxRateModel $taxRateModel (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseTaxRateModel|\EkmPHP\Models\TempestResponseTempestValidationError|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function taxCreateTaxRateWithHttpInfo($taxRateModel = null)
     {
@@ -177,44 +177,44 @@ class TaxApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTaxRateModel' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTaxRateModel', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel';
+            $returnType = '\EkmPHP\Models\TempestResponseTaxRateModel';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -232,7 +232,7 @@ class TaxApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel',
+                        '\EkmPHP\Models\TempestResponseTaxRateModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -240,7 +240,7 @@ class TaxApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -248,7 +248,7 @@ class TaxApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -263,7 +263,7 @@ class TaxApi
      *
      * Add a Tax Rate
      *
-     * @param  \Mrstebo\EkmPHP\Models\TaxRateModel $taxRateModel (optional)
+     * @param  \EkmPHP\Models\TaxRateModel $taxRateModel (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -283,14 +283,14 @@ class TaxApi
      *
      * Add a Tax Rate
      *
-     * @param  \Mrstebo\EkmPHP\Models\TaxRateModel $taxRateModel (optional)
+     * @param  \EkmPHP\Models\TaxRateModel $taxRateModel (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function taxCreateTaxRateAsyncWithHttpInfo($taxRateModel = null)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel';
+        $returnType = '\EkmPHP\Models\TempestResponseTaxRateModel';
         $request = $this->taxCreateTaxRateRequest($taxRateModel);
 
         return $this->client
@@ -329,7 +329,7 @@ class TaxApi
     /**
      * Create request for operation 'taxCreateTaxRate'
      *
-     * @param  \Mrstebo\EkmPHP\Models\TaxRateModel $taxRateModel (optional)
+     * @param  \EkmPHP\Models\TaxRateModel $taxRateModel (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -422,9 +422,9 @@ class TaxApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseTaxRateModel|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function taxDeleteTaxRate($id)
     {
@@ -439,9 +439,9 @@ class TaxApi
      *
      * @param  int $id (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseTaxRateModel|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function taxDeleteTaxRateWithHttpInfo($id)
     {
@@ -477,32 +477,32 @@ class TaxApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTaxRateModel' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTaxRateModel', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel';
+            $returnType = '\EkmPHP\Models\TempestResponseTaxRateModel';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -520,7 +520,7 @@ class TaxApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel',
+                        '\EkmPHP\Models\TempestResponseTaxRateModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -528,7 +528,7 @@ class TaxApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -570,7 +570,7 @@ class TaxApi
      */
     public function taxDeleteTaxRateAsyncWithHttpInfo($id)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel';
+        $returnType = '\EkmPHP\Models\TempestResponseTaxRateModel';
         $request = $this->taxDeleteTaxRateRequest($id);
 
         return $this->client
@@ -710,9 +710,9 @@ class TaxApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel
+     * @return \EkmPHP\Models\TempestResponseTaxRateModel
      */
     public function taxGetTaxRate($id)
     {
@@ -727,9 +727,9 @@ class TaxApi
      *
      * @param  int $id (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseTaxRateModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function taxGetTaxRateWithHttpInfo($id)
     {
@@ -765,20 +765,20 @@ class TaxApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTaxRateModel' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTaxRateModel', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel';
+            $returnType = '\EkmPHP\Models\TempestResponseTaxRateModel';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -796,7 +796,7 @@ class TaxApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel',
+                        '\EkmPHP\Models\TempestResponseTaxRateModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -838,7 +838,7 @@ class TaxApi
      */
     public function taxGetTaxRateAsyncWithHttpInfo($id)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel';
+        $returnType = '\EkmPHP\Models\TempestResponseTaxRateModel';
         $request = $this->taxGetTaxRateRequest($id);
 
         return $this->client
@@ -977,9 +977,9 @@ class TaxApi
      * Get a list of Tax Rates
      *
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseListTaxRateModel
+     * @return \EkmPHP\Models\TempestResponseListTaxRateModel
      */
     public function taxGetTaxRates()
     {
@@ -993,9 +993,9 @@ class TaxApi
      * Get a list of Tax Rates
      *
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseListTaxRateModel, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseListTaxRateModel, HTTP status code, HTTP response headers (array of strings)
      */
     public function taxGetTaxRatesWithHttpInfo()
     {
@@ -1031,20 +1031,20 @@ class TaxApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseListTaxRateModel' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseListTaxRateModel' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseListTaxRateModel', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseListTaxRateModel', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseListTaxRateModel';
+            $returnType = '\EkmPHP\Models\TempestResponseListTaxRateModel';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1062,7 +1062,7 @@ class TaxApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseListTaxRateModel',
+                        '\EkmPHP\Models\TempestResponseListTaxRateModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1102,7 +1102,7 @@ class TaxApi
      */
     public function taxGetTaxRatesAsyncWithHttpInfo()
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseListTaxRateModel';
+        $returnType = '\EkmPHP\Models\TempestResponseListTaxRateModel';
         $request = $this->taxGetTaxRatesRequest();
 
         return $this->client
@@ -1226,9 +1226,9 @@ class TaxApi
      * Get the current Tax Settings
      *
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseTaxSettings|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseTaxSettings|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function taxGetTaxSettings()
     {
@@ -1242,9 +1242,9 @@ class TaxApi
      * Get the current Tax Settings
      *
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseTaxSettings|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseTaxSettings|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function taxGetTaxSettingsWithHttpInfo()
     {
@@ -1280,32 +1280,32 @@ class TaxApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTaxSettings' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTaxSettings' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTaxSettings', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTaxSettings', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseTaxSettings';
+            $returnType = '\EkmPHP\Models\TempestResponseTaxSettings';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1323,7 +1323,7 @@ class TaxApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTaxSettings',
+                        '\EkmPHP\Models\TempestResponseTaxSettings',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1331,7 +1331,7 @@ class TaxApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1371,7 +1371,7 @@ class TaxApi
      */
     public function taxGetTaxSettingsAsyncWithHttpInfo()
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseTaxSettings';
+        $returnType = '\EkmPHP\Models\TempestResponseTaxSettings';
         $request = $this->taxGetTaxSettingsRequest();
 
         return $this->client
@@ -1495,11 +1495,11 @@ class TaxApi
      * Update a Tax Rate
      *
      * @param  int $id id (required)
-     * @param  \Mrstebo\EkmPHP\Models\TaxRateModel $taxRateModel taxRateModel (optional)
+     * @param  \EkmPHP\Models\TaxRateModel $taxRateModel taxRateModel (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseTaxRateModel|\EkmPHP\Models\TempestResponseTempestValidationError|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function taxUpdateTaxRate($id, $taxRateModel = null)
     {
@@ -1513,11 +1513,11 @@ class TaxApi
      * Update a Tax Rate
      *
      * @param  int $id (required)
-     * @param  \Mrstebo\EkmPHP\Models\TaxRateModel $taxRateModel (optional)
+     * @param  \EkmPHP\Models\TaxRateModel $taxRateModel (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseTaxRateModel|\EkmPHP\Models\TempestResponseTempestValidationError|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function taxUpdateTaxRateWithHttpInfo($id, $taxRateModel = null)
     {
@@ -1553,44 +1553,44 @@ class TaxApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTaxRateModel' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTaxRateModel', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel';
+            $returnType = '\EkmPHP\Models\TempestResponseTaxRateModel';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1608,7 +1608,7 @@ class TaxApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel',
+                        '\EkmPHP\Models\TempestResponseTaxRateModel',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1616,7 +1616,7 @@ class TaxApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1624,7 +1624,7 @@ class TaxApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1640,7 +1640,7 @@ class TaxApi
      * Update a Tax Rate
      *
      * @param  int $id (required)
-     * @param  \Mrstebo\EkmPHP\Models\TaxRateModel $taxRateModel (optional)
+     * @param  \EkmPHP\Models\TaxRateModel $taxRateModel (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1661,14 +1661,14 @@ class TaxApi
      * Update a Tax Rate
      *
      * @param  int $id (required)
-     * @param  \Mrstebo\EkmPHP\Models\TaxRateModel $taxRateModel (optional)
+     * @param  \EkmPHP\Models\TaxRateModel $taxRateModel (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function taxUpdateTaxRateAsyncWithHttpInfo($id, $taxRateModel = null)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseTaxRateModel';
+        $returnType = '\EkmPHP\Models\TempestResponseTaxRateModel';
         $request = $this->taxUpdateTaxRateRequest($id, $taxRateModel);
 
         return $this->client
@@ -1708,7 +1708,7 @@ class TaxApi
      * Create request for operation 'taxUpdateTaxRate'
      *
      * @param  int $id (required)
-     * @param  \Mrstebo\EkmPHP\Models\TaxRateModel $taxRateModel (optional)
+     * @param  \EkmPHP\Models\TaxRateModel $taxRateModel (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1813,11 +1813,11 @@ class TaxApi
      *
      * Update the current Tax Settings
      *
-     * @param  \Mrstebo\EkmPHP\Models\TaxSettings $taxSettings taxSettings (optional)
+     * @param  \EkmPHP\Models\TaxSettings $taxSettings taxSettings (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseTaxSettings|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseTaxSettings|\EkmPHP\Models\TempestResponseTempestValidationError|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function taxUpdateTaxSettings($taxSettings = null)
     {
@@ -1830,11 +1830,11 @@ class TaxApi
      *
      * Update the current Tax Settings
      *
-     * @param  \Mrstebo\EkmPHP\Models\TaxSettings $taxSettings (optional)
+     * @param  \EkmPHP\Models\TaxSettings $taxSettings (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseTaxSettings|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseTaxSettings|\EkmPHP\Models\TempestResponseTempestValidationError|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function taxUpdateTaxSettingsWithHttpInfo($taxSettings = null)
     {
@@ -1870,44 +1870,44 @@ class TaxApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTaxSettings' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTaxSettings' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTaxSettings', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTaxSettings', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseTaxSettings';
+            $returnType = '\EkmPHP\Models\TempestResponseTaxSettings';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1925,7 +1925,7 @@ class TaxApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTaxSettings',
+                        '\EkmPHP\Models\TempestResponseTaxSettings',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1933,7 +1933,7 @@ class TaxApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1941,7 +1941,7 @@ class TaxApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1956,7 +1956,7 @@ class TaxApi
      *
      * Update the current Tax Settings
      *
-     * @param  \Mrstebo\EkmPHP\Models\TaxSettings $taxSettings (optional)
+     * @param  \EkmPHP\Models\TaxSettings $taxSettings (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1976,14 +1976,14 @@ class TaxApi
      *
      * Update the current Tax Settings
      *
-     * @param  \Mrstebo\EkmPHP\Models\TaxSettings $taxSettings (optional)
+     * @param  \EkmPHP\Models\TaxSettings $taxSettings (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function taxUpdateTaxSettingsAsyncWithHttpInfo($taxSettings = null)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseTaxSettings';
+        $returnType = '\EkmPHP\Models\TempestResponseTaxSettings';
         $request = $this->taxUpdateTaxSettingsRequest($taxSettings);
 
         return $this->client
@@ -2022,7 +2022,7 @@ class TaxApi
     /**
      * Create request for operation 'taxUpdateTaxSettings'
      *
-     * @param  \Mrstebo\EkmPHP\Models\TaxSettings $taxSettings (optional)
+     * @param  \EkmPHP\Models\TaxSettings $taxSettings (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

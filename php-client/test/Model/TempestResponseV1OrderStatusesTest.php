@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,7 +27,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Mrstebo\EkmPHP\Test\Model;
+namespace EkmPHP\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -36,7 +36,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description TempestResponseV1OrderStatuses
- * @package     Mrstebo\EkmPHP
+ * @package     EkmPHP
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */

@@ -4,7 +4,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Mrstebo\EkmPHP\API;
+namespace EkmPHP\API;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Mrstebo\EkmPHP\ApiException;
-use Mrstebo\EkmPHP\Configuration;
-use Mrstebo\EkmPHP\HeaderSelector;
-use Mrstebo\EkmPHP\ObjectSerializer;
+use EkmPHP\ApiException;
+use EkmPHP\Configuration;
+use EkmPHP\HeaderSelector;
+use EkmPHP\ObjectSerializer;
 
 /**
  * CustomersApi Class Doc Comment
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -120,11 +120,11 @@ class CustomersApi
      *
      * Add a customer
      *
-     * @param  \Mrstebo\EkmPHP\Models\V1AddCustomer $v1AddCustomer v1AddCustomer (optional)
+     * @param  \EkmPHP\Models\V1AddCustomer $v1AddCustomer v1AddCustomer (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseV1Customer|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseV1Customer|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function customersCreate($v1AddCustomer = null)
     {
@@ -137,11 +137,11 @@ class CustomersApi
      *
      * Add a customer
      *
-     * @param  \Mrstebo\EkmPHP\Models\V1AddCustomer $v1AddCustomer (optional)
+     * @param  \EkmPHP\Models\V1AddCustomer $v1AddCustomer (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseV1Customer|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseV1Customer|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function customersCreateWithHttpInfo($v1AddCustomer = null)
     {
@@ -177,32 +177,32 @@ class CustomersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV1Customer' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV1Customer' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV1Customer', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV1Customer', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1Customer';
+            $returnType = '\EkmPHP\Models\TempestResponseV1Customer';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -220,7 +220,7 @@ class CustomersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV1Customer',
+                        '\EkmPHP\Models\TempestResponseV1Customer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -228,7 +228,7 @@ class CustomersApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -243,7 +243,7 @@ class CustomersApi
      *
      * Add a customer
      *
-     * @param  \Mrstebo\EkmPHP\Models\V1AddCustomer $v1AddCustomer (optional)
+     * @param  \EkmPHP\Models\V1AddCustomer $v1AddCustomer (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -263,14 +263,14 @@ class CustomersApi
      *
      * Add a customer
      *
-     * @param  \Mrstebo\EkmPHP\Models\V1AddCustomer $v1AddCustomer (optional)
+     * @param  \EkmPHP\Models\V1AddCustomer $v1AddCustomer (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function customersCreateAsyncWithHttpInfo($v1AddCustomer = null)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1Customer';
+        $returnType = '\EkmPHP\Models\TempestResponseV1Customer';
         $request = $this->customersCreateRequest($v1AddCustomer);
 
         return $this->client
@@ -309,7 +309,7 @@ class CustomersApi
     /**
      * Create request for operation 'customersCreate'
      *
-     * @param  \Mrstebo\EkmPHP\Models\V1AddCustomer $v1AddCustomer (optional)
+     * @param  \EkmPHP\Models\V1AddCustomer $v1AddCustomer (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -402,9 +402,9 @@ class CustomersApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseV1Customer|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseV1Customer|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function customersDelete($id)
     {
@@ -419,9 +419,9 @@ class CustomersApi
      *
      * @param  int $id (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseV1Customer|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseV1Customer|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function customersDeleteWithHttpInfo($id)
     {
@@ -457,32 +457,32 @@ class CustomersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV1Customer' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV1Customer' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV1Customer', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV1Customer', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1Customer';
+            $returnType = '\EkmPHP\Models\TempestResponseV1Customer';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -500,7 +500,7 @@ class CustomersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV1Customer',
+                        '\EkmPHP\Models\TempestResponseV1Customer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -508,7 +508,7 @@ class CustomersApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -550,7 +550,7 @@ class CustomersApi
      */
     public function customersDeleteAsyncWithHttpInfo($id)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1Customer';
+        $returnType = '\EkmPHP\Models\TempestResponseV1Customer';
         $request = $this->customersDeleteRequest($id);
 
         return $this->client
@@ -691,9 +691,9 @@ class CustomersApi
      * @param  int $page Page number to display (optional)
      * @param  int $limit Items per page (maximum 20) (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseListV1Customer
+     * @return \EkmPHP\Models\TempestResponseListV1Customer
      */
     public function customersGetAll($page = null, $limit = null)
     {
@@ -709,9 +709,9 @@ class CustomersApi
      * @param  int $page Page number to display (optional)
      * @param  int $limit Items per page (maximum 20) (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseListV1Customer, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseListV1Customer, HTTP status code, HTTP response headers (array of strings)
      */
     public function customersGetAllWithHttpInfo($page = null, $limit = null)
     {
@@ -747,20 +747,20 @@ class CustomersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseListV1Customer' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseListV1Customer' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseListV1Customer', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseListV1Customer', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseListV1Customer';
+            $returnType = '\EkmPHP\Models\TempestResponseListV1Customer';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -778,7 +778,7 @@ class CustomersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseListV1Customer',
+                        '\EkmPHP\Models\TempestResponseListV1Customer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -822,7 +822,7 @@ class CustomersApi
      */
     public function customersGetAllAsyncWithHttpInfo($page = null, $limit = null)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseListV1Customer';
+        $returnType = '\EkmPHP\Models\TempestResponseListV1Customer';
         $request = $this->customersGetAllRequest($page, $limit);
 
         return $this->client
@@ -971,9 +971,9 @@ class CustomersApi
      *
      * @param  int $id The Customers Id (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseV1Customer|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseV1Customer|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function customersGetById($id)
     {
@@ -988,9 +988,9 @@ class CustomersApi
      *
      * @param  int $id The Customers Id (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseV1Customer|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseV1Customer|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function customersGetByIdWithHttpInfo($id)
     {
@@ -1026,32 +1026,32 @@ class CustomersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV1Customer' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV1Customer' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV1Customer', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV1Customer', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1Customer';
+            $returnType = '\EkmPHP\Models\TempestResponseV1Customer';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1069,7 +1069,7 @@ class CustomersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV1Customer',
+                        '\EkmPHP\Models\TempestResponseV1Customer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1077,7 +1077,7 @@ class CustomersApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1119,7 +1119,7 @@ class CustomersApi
      */
     public function customersGetByIdAsyncWithHttpInfo($id)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1Customer';
+        $returnType = '\EkmPHP\Models\TempestResponseV1Customer';
         $request = $this->customersGetByIdRequest($id);
 
         return $this->client
@@ -1262,9 +1262,9 @@ class CustomersApi
      * @param  string $query A &lt;a href&#x3D;\&quot;#tag/OData\&quot; target&#x3D;\&quot;_blank\&quot;&gt;search&lt;/a&gt; query e.g. email_address eq &#39;test@ekm.com&#39; (optional)
      * @param  string $orderby Field to order results. Prefix with a - (dash) for descending e.g. -id (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseListV1Customer|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseListV1Customer|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function customersSearch($page = null, $limit = null, $query = null, $orderby = null)
     {
@@ -1282,9 +1282,9 @@ class CustomersApi
      * @param  string $query A &lt;a href&#x3D;\&quot;#tag/OData\&quot; target&#x3D;\&quot;_blank\&quot;&gt;search&lt;/a&gt; query e.g. email_address eq &#39;test@ekm.com&#39; (optional)
      * @param  string $orderby Field to order results. Prefix with a - (dash) for descending e.g. -id (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseListV1Customer|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseListV1Customer|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function customersSearchWithHttpInfo($page = null, $limit = null, $query = null, $orderby = null)
     {
@@ -1320,32 +1320,32 @@ class CustomersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseListV1Customer' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseListV1Customer' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseListV1Customer', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseListV1Customer', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseListV1Customer';
+            $returnType = '\EkmPHP\Models\TempestResponseListV1Customer';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1363,7 +1363,7 @@ class CustomersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseListV1Customer',
+                        '\EkmPHP\Models\TempestResponseListV1Customer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1371,7 +1371,7 @@ class CustomersApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1419,7 +1419,7 @@ class CustomersApi
      */
     public function customersSearchAsyncWithHttpInfo($page = null, $limit = null, $query = null, $orderby = null)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseListV1Customer';
+        $returnType = '\EkmPHP\Models\TempestResponseListV1Customer';
         $request = $this->customersSearchRequest($page, $limit, $query, $orderby);
 
         return $this->client
@@ -1591,11 +1591,11 @@ class CustomersApi
      * Update a Customer
      *
      * @param  int $id id (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1UpdateCustomer $v1UpdateCustomer v1UpdateCustomer (optional)
+     * @param  \EkmPHP\Models\V1UpdateCustomer $v1UpdateCustomer v1UpdateCustomer (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseV1Customer|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseV1Customer|\EkmPHP\Models\TempestResponseTempestValidationError|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function customersUpdate($id, $v1UpdateCustomer = null)
     {
@@ -1609,11 +1609,11 @@ class CustomersApi
      * Update a Customer
      *
      * @param  int $id (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1UpdateCustomer $v1UpdateCustomer (optional)
+     * @param  \EkmPHP\Models\V1UpdateCustomer $v1UpdateCustomer (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseV1Customer|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseV1Customer|\EkmPHP\Models\TempestResponseTempestValidationError|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function customersUpdateWithHttpInfo($id, $v1UpdateCustomer = null)
     {
@@ -1649,44 +1649,44 @@ class CustomersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV1Customer' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV1Customer' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV1Customer', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV1Customer', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1Customer';
+            $returnType = '\EkmPHP\Models\TempestResponseV1Customer';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1704,7 +1704,7 @@ class CustomersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV1Customer',
+                        '\EkmPHP\Models\TempestResponseV1Customer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1712,7 +1712,7 @@ class CustomersApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1720,7 +1720,7 @@ class CustomersApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1736,7 +1736,7 @@ class CustomersApi
      * Update a Customer
      *
      * @param  int $id (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1UpdateCustomer $v1UpdateCustomer (optional)
+     * @param  \EkmPHP\Models\V1UpdateCustomer $v1UpdateCustomer (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1757,14 +1757,14 @@ class CustomersApi
      * Update a Customer
      *
      * @param  int $id (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1UpdateCustomer $v1UpdateCustomer (optional)
+     * @param  \EkmPHP\Models\V1UpdateCustomer $v1UpdateCustomer (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function customersUpdateAsyncWithHttpInfo($id, $v1UpdateCustomer = null)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1Customer';
+        $returnType = '\EkmPHP\Models\TempestResponseV1Customer';
         $request = $this->customersUpdateRequest($id, $v1UpdateCustomer);
 
         return $this->client
@@ -1804,7 +1804,7 @@ class CustomersApi
      * Create request for operation 'customersUpdate'
      *
      * @param  int $id (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1UpdateCustomer $v1UpdateCustomer (optional)
+     * @param  \EkmPHP\Models\V1UpdateCustomer $v1UpdateCustomer (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

@@ -4,7 +4,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Mrstebo\EkmPHP\API;
+namespace EkmPHP\API;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Mrstebo\EkmPHP\ApiException;
-use Mrstebo\EkmPHP\Configuration;
-use Mrstebo\EkmPHP\HeaderSelector;
-use Mrstebo\EkmPHP\ObjectSerializer;
+use EkmPHP\ApiException;
+use EkmPHP\Configuration;
+use EkmPHP\HeaderSelector;
+use EkmPHP\ObjectSerializer;
 
 /**
  * ProductAttributeItemsApi Class Doc Comment
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -121,11 +121,11 @@ class ProductAttributeItemsApi
      * Add a attribute item to a product
      *
      * @param  int $id The product ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1ProductAttributeItem $v1ProductAttributeItem The product attribute item to add (optional)
+     * @param  \EkmPHP\Models\V1ProductAttributeItem $v1ProductAttributeItem The product attribute item to add (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem|\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseV1ProductAttributeItem|\EkmPHP\Models\TempestResponseV1ProductAttributeItem|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function productAttributeItemsCreate($id, $v1ProductAttributeItem = null)
     {
@@ -139,11 +139,11 @@ class ProductAttributeItemsApi
      * Add a attribute item to a product
      *
      * @param  int $id The product ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1ProductAttributeItem $v1ProductAttributeItem The product attribute item to add (optional)
+     * @param  \EkmPHP\Models\V1ProductAttributeItem $v1ProductAttributeItem The product attribute item to add (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem|\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseV1ProductAttributeItem|\EkmPHP\Models\TempestResponseV1ProductAttributeItem|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function productAttributeItemsCreateWithHttpInfo($id, $v1ProductAttributeItem = null)
     {
@@ -179,44 +179,44 @@ class ProductAttributeItemsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV1ProductAttributeItem' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV1ProductAttributeItem', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV1ProductAttributeItem' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV1ProductAttributeItem', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem';
+            $returnType = '\EkmPHP\Models\TempestResponseV1ProductAttributeItem';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -234,7 +234,7 @@ class ProductAttributeItemsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem',
+                        '\EkmPHP\Models\TempestResponseV1ProductAttributeItem',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -242,7 +242,7 @@ class ProductAttributeItemsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem',
+                        '\EkmPHP\Models\TempestResponseV1ProductAttributeItem',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -250,7 +250,7 @@ class ProductAttributeItemsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -266,7 +266,7 @@ class ProductAttributeItemsApi
      * Add a attribute item to a product
      *
      * @param  int $id The product ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1ProductAttributeItem $v1ProductAttributeItem The product attribute item to add (optional)
+     * @param  \EkmPHP\Models\V1ProductAttributeItem $v1ProductAttributeItem The product attribute item to add (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -287,14 +287,14 @@ class ProductAttributeItemsApi
      * Add a attribute item to a product
      *
      * @param  int $id The product ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1ProductAttributeItem $v1ProductAttributeItem The product attribute item to add (optional)
+     * @param  \EkmPHP\Models\V1ProductAttributeItem $v1ProductAttributeItem The product attribute item to add (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function productAttributeItemsCreateAsyncWithHttpInfo($id, $v1ProductAttributeItem = null)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem';
+        $returnType = '\EkmPHP\Models\TempestResponseV1ProductAttributeItem';
         $request = $this->productAttributeItemsCreateRequest($id, $v1ProductAttributeItem);
 
         return $this->client
@@ -334,7 +334,7 @@ class ProductAttributeItemsApi
      * Create request for operation 'productAttributeItemsCreate'
      *
      * @param  int $id The product ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1ProductAttributeItem $v1ProductAttributeItem The product attribute item to add (optional)
+     * @param  \EkmPHP\Models\V1ProductAttributeItem $v1ProductAttributeItem The product attribute item to add (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -442,9 +442,9 @@ class ProductAttributeItemsApi
      * @param  int $id The product ID (required)
      * @param  int $attributeKey The attribute item key (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseV1ProductAttributeItem|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function productAttributeItemsGet($id, $attributeKey)
     {
@@ -460,9 +460,9 @@ class ProductAttributeItemsApi
      * @param  int $id The product ID (required)
      * @param  int $attributeKey The attribute item key (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseV1ProductAttributeItem|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function productAttributeItemsGetWithHttpInfo($id, $attributeKey)
     {
@@ -498,32 +498,32 @@ class ProductAttributeItemsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV1ProductAttributeItem' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV1ProductAttributeItem', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem';
+            $returnType = '\EkmPHP\Models\TempestResponseV1ProductAttributeItem';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -541,7 +541,7 @@ class ProductAttributeItemsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem',
+                        '\EkmPHP\Models\TempestResponseV1ProductAttributeItem',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -549,7 +549,7 @@ class ProductAttributeItemsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -593,7 +593,7 @@ class ProductAttributeItemsApi
      */
     public function productAttributeItemsGetAsyncWithHttpInfo($id, $attributeKey)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem';
+        $returnType = '\EkmPHP\Models\TempestResponseV1ProductAttributeItem';
         $request = $this->productAttributeItemsGetRequest($id, $attributeKey);
 
         return $this->client
@@ -748,9 +748,9 @@ class ProductAttributeItemsApi
      *
      * @param  int $id The product ID (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseListV1ProductAttributeItem|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseListV1ProductAttributeItem|\EkmPHP\Models\TempestResponseTempestValidationError|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function productAttributeItemsGetAll($id)
     {
@@ -765,9 +765,9 @@ class ProductAttributeItemsApi
      *
      * @param  int $id The product ID (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseListV1ProductAttributeItem|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseListV1ProductAttributeItem|\EkmPHP\Models\TempestResponseTempestValidationError|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function productAttributeItemsGetAllWithHttpInfo($id)
     {
@@ -803,44 +803,44 @@ class ProductAttributeItemsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseListV1ProductAttributeItem' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseListV1ProductAttributeItem' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseListV1ProductAttributeItem', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseListV1ProductAttributeItem', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseListV1ProductAttributeItem';
+            $returnType = '\EkmPHP\Models\TempestResponseListV1ProductAttributeItem';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -858,7 +858,7 @@ class ProductAttributeItemsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseListV1ProductAttributeItem',
+                        '\EkmPHP\Models\TempestResponseListV1ProductAttributeItem',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -866,7 +866,7 @@ class ProductAttributeItemsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -874,7 +874,7 @@ class ProductAttributeItemsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -916,7 +916,7 @@ class ProductAttributeItemsApi
      */
     public function productAttributeItemsGetAllAsyncWithHttpInfo($id)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseListV1ProductAttributeItem';
+        $returnType = '\EkmPHP\Models\TempestResponseListV1ProductAttributeItem';
         $request = $this->productAttributeItemsGetAllRequest($id);
 
         return $this->client
@@ -1056,11 +1056,11 @@ class ProductAttributeItemsApi
      *
      * @param  int $id The product ID (required)
      * @param  int $attributeKey The attribute ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1ProductAttributeItem $v1ProductAttributeItem The product attribute item to update (optional)
+     * @param  \EkmPHP\Models\V1ProductAttributeItem $v1ProductAttributeItem The product attribute item to update (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem|\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseV1ProductAttributeItem|\EkmPHP\Models\TempestResponseV1ProductAttributeItem|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function productAttributeItemsUpdate($id, $attributeKey, $v1ProductAttributeItem = null)
     {
@@ -1075,11 +1075,11 @@ class ProductAttributeItemsApi
      *
      * @param  int $id The product ID (required)
      * @param  int $attributeKey The attribute ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1ProductAttributeItem $v1ProductAttributeItem The product attribute item to update (optional)
+     * @param  \EkmPHP\Models\V1ProductAttributeItem $v1ProductAttributeItem The product attribute item to update (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem|\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseV1ProductAttributeItem|\EkmPHP\Models\TempestResponseV1ProductAttributeItem|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function productAttributeItemsUpdateWithHttpInfo($id, $attributeKey, $v1ProductAttributeItem = null)
     {
@@ -1115,44 +1115,44 @@ class ProductAttributeItemsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV1ProductAttributeItem' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV1ProductAttributeItem', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV1ProductAttributeItem' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV1ProductAttributeItem', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem';
+            $returnType = '\EkmPHP\Models\TempestResponseV1ProductAttributeItem';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1170,7 +1170,7 @@ class ProductAttributeItemsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem',
+                        '\EkmPHP\Models\TempestResponseV1ProductAttributeItem',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1178,7 +1178,7 @@ class ProductAttributeItemsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem',
+                        '\EkmPHP\Models\TempestResponseV1ProductAttributeItem',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1186,7 +1186,7 @@ class ProductAttributeItemsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1203,7 +1203,7 @@ class ProductAttributeItemsApi
      *
      * @param  int $id The product ID (required)
      * @param  int $attributeKey The attribute ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1ProductAttributeItem $v1ProductAttributeItem The product attribute item to update (optional)
+     * @param  \EkmPHP\Models\V1ProductAttributeItem $v1ProductAttributeItem The product attribute item to update (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1225,14 +1225,14 @@ class ProductAttributeItemsApi
      *
      * @param  int $id The product ID (required)
      * @param  int $attributeKey The attribute ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1ProductAttributeItem $v1ProductAttributeItem The product attribute item to update (optional)
+     * @param  \EkmPHP\Models\V1ProductAttributeItem $v1ProductAttributeItem The product attribute item to update (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function productAttributeItemsUpdateAsyncWithHttpInfo($id, $attributeKey, $v1ProductAttributeItem = null)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem';
+        $returnType = '\EkmPHP\Models\TempestResponseV1ProductAttributeItem';
         $request = $this->productAttributeItemsUpdateRequest($id, $attributeKey, $v1ProductAttributeItem);
 
         return $this->client
@@ -1273,7 +1273,7 @@ class ProductAttributeItemsApi
      *
      * @param  int $id The product ID (required)
      * @param  int $attributeKey The attribute ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1ProductAttributeItem $v1ProductAttributeItem The product attribute item to update (optional)
+     * @param  \EkmPHP\Models\V1ProductAttributeItem $v1ProductAttributeItem The product attribute item to update (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

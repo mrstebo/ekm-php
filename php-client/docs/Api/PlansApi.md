@@ -1,4 +1,4 @@
-# Mrstebo\EkmPHP\PlansApi
+# EkmPHP\PlansApi
 
 All URIs are relative to https://api.ekm.net.
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 ## `plansGetAll()`
 
 ```php
-plansGetAll(): \Mrstebo\EkmPHP\Models\TempestResponseListPlan
+plansGetAll(): \EkmPHP\Models\TempestResponseListPlan
 ```
 
 Get all plans
@@ -25,10 +25,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\PlansApi(
+$apiInstance = new EkmPHP\Api\PlansApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -49,7 +49,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseListPlan**](../Model/TempestResponseListPlan.md)
+[**\EkmPHP\Models\TempestResponseListPlan**](../Model/TempestResponseListPlan.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ This endpoint does not need any parameter.
 ## `plansGetById()`
 
 ```php
-plansGetById($id): \Mrstebo\EkmPHP\Models\TempestResponsePlan
+plansGetById($id): \EkmPHP\Models\TempestResponsePlan
 ```
 
 Get a plan by id
@@ -80,10 +80,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\PlansApi(
+$apiInstance = new EkmPHP\Api\PlansApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponsePlan**](../Model/TempestResponsePlan.md)
+[**\EkmPHP\Models\TempestResponsePlan**](../Model/TempestResponsePlan.md)
 
 ### Authorization
 
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 ## `plansGetCurrent()`
 
 ```php
-plansGetCurrent(): \Mrstebo\EkmPHP\Models\TempestResponsePlan
+plansGetCurrent(): \EkmPHP\Models\TempestResponsePlan
 ```
 
 Get the current users plan
@@ -138,10 +138,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\PlansApi(
+$apiInstance = new EkmPHP\Api\PlansApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -162,7 +162,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponsePlan**](../Model/TempestResponsePlan.md)
+[**\EkmPHP\Models\TempestResponsePlan**](../Model/TempestResponsePlan.md)
 
 ### Authorization
 

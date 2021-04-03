@@ -4,7 +4,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Mrstebo\EkmPHP\API;
+namespace EkmPHP\API;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Mrstebo\EkmPHP\ApiException;
-use Mrstebo\EkmPHP\Configuration;
-use Mrstebo\EkmPHP\HeaderSelector;
-use Mrstebo\EkmPHP\ObjectSerializer;
+use EkmPHP\ApiException;
+use EkmPHP\Configuration;
+use EkmPHP\HeaderSelector;
+use EkmPHP\ObjectSerializer;
 
 /**
  * ProductOptionsApi Class Doc Comment
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -121,11 +121,11 @@ class ProductOptionsApi
      * Add an option to a product
      *
      * @param  int $id The product ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1AddProductOption $v1AddProductOption v1AddProductOption (optional)
+     * @param  \EkmPHP\Models\V1AddProductOption $v1AddProductOption v1AddProductOption (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption|\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseV1ProductOption|\EkmPHP\Models\TempestResponseV1ProductOption|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function productOptionsCreate($id, $v1AddProductOption = null)
     {
@@ -139,11 +139,11 @@ class ProductOptionsApi
      * Add an option to a product
      *
      * @param  int $id The product ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1AddProductOption $v1AddProductOption (optional)
+     * @param  \EkmPHP\Models\V1AddProductOption $v1AddProductOption (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption|\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseV1ProductOption|\EkmPHP\Models\TempestResponseV1ProductOption|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function productOptionsCreateWithHttpInfo($id, $v1AddProductOption = null)
     {
@@ -179,44 +179,44 @@ class ProductOptionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV1ProductOption' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV1ProductOption', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV1ProductOption' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV1ProductOption', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption';
+            $returnType = '\EkmPHP\Models\TempestResponseV1ProductOption';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -234,7 +234,7 @@ class ProductOptionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption',
+                        '\EkmPHP\Models\TempestResponseV1ProductOption',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -242,7 +242,7 @@ class ProductOptionsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption',
+                        '\EkmPHP\Models\TempestResponseV1ProductOption',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -250,7 +250,7 @@ class ProductOptionsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -266,7 +266,7 @@ class ProductOptionsApi
      * Add an option to a product
      *
      * @param  int $id The product ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1AddProductOption $v1AddProductOption (optional)
+     * @param  \EkmPHP\Models\V1AddProductOption $v1AddProductOption (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -287,14 +287,14 @@ class ProductOptionsApi
      * Add an option to a product
      *
      * @param  int $id The product ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1AddProductOption $v1AddProductOption (optional)
+     * @param  \EkmPHP\Models\V1AddProductOption $v1AddProductOption (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function productOptionsCreateAsyncWithHttpInfo($id, $v1AddProductOption = null)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption';
+        $returnType = '\EkmPHP\Models\TempestResponseV1ProductOption';
         $request = $this->productOptionsCreateRequest($id, $v1AddProductOption);
 
         return $this->client
@@ -334,7 +334,7 @@ class ProductOptionsApi
      * Create request for operation 'productOptionsCreate'
      *
      * @param  int $id The product ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1AddProductOption $v1AddProductOption (optional)
+     * @param  \EkmPHP\Models\V1AddProductOption $v1AddProductOption (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -442,9 +442,9 @@ class ProductOptionsApi
      * @param  int $id The product ID (required)
      * @param  int $optionId The option ID (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseV1ProductOption|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function productOptionsDelete($id, $optionId)
     {
@@ -460,9 +460,9 @@ class ProductOptionsApi
      * @param  int $id The product ID (required)
      * @param  int $optionId The option ID (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseV1ProductOption|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function productOptionsDeleteWithHttpInfo($id, $optionId)
     {
@@ -498,32 +498,32 @@ class ProductOptionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV1ProductOption' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV1ProductOption', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption';
+            $returnType = '\EkmPHP\Models\TempestResponseV1ProductOption';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -541,7 +541,7 @@ class ProductOptionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption',
+                        '\EkmPHP\Models\TempestResponseV1ProductOption',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -549,7 +549,7 @@ class ProductOptionsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -593,7 +593,7 @@ class ProductOptionsApi
      */
     public function productOptionsDeleteAsyncWithHttpInfo($id, $optionId)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption';
+        $returnType = '\EkmPHP\Models\TempestResponseV1ProductOption';
         $request = $this->productOptionsDeleteRequest($id, $optionId);
 
         return $this->client
@@ -749,9 +749,9 @@ class ProductOptionsApi
      * @param  int $id The product ID (required)
      * @param  int $optionId The option ID (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseV1ProductOption|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function productOptionsGet($id, $optionId)
     {
@@ -767,9 +767,9 @@ class ProductOptionsApi
      * @param  int $id The product ID (required)
      * @param  int $optionId The option ID (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseV1ProductOption|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function productOptionsGetWithHttpInfo($id, $optionId)
     {
@@ -805,32 +805,32 @@ class ProductOptionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV1ProductOption' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV1ProductOption', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption';
+            $returnType = '\EkmPHP\Models\TempestResponseV1ProductOption';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -848,7 +848,7 @@ class ProductOptionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption',
+                        '\EkmPHP\Models\TempestResponseV1ProductOption',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -856,7 +856,7 @@ class ProductOptionsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -900,7 +900,7 @@ class ProductOptionsApi
      */
     public function productOptionsGetAsyncWithHttpInfo($id, $optionId)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption';
+        $returnType = '\EkmPHP\Models\TempestResponseV1ProductOption';
         $request = $this->productOptionsGetRequest($id, $optionId);
 
         return $this->client
@@ -1055,9 +1055,9 @@ class ProductOptionsApi
      *
      * @param  int $id The product ID (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseListV1ProductOption|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseListV1ProductOption|\EkmPHP\Models\TempestResponseTempestValidationError|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function productOptionsGetAll($id)
     {
@@ -1072,9 +1072,9 @@ class ProductOptionsApi
      *
      * @param  int $id The product ID (required)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseListV1ProductOption|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseListV1ProductOption|\EkmPHP\Models\TempestResponseTempestValidationError|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function productOptionsGetAllWithHttpInfo($id)
     {
@@ -1110,44 +1110,44 @@ class ProductOptionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseListV1ProductOption' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseListV1ProductOption' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseListV1ProductOption', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseListV1ProductOption', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseListV1ProductOption';
+            $returnType = '\EkmPHP\Models\TempestResponseListV1ProductOption';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1165,7 +1165,7 @@ class ProductOptionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseListV1ProductOption',
+                        '\EkmPHP\Models\TempestResponseListV1ProductOption',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1173,7 +1173,7 @@ class ProductOptionsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1181,7 +1181,7 @@ class ProductOptionsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1223,7 +1223,7 @@ class ProductOptionsApi
      */
     public function productOptionsGetAllAsyncWithHttpInfo($id)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseListV1ProductOption';
+        $returnType = '\EkmPHP\Models\TempestResponseListV1ProductOption';
         $request = $this->productOptionsGetAllRequest($id);
 
         return $this->client
@@ -1363,11 +1363,11 @@ class ProductOptionsApi
      *
      * @param  int $id The product ID (required)
      * @param  int $optionId The option ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1UpdateProductOption $v1UpdateProductOption v1UpdateProductOption (optional)
+     * @param  \EkmPHP\Models\V1UpdateProductOption $v1UpdateProductOption v1UpdateProductOption (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption|\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError
+     * @return \EkmPHP\Models\TempestResponseV1ProductOption|\EkmPHP\Models\TempestResponseV1ProductOption|\EkmPHP\Models\TempestResponseTempestValidationError
      */
     public function productOptionsUpdate($id, $optionId, $v1UpdateProductOption = null)
     {
@@ -1382,11 +1382,11 @@ class ProductOptionsApi
      *
      * @param  int $id The product ID (required)
      * @param  int $optionId The option ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1UpdateProductOption $v1UpdateProductOption (optional)
+     * @param  \EkmPHP\Models\V1UpdateProductOption $v1UpdateProductOption (optional)
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption|\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption|\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseV1ProductOption|\EkmPHP\Models\TempestResponseV1ProductOption|\EkmPHP\Models\TempestResponseTempestValidationError, HTTP status code, HTTP response headers (array of strings)
      */
     public function productOptionsUpdateWithHttpInfo($id, $optionId, $v1UpdateProductOption = null)
     {
@@ -1422,44 +1422,44 @@ class ProductOptionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV1ProductOption' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV1ProductOption', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV1ProductOption' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV1ProductOption', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseTempestValidationError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseTempestValidationError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption';
+            $returnType = '\EkmPHP\Models\TempestResponseV1ProductOption';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1477,7 +1477,7 @@ class ProductOptionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption',
+                        '\EkmPHP\Models\TempestResponseV1ProductOption',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1485,7 +1485,7 @@ class ProductOptionsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption',
+                        '\EkmPHP\Models\TempestResponseV1ProductOption',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1493,7 +1493,7 @@ class ProductOptionsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseTempestValidationError',
+                        '\EkmPHP\Models\TempestResponseTempestValidationError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1510,7 +1510,7 @@ class ProductOptionsApi
      *
      * @param  int $id The product ID (required)
      * @param  int $optionId The option ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1UpdateProductOption $v1UpdateProductOption (optional)
+     * @param  \EkmPHP\Models\V1UpdateProductOption $v1UpdateProductOption (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1532,14 +1532,14 @@ class ProductOptionsApi
      *
      * @param  int $id The product ID (required)
      * @param  int $optionId The option ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1UpdateProductOption $v1UpdateProductOption (optional)
+     * @param  \EkmPHP\Models\V1UpdateProductOption $v1UpdateProductOption (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function productOptionsUpdateAsyncWithHttpInfo($id, $optionId, $v1UpdateProductOption = null)
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1ProductOption';
+        $returnType = '\EkmPHP\Models\TempestResponseV1ProductOption';
         $request = $this->productOptionsUpdateRequest($id, $optionId, $v1UpdateProductOption);
 
         return $this->client
@@ -1580,7 +1580,7 @@ class ProductOptionsApi
      *
      * @param  int $id The product ID (required)
      * @param  int $optionId The option ID (required)
-     * @param  \Mrstebo\EkmPHP\Models\V1UpdateProductOption $v1UpdateProductOption (optional)
+     * @param  \EkmPHP\Models\V1UpdateProductOption $v1UpdateProductOption (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Mrstebo\EkmPHP\Models;
+namespace EkmPHP\Models;
 
 use \ArrayAccess;
-use \Mrstebo\EkmPHP\ObjectSerializer;
+use \EkmPHP\ObjectSerializer;
 
 /**
  * Plan Class Doc Comment
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -64,7 +64,7 @@ class Plan implements ModelInterface, ArrayAccess, \JsonSerializable
         'order' => 'int',
         'friendlyName' => 'string',
         'description' => 'string',
-        'restrictions' => '\Mrstebo\EkmPHP\Models\PlanRestriction[]'
+        'restrictions' => '\EkmPHP\Models\PlanRestriction[]'
     ];
 
     /**
@@ -329,7 +329,7 @@ class Plan implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets restrictions
      *
-     * @return \Mrstebo\EkmPHP\Models\PlanRestriction[]|null
+     * @return \EkmPHP\Models\PlanRestriction[]|null
      */
     public function getRestrictions()
     {
@@ -339,7 +339,7 @@ class Plan implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets restrictions
      *
-     * @param \Mrstebo\EkmPHP\Models\PlanRestriction[]|null $restrictions restrictions
+     * @param \EkmPHP\Models\PlanRestriction[]|null $restrictions restrictions
      *
      * @return self
      */

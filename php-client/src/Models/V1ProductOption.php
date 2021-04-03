@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Mrstebo\EkmPHP\Models;
+namespace EkmPHP\Models;
 
 use \ArrayAccess;
-use \Mrstebo\EkmPHP\ObjectSerializer;
+use \EkmPHP\ObjectSerializer;
 
 /**
  * V1ProductOption Class Doc Comment
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -66,7 +66,7 @@ class V1ProductOption implements ModelInterface, ArrayAccess, \JsonSerializable
         'productId' => 'int',
         'isRequired' => 'bool',
         'type' => 'string',
-        'optionItems' => '\Mrstebo\EkmPHP\Models\V1ProductOptionItem[]'
+        'optionItems' => '\EkmPHP\Models\V1ProductOptionItem[]'
     ];
 
     /**
@@ -411,7 +411,7 @@ class V1ProductOption implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets optionItems
      *
-     * @return \Mrstebo\EkmPHP\Models\V1ProductOptionItem[]|null
+     * @return \EkmPHP\Models\V1ProductOptionItem[]|null
      */
     public function getOptionItems()
     {
@@ -421,7 +421,7 @@ class V1ProductOption implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets optionItems
      *
-     * @param \Mrstebo\EkmPHP\Models\V1ProductOptionItem[]|null $optionItems optionItems
+     * @param \EkmPHP\Models\V1ProductOptionItem[]|null $optionItems optionItems
      *
      * @return self
      */

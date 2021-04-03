@@ -1,6 +1,6 @@
 {
-    "name": "GIT_USER_ID/GIT_REPO_ID",
-    "version": "0.0.1",
+    "name": "mrstebo/ekm-php",
+    "version": "0.0.0",
     "description": "Our new API allows partners to build significantly better integrations with the EKM platform.    To try out the below endpoints, or for full up to date representations of the request / response models, please see the [swagger page](https://api.ekm.net/swagger/index.html). (We display examples here, but the swagger page is guaranteed to show the complete model.)    To keep up to date with the latest updates, please see our [RSS feed](https://partners.ekm.net/ChangeLog/Feed) or the [partner dashboard](https://partners.ekm.net/).",
     "keywords": [
         "openapitools",
@@ -31,9 +31,9 @@
         "friendsofphp/php-cs-fixer": "^2.12"
     },
     "autoload": {
-        "psr-4": { "Mrstebo\\EkmPHP\\" : "src/" }
+        "psr-4": { "EkmPHP\\" : "src/" }
     },
     "autoload-dev": {
-        "psr-4": { "Mrstebo\\EkmPHP\\Test\\" : "test/" }
+        "psr-4": { "EkmPHP\\Test\\" : "test/" }
     }
 }

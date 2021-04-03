@@ -15,6 +15,6 @@ Name | Type | Description | Notes
 **gtin** | **string** |  | [optional]
 **mpn** | **string** |  | [optional]
 **live** | **bool** |  | [optional]
-**variantCombinations** | [**\Mrstebo\EkmPHP\Models\V1VariantCombination[]**](V1VariantCombination.md) |  | [optional]
+**variantCombinations** | [**\EkmPHP\Models\V1VariantCombination[]**](V1VariantCombination.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

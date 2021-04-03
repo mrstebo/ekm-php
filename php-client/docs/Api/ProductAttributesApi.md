@@ -1,4 +1,4 @@
-# Mrstebo\EkmPHP\ProductAttributesApi
+# EkmPHP\ProductAttributesApi
 
 All URIs are relative to https://api.ekm.net.
 
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 ## `productAttributesCreate()`
 
 ```php
-productAttributesCreate($v1ProductAttribute): \Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttribute
+productAttributesCreate($v1ProductAttribute): \EkmPHP\Models\TempestResponseV1ProductAttribute
 ```
 
 Add a product attribute
@@ -27,16 +27,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductAttributesApi(
+$apiInstance = new EkmPHP\Api\ProductAttributesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$v1ProductAttribute = new \Mrstebo\EkmPHP\Models\V1ProductAttribute(); // \Mrstebo\EkmPHP\Models\V1ProductAttribute
+$v1ProductAttribute = new \EkmPHP\Models\V1ProductAttribute(); // \EkmPHP\Models\V1ProductAttribute
 
 try {
     $result = $apiInstance->productAttributesCreate($v1ProductAttribute);
@@ -50,11 +50,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **v1ProductAttribute** | [**\Mrstebo\EkmPHP\Models\V1ProductAttribute**](../Model/V1ProductAttribute.md)|  | [optional]
+ **v1ProductAttribute** | [**\EkmPHP\Models\V1ProductAttribute**](../Model/V1ProductAttribute.md)|  | [optional]
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttribute**](../Model/TempestResponseV1ProductAttribute.md)
+[**\EkmPHP\Models\TempestResponseV1ProductAttribute**](../Model/TempestResponseV1ProductAttribute.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 ## `productAttributesDelete()`
 
 ```php
-productAttributesDelete($attributeKey): \Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttribute
+productAttributesDelete($attributeKey): \EkmPHP\Models\TempestResponseV1ProductAttribute
 ```
 
 Delete a product attribute
@@ -85,10 +85,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductAttributesApi(
+$apiInstance = new EkmPHP\Api\ProductAttributesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttribute**](../Model/TempestResponseV1ProductAttribute.md)
+[**\EkmPHP\Models\TempestResponseV1ProductAttribute**](../Model/TempestResponseV1ProductAttribute.md)
 
 ### Authorization
 
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 ## `productAttributesGet()`
 
 ```php
-productAttributesGet($attributeKey): \Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttribute
+productAttributesGet($attributeKey): \EkmPHP\Models\TempestResponseV1ProductAttribute
 ```
 
 Get a product attribute
@@ -143,10 +143,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductAttributesApi(
+$apiInstance = new EkmPHP\Api\ProductAttributesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -170,7 +170,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttribute**](../Model/TempestResponseV1ProductAttribute.md)
+[**\EkmPHP\Models\TempestResponseV1ProductAttribute**](../Model/TempestResponseV1ProductAttribute.md)
 
 ### Authorization
 
@@ -188,7 +188,7 @@ Name | Type | Description  | Notes
 ## `productAttributesGetAll()`
 
 ```php
-productAttributesGetAll(): \Mrstebo\EkmPHP\Models\TempestResponseListV1ProductAttribute
+productAttributesGetAll(): \EkmPHP\Models\TempestResponseListV1ProductAttribute
 ```
 
 Get all product attributes
@@ -201,10 +201,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductAttributesApi(
+$apiInstance = new EkmPHP\Api\ProductAttributesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -225,7 +225,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseListV1ProductAttribute**](../Model/TempestResponseListV1ProductAttribute.md)
+[**\EkmPHP\Models\TempestResponseListV1ProductAttribute**](../Model/TempestResponseListV1ProductAttribute.md)
 
 ### Authorization
 
@@ -243,7 +243,7 @@ This endpoint does not need any parameter.
 ## `productAttributesUpdate()`
 
 ```php
-productAttributesUpdate($attributeKey, $v1ProductAttribute): \Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttribute
+productAttributesUpdate($attributeKey, $v1ProductAttribute): \EkmPHP\Models\TempestResponseV1ProductAttribute
 ```
 
 Update a product attribute
@@ -256,17 +256,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductAttributesApi(
+$apiInstance = new EkmPHP\Api\ProductAttributesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $attributeKey = 'attributeKey_example'; // string | The attribute ID
-$v1ProductAttribute = new \Mrstebo\EkmPHP\Models\V1ProductAttribute(); // \Mrstebo\EkmPHP\Models\V1ProductAttribute | The product attribute item to update
+$v1ProductAttribute = new \EkmPHP\Models\V1ProductAttribute(); // \EkmPHP\Models\V1ProductAttribute | The product attribute item to update
 
 try {
     $result = $apiInstance->productAttributesUpdate($attributeKey, $v1ProductAttribute);
@@ -281,11 +281,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **attributeKey** | **string**| The attribute ID |
- **v1ProductAttribute** | [**\Mrstebo\EkmPHP\Models\V1ProductAttribute**](../Model/V1ProductAttribute.md)| The product attribute item to update | [optional]
+ **v1ProductAttribute** | [**\EkmPHP\Models\V1ProductAttribute**](../Model/V1ProductAttribute.md)| The product attribute item to update | [optional]
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttribute**](../Model/TempestResponseV1ProductAttribute.md)
+[**\EkmPHP\Models\TempestResponseV1ProductAttribute**](../Model/TempestResponseV1ProductAttribute.md)
 
 ### Authorization
 

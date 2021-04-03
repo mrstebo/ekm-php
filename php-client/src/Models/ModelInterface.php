@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Mrstebo\EkmPHP\Models
+ * @package  EkmPHP\Models
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,12 +27,12 @@
  * Do not edit the class manually.
  */
 
-namespace Mrstebo\EkmPHP\Models;
+namespace EkmPHP\Models;
 
 /**
  * Interface abstracting model access.
  *
- * @package Mrstebo\EkmPHP\Models
+ * @package EkmPHP\Models
  * @author  OpenAPI Generator team
  */
 interface ModelInterface

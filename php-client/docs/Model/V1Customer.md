@@ -18,6 +18,6 @@ Name | Type | Description | Notes
 **lockedDate** | [**\DateTime**](\DateTime.md) |  | [optional]
 **lockedEndDate** | [**\DateTime**](\DateTime.md) |  | [optional]
 **isSubscribedToNewsletter** | **bool** |  | [optional]
-**addresses** | [**\Mrstebo\EkmPHP\Models\V1CustomerAddress[]**](V1CustomerAddress.md) |  | [optional]
+**addresses** | [**\EkmPHP\Models\V1CustomerAddress[]**](V1CustomerAddress.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

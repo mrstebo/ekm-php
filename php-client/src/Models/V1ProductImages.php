@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Mrstebo\EkmPHP\Models;
+namespace EkmPHP\Models;
 
 use \ArrayAccess;
-use \Mrstebo\EkmPHP\ObjectSerializer;
+use \EkmPHP\ObjectSerializer;
 
 /**
  * V1ProductImages Class Doc Comment
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -60,11 +60,11 @@ class V1ProductImages implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'image1' => '\Mrstebo\EkmPHP\Models\V1ProductImage',
-        'image2' => '\Mrstebo\EkmPHP\Models\V1ProductImage',
-        'image3' => '\Mrstebo\EkmPHP\Models\V1ProductImage',
-        'image4' => '\Mrstebo\EkmPHP\Models\V1ProductImage',
-        'image5' => '\Mrstebo\EkmPHP\Models\V1ProductImage'
+        'image1' => '\EkmPHP\Models\V1ProductImage',
+        'image2' => '\EkmPHP\Models\V1ProductImage',
+        'image3' => '\EkmPHP\Models\V1ProductImage',
+        'image4' => '\EkmPHP\Models\V1ProductImage',
+        'image5' => '\EkmPHP\Models\V1ProductImage'
     ];
 
     /**
@@ -233,7 +233,7 @@ class V1ProductImages implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets image1
      *
-     * @return \Mrstebo\EkmPHP\Models\V1ProductImage|null
+     * @return \EkmPHP\Models\V1ProductImage|null
      */
     public function getImage1()
     {
@@ -243,7 +243,7 @@ class V1ProductImages implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets image1
      *
-     * @param \Mrstebo\EkmPHP\Models\V1ProductImage|null $image1 image1
+     * @param \EkmPHP\Models\V1ProductImage|null $image1 image1
      *
      * @return self
      */
@@ -257,7 +257,7 @@ class V1ProductImages implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets image2
      *
-     * @return \Mrstebo\EkmPHP\Models\V1ProductImage|null
+     * @return \EkmPHP\Models\V1ProductImage|null
      */
     public function getImage2()
     {
@@ -267,7 +267,7 @@ class V1ProductImages implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets image2
      *
-     * @param \Mrstebo\EkmPHP\Models\V1ProductImage|null $image2 image2
+     * @param \EkmPHP\Models\V1ProductImage|null $image2 image2
      *
      * @return self
      */
@@ -281,7 +281,7 @@ class V1ProductImages implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets image3
      *
-     * @return \Mrstebo\EkmPHP\Models\V1ProductImage|null
+     * @return \EkmPHP\Models\V1ProductImage|null
      */
     public function getImage3()
     {
@@ -291,7 +291,7 @@ class V1ProductImages implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets image3
      *
-     * @param \Mrstebo\EkmPHP\Models\V1ProductImage|null $image3 image3
+     * @param \EkmPHP\Models\V1ProductImage|null $image3 image3
      *
      * @return self
      */
@@ -305,7 +305,7 @@ class V1ProductImages implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets image4
      *
-     * @return \Mrstebo\EkmPHP\Models\V1ProductImage|null
+     * @return \EkmPHP\Models\V1ProductImage|null
      */
     public function getImage4()
     {
@@ -315,7 +315,7 @@ class V1ProductImages implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets image4
      *
-     * @param \Mrstebo\EkmPHP\Models\V1ProductImage|null $image4 image4
+     * @param \EkmPHP\Models\V1ProductImage|null $image4 image4
      *
      * @return self
      */
@@ -329,7 +329,7 @@ class V1ProductImages implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets image5
      *
-     * @return \Mrstebo\EkmPHP\Models\V1ProductImage|null
+     * @return \EkmPHP\Models\V1ProductImage|null
      */
     public function getImage5()
     {
@@ -339,7 +339,7 @@ class V1ProductImages implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets image5
      *
-     * @param \Mrstebo\EkmPHP\Models\V1ProductImage|null $image5 image5
+     * @param \EkmPHP\Models\V1ProductImage|null $image5 image5
      *
      * @return self
      */

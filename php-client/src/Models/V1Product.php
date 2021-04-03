@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Mrstebo\EkmPHP\Models;
+namespace EkmPHP\Models;
 
 use \ArrayAccess;
-use \Mrstebo\EkmPHP\ObjectSerializer;
+use \EkmPHP\ObjectSerializer;
 
 /**
  * V1Product Class Doc Comment
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -88,10 +88,10 @@ class V1Product implements ModelInterface, ArrayAccess, \JsonSerializable
         'metaTitle' => 'string',
         'totalProductStock' => 'int',
         'parentProductId' => 'int',
-        'options' => '\Mrstebo\EkmPHP\Models\V1ProductOption[]',
-        'variants' => '\Mrstebo\EkmPHP\Models\V1ProductVariant[]',
-        'categories' => '\Mrstebo\EkmPHP\Models\V1ProductCategory[]',
-        'attributeItems' => '\Mrstebo\EkmPHP\Models\V1ProductAttributeItem[]',
+        'options' => '\EkmPHP\Models\V1ProductOption[]',
+        'variants' => '\EkmPHP\Models\V1ProductVariant[]',
+        'categories' => '\EkmPHP\Models\V1ProductCategory[]',
+        'attributeItems' => '\EkmPHP\Models\V1ProductAttributeItem[]',
         'orderLocation' => 'int',
         'seoFriendlyUrl' => 'string'
     ];
@@ -1109,7 +1109,7 @@ class V1Product implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets options
      *
-     * @return \Mrstebo\EkmPHP\Models\V1ProductOption[]|null
+     * @return \EkmPHP\Models\V1ProductOption[]|null
      */
     public function getOptions()
     {
@@ -1119,7 +1119,7 @@ class V1Product implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets options
      *
-     * @param \Mrstebo\EkmPHP\Models\V1ProductOption[]|null $options options
+     * @param \EkmPHP\Models\V1ProductOption[]|null $options options
      *
      * @return self
      */
@@ -1133,7 +1133,7 @@ class V1Product implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets variants
      *
-     * @return \Mrstebo\EkmPHP\Models\V1ProductVariant[]|null
+     * @return \EkmPHP\Models\V1ProductVariant[]|null
      */
     public function getVariants()
     {
@@ -1143,7 +1143,7 @@ class V1Product implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets variants
      *
-     * @param \Mrstebo\EkmPHP\Models\V1ProductVariant[]|null $variants variants
+     * @param \EkmPHP\Models\V1ProductVariant[]|null $variants variants
      *
      * @return self
      */
@@ -1157,7 +1157,7 @@ class V1Product implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets categories
      *
-     * @return \Mrstebo\EkmPHP\Models\V1ProductCategory[]|null
+     * @return \EkmPHP\Models\V1ProductCategory[]|null
      */
     public function getCategories()
     {
@@ -1167,7 +1167,7 @@ class V1Product implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets categories
      *
-     * @param \Mrstebo\EkmPHP\Models\V1ProductCategory[]|null $categories categories
+     * @param \EkmPHP\Models\V1ProductCategory[]|null $categories categories
      *
      * @return self
      */
@@ -1181,7 +1181,7 @@ class V1Product implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets attributeItems
      *
-     * @return \Mrstebo\EkmPHP\Models\V1ProductAttributeItem[]|null
+     * @return \EkmPHP\Models\V1ProductAttributeItem[]|null
      */
     public function getAttributeItems()
     {
@@ -1191,7 +1191,7 @@ class V1Product implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets attributeItems
      *
-     * @param \Mrstebo\EkmPHP\Models\V1ProductAttributeItem[]|null $attributeItems attributeItems
+     * @param \EkmPHP\Models\V1ProductAttributeItem[]|null $attributeItems attributeItems
      *
      * @return self
      */

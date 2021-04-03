@@ -1,4 +1,4 @@
-# Mrstebo\EkmPHP\ProductAttributeItemsApi
+# EkmPHP\ProductAttributeItemsApi
 
 All URIs are relative to https://api.ekm.net.
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 ## `productAttributeItemsCreate()`
 
 ```php
-productAttributeItemsCreate($id, $v1ProductAttributeItem): \Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem
+productAttributeItemsCreate($id, $v1ProductAttributeItem): \EkmPHP\Models\TempestResponseV1ProductAttributeItem
 ```
 
 Add a attribute item to a product
@@ -26,17 +26,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductAttributeItemsApi(
+$apiInstance = new EkmPHP\Api\ProductAttributeItemsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | The product ID
-$v1ProductAttributeItem = new \Mrstebo\EkmPHP\Models\V1ProductAttributeItem(); // \Mrstebo\EkmPHP\Models\V1ProductAttributeItem | The product attribute item to add
+$v1ProductAttributeItem = new \EkmPHP\Models\V1ProductAttributeItem(); // \EkmPHP\Models\V1ProductAttributeItem | The product attribute item to add
 
 try {
     $result = $apiInstance->productAttributeItemsCreate($id, $v1ProductAttributeItem);
@@ -51,11 +51,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The product ID |
- **v1ProductAttributeItem** | [**\Mrstebo\EkmPHP\Models\V1ProductAttributeItem**](../Model/V1ProductAttributeItem.md)| The product attribute item to add | [optional]
+ **v1ProductAttributeItem** | [**\EkmPHP\Models\V1ProductAttributeItem**](../Model/V1ProductAttributeItem.md)| The product attribute item to add | [optional]
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem**](../Model/TempestResponseV1ProductAttributeItem.md)
+[**\EkmPHP\Models\TempestResponseV1ProductAttributeItem**](../Model/TempestResponseV1ProductAttributeItem.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 ## `productAttributeItemsGet()`
 
 ```php
-productAttributeItemsGet($id, $attributeKey): \Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem
+productAttributeItemsGet($id, $attributeKey): \EkmPHP\Models\TempestResponseV1ProductAttributeItem
 ```
 
 Get a product attribute item
@@ -86,10 +86,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductAttributeItemsApi(
+$apiInstance = new EkmPHP\Api\ProductAttributeItemsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem**](../Model/TempestResponseV1ProductAttributeItem.md)
+[**\EkmPHP\Models\TempestResponseV1ProductAttributeItem**](../Model/TempestResponseV1ProductAttributeItem.md)
 
 ### Authorization
 
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 ## `productAttributeItemsGetAll()`
 
 ```php
-productAttributeItemsGetAll($id): \Mrstebo\EkmPHP\Models\TempestResponseListV1ProductAttributeItem
+productAttributeItemsGetAll($id): \EkmPHP\Models\TempestResponseListV1ProductAttributeItem
 ```
 
 Get all of a products attribute items
@@ -146,10 +146,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductAttributeItemsApi(
+$apiInstance = new EkmPHP\Api\ProductAttributeItemsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -173,7 +173,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseListV1ProductAttributeItem**](../Model/TempestResponseListV1ProductAttributeItem.md)
+[**\EkmPHP\Models\TempestResponseListV1ProductAttributeItem**](../Model/TempestResponseListV1ProductAttributeItem.md)
 
 ### Authorization
 
@@ -191,7 +191,7 @@ Name | Type | Description  | Notes
 ## `productAttributeItemsUpdate()`
 
 ```php
-productAttributeItemsUpdate($id, $attributeKey, $v1ProductAttributeItem): \Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem
+productAttributeItemsUpdate($id, $attributeKey, $v1ProductAttributeItem): \EkmPHP\Models\TempestResponseV1ProductAttributeItem
 ```
 
 Update a product attribute item
@@ -204,10 +204,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductAttributeItemsApi(
+$apiInstance = new EkmPHP\Api\ProductAttributeItemsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -215,7 +215,7 @@ $apiInstance = new Mrstebo\EkmPHP\Api\ProductAttributeItemsApi(
 );
 $id = 56; // int | The product ID
 $attributeKey = 56; // int | The attribute ID
-$v1ProductAttributeItem = new \Mrstebo\EkmPHP\Models\V1ProductAttributeItem(); // \Mrstebo\EkmPHP\Models\V1ProductAttributeItem | The product attribute item to update
+$v1ProductAttributeItem = new \EkmPHP\Models\V1ProductAttributeItem(); // \EkmPHP\Models\V1ProductAttributeItem | The product attribute item to update
 
 try {
     $result = $apiInstance->productAttributeItemsUpdate($id, $attributeKey, $v1ProductAttributeItem);
@@ -231,11 +231,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The product ID |
  **attributeKey** | **int**| The attribute ID |
- **v1ProductAttributeItem** | [**\Mrstebo\EkmPHP\Models\V1ProductAttributeItem**](../Model/V1ProductAttributeItem.md)| The product attribute item to update | [optional]
+ **v1ProductAttributeItem** | [**\EkmPHP\Models\V1ProductAttributeItem**](../Model/V1ProductAttributeItem.md)| The product attribute item to update | [optional]
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1ProductAttributeItem**](../Model/TempestResponseV1ProductAttributeItem.md)
+[**\EkmPHP\Models\TempestResponseV1ProductAttributeItem**](../Model/TempestResponseV1ProductAttributeItem.md)
 
 ### Authorization
 

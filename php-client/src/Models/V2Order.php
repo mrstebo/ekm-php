@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Mrstebo\EkmPHP\Models;
+namespace EkmPHP\Models;
 
 use \ArrayAccess;
-use \Mrstebo\EkmPHP\ObjectSerializer;
+use \EkmPHP\ObjectSerializer;
 
 /**
  * V2Order Class Doc Comment
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -75,7 +75,7 @@ class V2Order implements ModelInterface, ArrayAccess, \JsonSerializable
         'transactionId' => 'string',
         'transactionStatus' => 'string',
         'useShippingAddress' => 'bool',
-        'shippingAddress' => '\Mrstebo\EkmPHP\Models\V1ShippingAddress',
+        'shippingAddress' => '\EkmPHP\Models\V1ShippingAddress',
         'internalNotes' => 'string',
         'customerFacingNotes' => 'string',
         'emailed' => 'bool',
@@ -89,7 +89,7 @@ class V2Order implements ModelInterface, ArrayAccess, \JsonSerializable
         'deliveryIncludesTax' => 'int',
         'customFieldsTotal' => 'double',
         'customFieldsTaxTotal' => 'double',
-        'customerDetails' => '\Mrstebo\EkmPHP\Models\V1OrderCustomerDetails',
+        'customerDetails' => '\EkmPHP\Models\V1OrderCustomerDetails',
         'customFields' => 'string',
         'deliveryTrackingNumber' => 'string',
         'deliveryTrackingCompany' => 'string',
@@ -779,7 +779,7 @@ class V2Order implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets shippingAddress
      *
-     * @return \Mrstebo\EkmPHP\Models\V1ShippingAddress|null
+     * @return \EkmPHP\Models\V1ShippingAddress|null
      */
     public function getShippingAddress()
     {
@@ -789,7 +789,7 @@ class V2Order implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets shippingAddress
      *
-     * @param \Mrstebo\EkmPHP\Models\V1ShippingAddress|null $shippingAddress shippingAddress
+     * @param \EkmPHP\Models\V1ShippingAddress|null $shippingAddress shippingAddress
      *
      * @return self
      */
@@ -1115,7 +1115,7 @@ class V2Order implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets customerDetails
      *
-     * @return \Mrstebo\EkmPHP\Models\V1OrderCustomerDetails|null
+     * @return \EkmPHP\Models\V1OrderCustomerDetails|null
      */
     public function getCustomerDetails()
     {
@@ -1125,7 +1125,7 @@ class V2Order implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets customerDetails
      *
-     * @param \Mrstebo\EkmPHP\Models\V1OrderCustomerDetails|null $customerDetails customerDetails
+     * @param \EkmPHP\Models\V1OrderCustomerDetails|null $customerDetails customerDetails
      *
      * @return self
      */

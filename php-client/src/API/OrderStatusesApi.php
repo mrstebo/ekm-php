@@ -4,7 +4,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Mrstebo\EkmPHP\API;
+namespace EkmPHP\API;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Mrstebo\EkmPHP\ApiException;
-use Mrstebo\EkmPHP\Configuration;
-use Mrstebo\EkmPHP\HeaderSelector;
-use Mrstebo\EkmPHP\ObjectSerializer;
+use EkmPHP\ApiException;
+use EkmPHP\Configuration;
+use EkmPHP\HeaderSelector;
+use EkmPHP\ObjectSerializer;
 
 /**
  * OrderStatusesApi Class Doc Comment
  *
  * @category Class
- * @package  Mrstebo\EkmPHP
+ * @package  EkmPHP
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -121,9 +121,9 @@ class OrderStatusesApi
      * Get the current Order Statuses
      *
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Mrstebo\EkmPHP\Models\TempestResponseV1OrderStatuses
+     * @return \EkmPHP\Models\TempestResponseV1OrderStatuses
      */
     public function orderStatusesGetOrderStatuses()
     {
@@ -137,9 +137,9 @@ class OrderStatusesApi
      * Get the current Order Statuses
      *
      *
-     * @throws \Mrstebo\EkmPHP\ApiException on non-2xx response
+     * @throws \EkmPHP\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Mrstebo\EkmPHP\Models\TempestResponseV1OrderStatuses, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EkmPHP\Models\TempestResponseV1OrderStatuses, HTTP status code, HTTP response headers (array of strings)
      */
     public function orderStatusesGetOrderStatusesWithHttpInfo()
     {
@@ -175,20 +175,20 @@ class OrderStatusesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Mrstebo\EkmPHP\Models\TempestResponseV1OrderStatuses' === '\SplFileObject') {
+                    if ('\EkmPHP\Models\TempestResponseV1OrderStatuses' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Mrstebo\EkmPHP\Models\TempestResponseV1OrderStatuses', []),
+                        ObjectSerializer::deserialize($content, '\EkmPHP\Models\TempestResponseV1OrderStatuses', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1OrderStatuses';
+            $returnType = '\EkmPHP\Models\TempestResponseV1OrderStatuses';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -206,7 +206,7 @@ class OrderStatusesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Mrstebo\EkmPHP\Models\TempestResponseV1OrderStatuses',
+                        '\EkmPHP\Models\TempestResponseV1OrderStatuses',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -246,7 +246,7 @@ class OrderStatusesApi
      */
     public function orderStatusesGetOrderStatusesAsyncWithHttpInfo()
     {
-        $returnType = '\Mrstebo\EkmPHP\Models\TempestResponseV1OrderStatuses';
+        $returnType = '\EkmPHP\Models\TempestResponseV1OrderStatuses';
         $request = $this->orderStatusesGetOrderStatusesRequest();
 
         return $this->client

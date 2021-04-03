@@ -1,4 +1,4 @@
-# Mrstebo\EkmPHP\ProductVariantsApi
+# EkmPHP\ProductVariantsApi
 
 All URIs are relative to https://api.ekm.net.
 
@@ -18,7 +18,7 @@ Method | HTTP request | Description
 ## `productVariantsAssignImageByUrlToProduct()`
 
 ```php
-productVariantsAssignImageByUrlToProduct($id, $variantId, $imageNumber, $imageUrl): \Mrstebo\EkmPHP\Models\TempestResponseV1ProductImages
+productVariantsAssignImageByUrlToProduct($id, $variantId, $imageNumber, $imageUrl): \EkmPHP\Models\TempestResponseV1ProductImages
 ```
 
 Set a variants image to a URL
@@ -33,10 +33,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductVariantsApi(
+$apiInstance = new EkmPHP\Api\ProductVariantsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1ProductImages**](../Model/TempestResponseV1ProductImages.md)
+[**\EkmPHP\Models\TempestResponseV1ProductImages**](../Model/TempestResponseV1ProductImages.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 ## `productVariantsCreate()`
 
 ```php
-productVariantsCreate($id, $v1ProductVariant): \Mrstebo\EkmPHP\Models\TempestResponseListV1ProductVariant
+productVariantsCreate($id, $v1ProductVariant): \EkmPHP\Models\TempestResponseListV1ProductVariant
 ```
 
 Add a variant to a product
@@ -97,17 +97,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductVariantsApi(
+$apiInstance = new EkmPHP\Api\ProductVariantsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 56; // int | The product ID
-$v1ProductVariant = new \Mrstebo\EkmPHP\Models\V1ProductVariant(); // \Mrstebo\EkmPHP\Models\V1ProductVariant
+$v1ProductVariant = new \EkmPHP\Models\V1ProductVariant(); // \EkmPHP\Models\V1ProductVariant
 
 try {
     $result = $apiInstance->productVariantsCreate($id, $v1ProductVariant);
@@ -122,11 +122,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The product ID |
- **v1ProductVariant** | [**\Mrstebo\EkmPHP\Models\V1ProductVariant**](../Model/V1ProductVariant.md)|  | [optional]
+ **v1ProductVariant** | [**\EkmPHP\Models\V1ProductVariant**](../Model/V1ProductVariant.md)|  | [optional]
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseListV1ProductVariant**](../Model/TempestResponseListV1ProductVariant.md)
+[**\EkmPHP\Models\TempestResponseListV1ProductVariant**](../Model/TempestResponseListV1ProductVariant.md)
 
 ### Authorization
 
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 ## `productVariantsDelete()`
 
 ```php
-productVariantsDelete($id, $variantId): \Mrstebo\EkmPHP\Models\TempestResponseV1ProductVariant
+productVariantsDelete($id, $variantId): \EkmPHP\Models\TempestResponseV1ProductVariant
 ```
 
 Delete a variant
@@ -157,10 +157,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductVariantsApi(
+$apiInstance = new EkmPHP\Api\ProductVariantsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -186,7 +186,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1ProductVariant**](../Model/TempestResponseV1ProductVariant.md)
+[**\EkmPHP\Models\TempestResponseV1ProductVariant**](../Model/TempestResponseV1ProductVariant.md)
 
 ### Authorization
 
@@ -204,7 +204,7 @@ Name | Type | Description  | Notes
 ## `productVariantsGet()`
 
 ```php
-productVariantsGet($variantId): \Mrstebo\EkmPHP\Models\TempestResponseV1ProductVariant
+productVariantsGet($variantId): \EkmPHP\Models\TempestResponseV1ProductVariant
 ```
 
 Get a product variant
@@ -217,10 +217,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductVariantsApi(
+$apiInstance = new EkmPHP\Api\ProductVariantsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -244,7 +244,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1ProductVariant**](../Model/TempestResponseV1ProductVariant.md)
+[**\EkmPHP\Models\TempestResponseV1ProductVariant**](../Model/TempestResponseV1ProductVariant.md)
 
 ### Authorization
 
@@ -262,7 +262,7 @@ Name | Type | Description  | Notes
 ## `productVariantsGetAll()`
 
 ```php
-productVariantsGetAll($id): \Mrstebo\EkmPHP\Models\TempestResponseListV1ProductVariant
+productVariantsGetAll($id): \EkmPHP\Models\TempestResponseListV1ProductVariant
 ```
 
 Get a products variants
@@ -275,10 +275,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductVariantsApi(
+$apiInstance = new EkmPHP\Api\ProductVariantsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -302,7 +302,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseListV1ProductVariant**](../Model/TempestResponseListV1ProductVariant.md)
+[**\EkmPHP\Models\TempestResponseListV1ProductVariant**](../Model/TempestResponseListV1ProductVariant.md)
 
 ### Authorization
 
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 ## `productVariantsGetProductImages()`
 
 ```php
-productVariantsGetProductImages($id, $variantId): \Mrstebo\EkmPHP\Models\TempestResponseV1ProductImages
+productVariantsGetProductImages($id, $variantId): \EkmPHP\Models\TempestResponseV1ProductImages
 ```
 
 Get a variant's images.
@@ -335,10 +335,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductVariantsApi(
+$apiInstance = new EkmPHP\Api\ProductVariantsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -364,7 +364,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1ProductImages**](../Model/TempestResponseV1ProductImages.md)
+[**\EkmPHP\Models\TempestResponseV1ProductImages**](../Model/TempestResponseV1ProductImages.md)
 
 ### Authorization
 
@@ -382,7 +382,7 @@ Name | Type | Description  | Notes
 ## `productVariantsGetProductVariant()`
 
 ```php
-productVariantsGetProductVariant($id, $variantId): \Mrstebo\EkmPHP\Models\TempestResponseV1ProductVariant
+productVariantsGetProductVariant($id, $variantId): \EkmPHP\Models\TempestResponseV1ProductVariant
 ```
 
 Get a product variant
@@ -395,10 +395,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductVariantsApi(
+$apiInstance = new EkmPHP\Api\ProductVariantsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -424,7 +424,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1ProductVariant**](../Model/TempestResponseV1ProductVariant.md)
+[**\EkmPHP\Models\TempestResponseV1ProductVariant**](../Model/TempestResponseV1ProductVariant.md)
 
 ### Authorization
 
@@ -442,7 +442,7 @@ Name | Type | Description  | Notes
 ## `productVariantsSearch()`
 
 ```php
-productVariantsSearch($query, $page, $limit, $orderby): \Mrstebo\EkmPHP\Models\TempestResponseListV1ProductVariant
+productVariantsSearch($query, $page, $limit, $orderby): \EkmPHP\Models\TempestResponseListV1ProductVariant
 ```
 
 Searches variants based on search criteria
@@ -455,10 +455,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductVariantsApi(
+$apiInstance = new EkmPHP\Api\ProductVariantsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -488,7 +488,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseListV1ProductVariant**](../Model/TempestResponseListV1ProductVariant.md)
+[**\EkmPHP\Models\TempestResponseListV1ProductVariant**](../Model/TempestResponseListV1ProductVariant.md)
 
 ### Authorization
 
@@ -506,7 +506,7 @@ Name | Type | Description  | Notes
 ## `productVariantsUpdate()`
 
 ```php
-productVariantsUpdate($id, $variantId, $v1ProductVariant): \Mrstebo\EkmPHP\Models\TempestResponseV1ProductVariant
+productVariantsUpdate($id, $variantId, $v1ProductVariant): \EkmPHP\Models\TempestResponseV1ProductVariant
 ```
 
 Update a product variant
@@ -519,10 +519,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: Bearer
-$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Mrstebo\EkmPHP\Api\ProductVariantsApi(
+$apiInstance = new EkmPHP\Api\ProductVariantsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -530,7 +530,7 @@ $apiInstance = new Mrstebo\EkmPHP\Api\ProductVariantsApi(
 );
 $id = 56; // int | The product ID
 $variantId = 56; // int | The variant ID
-$v1ProductVariant = new \Mrstebo\EkmPHP\Models\V1ProductVariant(); // \Mrstebo\EkmPHP\Models\V1ProductVariant
+$v1ProductVariant = new \EkmPHP\Models\V1ProductVariant(); // \EkmPHP\Models\V1ProductVariant
 
 try {
     $result = $apiInstance->productVariantsUpdate($id, $variantId, $v1ProductVariant);
@@ -546,11 +546,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The product ID |
  **variantId** | **int**| The variant ID |
- **v1ProductVariant** | [**\Mrstebo\EkmPHP\Models\V1ProductVariant**](../Model/V1ProductVariant.md)|  | [optional]
+ **v1ProductVariant** | [**\EkmPHP\Models\V1ProductVariant**](../Model/V1ProductVariant.md)|  | [optional]
 
 ### Return type
 
-[**\Mrstebo\EkmPHP\Models\TempestResponseV1ProductVariant**](../Model/TempestResponseV1ProductVariant.md)
+[**\EkmPHP\Models\TempestResponseV1ProductVariant**](../Model/TempestResponseV1ProductVariant.md)
 
 ### Authorization
 
