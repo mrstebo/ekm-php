@@ -1,13 +1,14 @@
 name: Generate Code
 
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release version (e.g. v0.1.0)'
+        required: true
+      message:
+        description: 'Tag message'
+        required: true
 
 jobs:
   build:
@@ -31,3 +32,12 @@ jobs:
           generator: php
           config-file: .openapi-config/config.json
           openapi-file: .openapi-config/swagger.json
+          
+      - uses: EndBug/add-and-commit@v7
+        with:
+          message: ${{ github.event.inputs.message }}
+          push: true
+          tag: '${{ github.event.inputs.version }} --force'
+          
+          
+      
