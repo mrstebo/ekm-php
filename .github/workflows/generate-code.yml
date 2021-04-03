@@ -39,7 +39,24 @@ jobs:
           sed -i 's/GIT_REPO_ID/ekm-php/' php-client/composer.json
           sed -i 's/"version": "0.0.0"/"version": "${{ github.event.inputs.version }}"/' php-client/composer.json
 
-      - uses: EndBug/add-and-commit@v7
+      - name: Copy files from php-client
+        run: |
+          for x in $(ls php-client -A); do
+            rm -rf $x
+            cp -rf php-client/$x $x
+          done
+          rm -rf php-client
+
+      - name: Create commit
+        if: ${{ github.ref != 'refs/heads/main' }}
+        uses: EndBug/add-and-commit@v7
+        with:
+          message: "Build run #${{ github.run_number }}"
+          push: true
+
+      - name: Create commit and tag
+        if: ${{ github.ref == 'refs/heads/main' }}
+        uses: EndBug/add-and-commit@v7
         with:
           message: "Released version ${{ github.event.inputs.version }}"
           push: true
