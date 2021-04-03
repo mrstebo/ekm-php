@@ -6,9 +6,6 @@ on:
       version:
         description: 'Release version (e.g. v0.1.0)'
         required: true
-      message:
-        description: 'Tag message'
-        required: true
 
 jobs:
   build:
@@ -44,6 +41,6 @@ jobs:
 
       - uses: EndBug/add-and-commit@v7
         with:
-          message: ${{ github.event.inputs.message }}
+          message: "Released version ${{ github.event.inputs.message }}"
           push: true
           tag: '${{ github.event.inputs.version }} --force'
