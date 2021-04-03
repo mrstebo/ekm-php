@@ -41,6 +41,6 @@ jobs:
 
       - uses: EndBug/add-and-commit@v7
         with:
-          message: "Released version ${{ github.event.inputs.message }}"
+          message: "Released version ${{ github.event.inputs.version }}"
           push: true
           tag: '${{ github.event.inputs.version }} --force'
