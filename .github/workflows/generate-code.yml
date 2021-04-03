@@ -1,11 +1,11 @@
-name: Generate Code
-
 on:
   workflow_dispatch:
     inputs:
       version:
         description: 'Release version (e.g. v0.1.0)'
         required: true
+
+name: Generate Code - ${{ github.event.inputs.version }}
 
 jobs:
   build:
