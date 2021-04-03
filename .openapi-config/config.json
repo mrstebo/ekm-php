@@ -1,7 +1,7 @@
 {
   "allowUnicodeIdentifiers": false,
   "apiPackage": "API",
-  "artifactVersion": "0.0.1",
+  "artifactVersion": "0.0.0",
   "disallowAdditionalPropertiesIfNotPresent": false,
   "ensureUniqueParams": true,
   "hideGenerationTimestamp": true,
