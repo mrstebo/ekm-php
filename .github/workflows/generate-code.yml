@@ -26,18 +26,23 @@ jobs:
       - name: Replace the duplicate operationId
         run: sed -i '0,/"ProductVariants_Get"/{s/"ProductVariants_Get"/"ProductVariants_GetProductVariant"/}' .openapi-config/swagger.json
 
-      - name: Generate Client Library w/ the OpenAPITools Generator
-        uses: triaxtec/openapitools-generator-action@v1.0.0
+      - name: Generate Client Library with the OpenAPITools Generator
+        uses: addnab/docker-run-action@v3
         with:
-          generator: php
-          config-file: .openapi-config/config.json
-          openapi-file: .openapi-config/swagger.json
-          
+          image: openapitools/openapi-generator-cli
+          options: -v ${{ github.workspace }}:/local
+          run: |
+            generate \
+              --input-spec /local/.openapi-config/swagger.json \
+              --generator-name php \
+              --config /local/.openapi-config/config.json \
+              --git-repo-id ekm-php \
+              --git-user-id mrstebo \
+              --output /local \
+              --verbose
+
       - uses: EndBug/add-and-commit@v7
         with:
           message: ${{ github.event.inputs.message }}
           push: true
           tag: '${{ github.event.inputs.version }} --force'
-          
-          
-      
