@@ -7,7 +7,7 @@
   "hideGenerationTimestamp": true,
   "invokerPackage": "Mrstebo\\EkmPHP",
   "modelPackage": "Models",
-  "packageName": "EkmPHP",
+  "packageName": "ekm-php",
   "prependFormOrBodyParameters": false,
   "sortModelPropertiesByRequiredFlag": true,
   "sortParamsByRequiredFlag": true,
