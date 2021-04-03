@@ -36,6 +36,12 @@ jobs:
           config-file: .openapi-config/config.json
           openapi-file: .openapi-config/swagger.json
 
+      - name: Update name and version in composer.json
+        run: |
+          sed -i 's/GIT_USER_ID/mrstebo/' php-client/composer.json
+          sed -i 's/GIT_REPO_ID/ekm-php/' php-client/composer.json
+          sed -i 's/"version": "0.0.1"/"version": "${{ github.event.inputs.version }}"' php-client/composer.json
+
       - uses: EndBug/add-and-commit@v7
         with:
           message: ${{ github.event.inputs.message }}
