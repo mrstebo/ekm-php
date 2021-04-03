@@ -27,8 +27,7 @@ jobs:
         run: rm -rf php-client
 
       - name: Update the version in the config
-        run: |
-          sed -i "s/0.0.0/${TAG_VERSION/v/}/" .openapi-config/config.json
+        run: sed -i "s/0.0.0/${TAG_VERSION/v/}/" .openapi-config/config.json
         env:
           TAG_VERSION: ${{ github.event.inputs.version }}
 
@@ -40,8 +39,9 @@ jobs:
           openapi-file: .openapi-config/swagger.json
 
       - name: Revert the version in the config
-        run: |
-          sed -i "s/${TAG_VERSION/v/}/0.0.0/" .openapi-config/config.json
+        run: sed -i "s/${TAG_VERSION/v/}/0.0.0/" .openapi-config/config.json
+        env:
+          TAG_VERSION: ${{ github.event.inputs.version }}
 
       - name: Update name in composer.json
         run: |
