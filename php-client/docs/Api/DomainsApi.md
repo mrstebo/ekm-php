@@ -1,0 +1,63 @@
+# Mrstebo\EkmPHP\DomainsApi
+
+All URIs are relative to https://api.ekm.net.
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**domainsGetPrimaryDomain()**](DomainsApi.md#domainsGetPrimaryDomain) | **GET** /api/v1/settings/domains | Get the current Primary Domain
+
+
+## `domainsGetPrimaryDomain()`
+
+```php
+domainsGetPrimaryDomain(): \Mrstebo\EkmPHP\Models\TempestResponseV1DomainName
+```
+
+Get the current Primary Domain
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: Bearer
+$config = Mrstebo\EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Mrstebo\EkmPHP\Api\DomainsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+
+try {
+    $result = $apiInstance->domainsGetPrimaryDomain();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DomainsApi->domainsGetPrimaryDomain: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\Mrstebo\EkmPHP\Models\TempestResponseV1DomainName**](../Model/TempestResponseV1DomainName.md)
+
+### Authorization
+
+[Bearer](../../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
