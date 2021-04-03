@@ -1,10 +1,6 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Generate Code
 
-# Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
   pull_request:
@@ -13,31 +9,25 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       
-      - name: wget
+      - name: Download the Swagger file
         uses: wei/wget@v1
         with:
           args: -O .openapi-config/swagger.json https://api.ekm.net/swagger/v0/swagger.json
+          
+      - name: Replace the duplicate operationId
+        run: sed -i 's/ProductVariants_Get/ProductVariants_GetProductVariant/' .openapi-config/swagger.json
       
       - name: Generate Client Library w/ the OpenAPITools Generator
-        # You may pin to the exact commit or the version.
-        # uses: triaxtec/openapitools-generator-action@14848119a73e51bd7fe6c806b0da5af4338e0f6e
         uses: triaxtec/openapitools-generator-action@v1.0.0
         with:
-          # The name of the generator (i.e. the language to generate the client library in) to use e.g. "typescript-angular"
           generator: php
-          # The path to the config file to be passed along to the OpenAPITools generator
           config-file: .openapi-config/config.json
-          # The path to the openapi document to generate a client library for
           openapi-file: .openapi-config/swagger.json
