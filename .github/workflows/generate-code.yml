@@ -26,6 +26,9 @@ jobs:
       - name: Replace the duplicate operationId
         run: sed -i '0,/"ProductVariants_Get"/{s/"ProductVariants_Get"/"ProductVariants_GetProductVariant"/}' .openapi-config/swagger.json
 
+      - name: Remove existing client code
+        run: rm -rf php-client
+
       - name: Generate Client Library w/ the OpenAPITools Generator
         uses: triaxtec/openapitools-generator-action@v1.0.0
         with:
