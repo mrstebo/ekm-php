@@ -5,7 +5,7 @@
   "disallowAdditionalPropertiesIfNotPresent": false,
   "ensureUniqueParams": true,
   "hideGenerationTimestamp": true,
-  "invokerPackage": "Mrstebo\\EkmPHP",
+  "invokerPackage": "EkmPHP",
   "modelPackage": "Models",
   "packageName": "ekm-php",
   "prependFormOrBodyParameters": false,
