@@ -26,6 +26,12 @@ jobs:
       - name: Remove existing client code
         run: rm -rf php-client
 
+      - name: Update the version in the config
+        run: |
+          sed -i "s/0.0.0/${TAG_VERSION/v/}/" .openapi-config/config.json
+        env:
+          TAG_VERSION: ${{ github.event.inputs.version }}
+
       - name: Generate Client Library w/ the OpenAPITools Generator
         uses: triaxtec/openapitools-generator-action@v1.0.0
         with:
@@ -33,11 +39,14 @@ jobs:
           config-file: .openapi-config/config.json
           openapi-file: .openapi-config/swagger.json
 
-      - name: Update name and version in composer.json
+      - name: Revert the version in the config
+        run: |
+          sed -i "s/${TAG_VERSION/v/}/0.0.0/" .openapi-config/config.json
+
+      - name: Update name in composer.json
         run: |
           sed -i 's/GIT_USER_ID/mrstebo/' php-client/composer.json
           sed -i 's/GIT_REPO_ID/ekm-php/' php-client/composer.json
-          sed -i 's/"version": "0.0.0"/"version": "${{ github.event.inputs.version }}"/' php-client/composer.json
 
       - name: Copy files from php-client
         run: |
