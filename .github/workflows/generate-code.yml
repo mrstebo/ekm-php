@@ -52,7 +52,7 @@ jobs:
 
       - name: Update Guzzle package
         run: |
-          sed -i 's/"guzzlehttp/guzzle": "^6.2"/"guzzlehttp/guzzle": "^7.0"/' php-client/composer.json
+          sed -i 's/guzzle": "^6.2"/guzzle": "^7.0"/' php-client/composer.json
 
       - name: Copy files from php-client
         run: |
