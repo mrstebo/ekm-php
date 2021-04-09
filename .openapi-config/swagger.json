@@ -3092,7 +3092,7 @@
       "locked": false,
       "locked_date": null,
       "locked_end_date": null,
-      "is_subscribed_to_newsletter": true,
+      "is_subscribed_to_newsletter": false,
       "addresses": [
         {
           "id": 0,
@@ -3130,7 +3130,7 @@
       "locked": true,
       "locked_date": null,
       "locked_end_date": null,
-      "is_subscribed_to_newsletter": false,
+      "is_subscribed_to_newsletter": true,
       "addresses": [
         {
           "id": 0,
@@ -3168,7 +3168,7 @@
       "locked": false,
       "locked_date": null,
       "locked_end_date": null,
-      "is_subscribed_to_newsletter": true,
+      "is_subscribed_to_newsletter": false,
       "addresses": [
         {
           "id": 0,
@@ -4949,12 +4949,12 @@
       },
       {
         "name": "Processing",
-        "colour": "#000099",
+        "colour": "#FF00FF",
         "show_in_quick_stats": true
       },
       {
         "name": "Dispatched",
-        "colour": "#FF0000",
+        "colour": "#FF00FF",
         "show_in_quick_stats": true
       },
       {
@@ -7846,7 +7846,7 @@
             },
             {
               "variant_name": "Variant2",
-              "variant_choice": "voluptatem"
+              "variant_choice": "molestiae"
             }
           ]
         }
