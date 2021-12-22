@@ -6,10 +6,12 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ordersGetAll()**](OrdersApi.md#ordersGetAll) | **GET** /api/v2/orders | Get a paginated set of orders
 [**ordersGetById()**](OrdersApi.md#ordersGetById) | **GET** /api/v2/orders/{id} | Get an order by ID
+[**ordersGetCustomFields()**](OrdersApi.md#ordersGetCustomFields) | **GET** /api/v2/orders/{id}/customFields | Get custom fields for an order
 [**ordersGetItems()**](OrdersApi.md#ordersGetItems) | **GET** /api/v2/orders/{id}/items | Get an order&#39;s items
 [**ordersGetOrderItemById()**](OrdersApi.md#ordersGetOrderItemById) | **GET** /api/v2/orders/{id}/items/{itemId} | Get a specific item from an order
 [**ordersSearch()**](OrdersApi.md#ordersSearch) | **GET** /api/v2/orders/search | Searches orders based on search criteria
 [**ordersUpdateDeliveryTracking()**](OrdersApi.md#ordersUpdateDeliveryTracking) | **PUT** /api/v2/orders/{id}/deliveryTracking | Updates delivery tracking info for an order
+[**ordersUpdateInternalNotes()**](OrdersApi.md#ordersUpdateInternalNotes) | **PUT** /api/v2/orders/{id}/internalNotes | Updates internal notes for an order
 [**ordersUpdateStatus()**](OrdersApi.md#ordersUpdateStatus) | **PUT** /api/v2/orders/{id}/status | Updates the status of an order
 
 
@@ -117,6 +119,64 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\EkmPHP\Models\TempestResponseV2Order**](../Model/TempestResponseV2Order.md)
+
+### Authorization
+
+[Bearer](../../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `ordersGetCustomFields()`
+
+```php
+ordersGetCustomFields($id): \EkmPHP\Models\TempestResponseListV2OrderCustomField
+```
+
+Get custom fields for an order
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: Bearer
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new EkmPHP\Api\OrdersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = 56; // int | The order ID
+
+try {
+    $result = $apiInstance->ordersGetCustomFields($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OrdersApi->ordersGetCustomFields: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| The order ID |
+
+### Return type
+
+[**\EkmPHP\Models\TempestResponseListV2OrderCustomField**](../Model/TempestResponseListV2OrderCustomField.md)
 
 ### Authorization
 
@@ -357,6 +417,66 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The order ID |
  **v1OrderDeliveryTracking** | [**\EkmPHP\Models\V1OrderDeliveryTracking**](../Model/V1OrderDeliveryTracking.md)| The delivery tracking info for an order | [optional]
+
+### Return type
+
+[**\EkmPHP\Models\TempestResponseV2Order**](../Model/TempestResponseV2Order.md)
+
+### Authorization
+
+[Bearer](../../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `ordersUpdateInternalNotes()`
+
+```php
+ordersUpdateInternalNotes($id, $v2OrderInternalNotes): \EkmPHP\Models\TempestResponseV2Order
+```
+
+Updates internal notes for an order
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: Bearer
+$config = EkmPHP\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new EkmPHP\Api\OrdersApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = 56; // int | The order ID
+$v2OrderInternalNotes = new \EkmPHP\Models\V2OrderInternalNotes(); // \EkmPHP\Models\V2OrderInternalNotes | The internal notes for an order
+
+try {
+    $result = $apiInstance->ordersUpdateInternalNotes($id, $v2OrderInternalNotes);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OrdersApi->ordersUpdateInternalNotes: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| The order ID |
+ **v2OrderInternalNotes** | [**\EkmPHP\Models\V2OrderInternalNotes**](../Model/V2OrderInternalNotes.md)| The internal notes for an order | [optional]
 
 ### Return type
 

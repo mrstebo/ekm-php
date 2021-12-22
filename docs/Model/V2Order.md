@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  |
 **orderNumber** | **string** |  |
-**orderDate** | [**\DateTime**](\DateTime.md) |  |
+**orderDate** | **\DateTime** |  |
 **orderType** | **string** |  |
 **isConfirmed** | **bool** |  | [optional]
 **subTotal** | **double** |  | [optional]
@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 **shippingCompany** | **string** |  | [optional]
 **ipAddress** | **string** |  | [optional]
 **guid** | **string** |  | [optional]
-**lastUpdated** | [**\DateTime**](\DateTime.md) |  | [optional]
+**lastUpdated** | **\DateTime** |  | [optional]
 **deliveryTaxRate** | **double** |  | [optional]
 **deliveryIncludesTax** | **int** |  | [optional]
 **customFieldsTotal** | **double** |  | [optional]

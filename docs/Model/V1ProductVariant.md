@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **isDefaultVariant** | **bool** |  | [optional]
 **numberInStock** | **int** |  | [optional]
 **price** | **double** |  | [optional]
+**productWeight** | **double** |  | [optional]
 **condition** | **string** |  | [optional]
 **gtin** | **string** |  | [optional]
 **mpn** | **string** |  | [optional]

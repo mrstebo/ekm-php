@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **width** | **int** |  | [optional]
 **height** | **int** |  | [optional]
 **location** | **string** |  | [optional]
-**uploadDate** | [**\DateTime**](\DateTime.md) |  | [optional]
+**uploadDate** | **\DateTime** |  | [optional]
 **sectionType** | **string** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

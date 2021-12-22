@@ -5,9 +5,9 @@ All URIs are relative to https://api.ekm.net.
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**productAttributeItemsCreate()**](ProductAttributeItemsApi.md#productAttributeItemsCreate) | **POST** /api/v1/products/{id}/attributes | Add a attribute item to a product
-[**productAttributeItemsGet()**](ProductAttributeItemsApi.md#productAttributeItemsGet) | **GET** /api/v1/products/{id}/attributes/{attribute_key} | Get a product attribute item
+[**productAttributeItemsGet()**](ProductAttributeItemsApi.md#productAttributeItemsGet) | **GET** /api/v1/products/{id}/attributes/{attribute_id} | Get a product attribute item
 [**productAttributeItemsGetAll()**](ProductAttributeItemsApi.md#productAttributeItemsGetAll) | **GET** /api/v1/products/{id}/attributes | Get all of a products attribute items
-[**productAttributeItemsUpdate()**](ProductAttributeItemsApi.md#productAttributeItemsUpdate) | **PUT** /api/v1/products/{id}/attributes/{attribute_key} | Update a product attribute item
+[**productAttributeItemsUpdate()**](ProductAttributeItemsApi.md#productAttributeItemsUpdate) | **PUT** /api/v1/products/{id}/attributes/{attribute_id} | Update a product attribute item
 
 
 ## `productAttributeItemsCreate()`
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 ## `productAttributeItemsGet()`
 
 ```php
-productAttributeItemsGet($id, $attributeKey): \EkmPHP\Models\TempestResponseV1ProductAttributeItem
+productAttributeItemsGet($id, $attributeId): \EkmPHP\Models\TempestResponseV1ProductAttributeItem
 ```
 
 Get a product attribute item
@@ -96,10 +96,10 @@ $apiInstance = new EkmPHP\Api\ProductAttributeItemsApi(
     $config
 );
 $id = 56; // int | The product ID
-$attributeKey = 56; // int | The attribute item key
+$attributeId = 56; // int | The attribute item ID
 
 try {
-    $result = $apiInstance->productAttributeItemsGet($id, $attributeKey);
+    $result = $apiInstance->productAttributeItemsGet($id, $attributeId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductAttributeItemsApi->productAttributeItemsGet: ', $e->getMessage(), PHP_EOL;
@@ -111,7 +111,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The product ID |
- **attributeKey** | **int**| The attribute item key |
+ **attributeId** | **int**| The attribute item ID |
 
 ### Return type
 
@@ -191,7 +191,7 @@ Name | Type | Description  | Notes
 ## `productAttributeItemsUpdate()`
 
 ```php
-productAttributeItemsUpdate($id, $attributeKey, $v1ProductAttributeItem): \EkmPHP\Models\TempestResponseV1ProductAttributeItem
+productAttributeItemsUpdate($id, $attributeId, $v1ProductAttributeItem): \EkmPHP\Models\TempestResponseV1ProductAttributeItem
 ```
 
 Update a product attribute item
@@ -214,11 +214,11 @@ $apiInstance = new EkmPHP\Api\ProductAttributeItemsApi(
     $config
 );
 $id = 56; // int | The product ID
-$attributeKey = 56; // int | The attribute ID
+$attributeId = 56; // int | The attribute item ID
 $v1ProductAttributeItem = new \EkmPHP\Models\V1ProductAttributeItem(); // \EkmPHP\Models\V1ProductAttributeItem | The product attribute item to update
 
 try {
-    $result = $apiInstance->productAttributeItemsUpdate($id, $attributeKey, $v1ProductAttributeItem);
+    $result = $apiInstance->productAttributeItemsUpdate($id, $attributeId, $v1ProductAttributeItem);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductAttributeItemsApi->productAttributeItemsUpdate: ', $e->getMessage(), PHP_EOL;
@@ -230,7 +230,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The product ID |
- **attributeKey** | **int**| The attribute ID |
+ **attributeId** | **int**| The attribute item ID |
  **v1ProductAttributeItem** | [**\EkmPHP\Models\V1ProductAttributeItem**](../Model/V1ProductAttributeItem.md)| The product attribute item to update | [optional]
 
 ### Return type

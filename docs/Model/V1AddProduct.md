@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 **live** | **bool** |  | [optional]
 **orderNote** | **string** |  | [optional]
 **redirectUrl** | **string** |  | [optional]
-**lastModified** | [**\DateTime**](\DateTime.md) |  | [optional]
+**lastModified** | **\DateTime** |  | [optional]
 **metaDescription** | **string** |  | [optional]
 **metaKeywords** | **string** |  | [optional]
 **metaTitle** | **string** |  | [optional]

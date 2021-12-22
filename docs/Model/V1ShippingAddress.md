@@ -11,8 +11,8 @@ Name | Type | Description | Notes
 **country** | **string** |  |
 **postCode** | **string** |  |
 **id** | **int** |  | [optional]
-**createdDate** | [**\DateTime**](\DateTime.md) |  | [optional]
-**modifiedDate** | [**\DateTime**](\DateTime.md) |  | [optional]
+**createdDate** | **\DateTime** |  | [optional]
+**modifiedDate** | **\DateTime** |  | [optional]
 **customerId** | **int** |  | [optional]
 **isPreferredBillingAddress** | **bool** |  | [optional]
 **isPreferredShippingAddress** | **bool** |  | [optional]

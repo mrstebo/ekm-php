@@ -19,7 +19,7 @@ productOptionsCreate($id, $v1AddProductOption): \EkmPHP\Models\TempestResponseV1
 
 Add an option to a product
 
-Option items must be added separately
+Option items must be added separately <br />              Type must be one of TEXT, TEXTAREA, DROPDOWN or IMAGE
 
 ### Example
 
@@ -259,7 +259,7 @@ productOptionsUpdate($id, $optionId, $v1UpdateProductOption): \EkmPHP\Models\Tem
 
 Update a product option
 
-Option items must be updated separately
+Option items must be added separately <br />              Type must be one of TEXT, TEXTAREA, DROPDOWN or IMAGE
 
 ### Example
 

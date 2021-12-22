@@ -12,7 +12,8 @@ For more information, please visit [https://ekm.com](https://ekm.com).
 
 ### Requirements
 
-PHP 7.2 and later.
+PHP 7.3 and later.
+Should also work with PHP 8.0 but has not been tested.
 
 ### Composer
 
@@ -91,6 +92,7 @@ Class | Method | HTTP request | Description
 *CategoriesApi* | [**categoriesSubcategories**](docs/Api/CategoriesApi.md#categoriessubcategories) | **GET** /api/v1/categories/{id}/subcategories | Get a paginated set of subcategories
 *CategoriesApi* | [**categoriesUpdate**](docs/Api/CategoriesApi.md#categoriesupdate) | **PUT** /api/v1/categories/{id} | Update a category
 *CategoriesApi* | [**categoriesUpdateCategoryFilters**](docs/Api/CategoriesApi.md#categoriesupdatecategoryfilters) | **PUT** /api/v1/categories/{id}/filters | 
+*CurrencyApi* | [**currencyGetCurrency**](docs/Api/CurrencyApi.md#currencygetcurrency) | **GET** /api/v1/settings/currency | Gets the current Currency Settings
 *CustomerAddressesApi* | [**customerAddressesCreate**](docs/Api/CustomerAddressesApi.md#customeraddressescreate) | **POST** /api/v1/customers/{customerId}/addresses | Add a Customer Address
 *CustomerAddressesApi* | [**customerAddressesDelete**](docs/Api/CustomerAddressesApi.md#customeraddressesdelete) | **DELETE** /api/v1/customers/{customerId}/addresses/{addressId} | Delete a Customer Address
 *CustomerAddressesApi* | [**customerAddressesGetAll**](docs/Api/CustomerAddressesApi.md#customeraddressesgetall) | **GET** /api/v1/customers/{customerId}/addresses | Get a paginated set of Customer Addresses
@@ -107,23 +109,28 @@ Class | Method | HTTP request | Description
 *OrderStatusesApi* | [**orderStatusesGetOrderStatuses**](docs/Api/OrderStatusesApi.md#orderstatusesgetorderstatuses) | **GET** /api/v1/settings/orderstatuses | Get the current Order Statuses
 *OrdersApi* | [**ordersGetAll**](docs/Api/OrdersApi.md#ordersgetall) | **GET** /api/v2/orders | Get a paginated set of orders
 *OrdersApi* | [**ordersGetById**](docs/Api/OrdersApi.md#ordersgetbyid) | **GET** /api/v2/orders/{id} | Get an order by ID
+*OrdersApi* | [**ordersGetCustomFields**](docs/Api/OrdersApi.md#ordersgetcustomfields) | **GET** /api/v2/orders/{id}/customFields | Get custom fields for an order
 *OrdersApi* | [**ordersGetItems**](docs/Api/OrdersApi.md#ordersgetitems) | **GET** /api/v2/orders/{id}/items | Get an order&#39;s items
 *OrdersApi* | [**ordersGetOrderItemById**](docs/Api/OrdersApi.md#ordersgetorderitembyid) | **GET** /api/v2/orders/{id}/items/{itemId} | Get a specific item from an order
 *OrdersApi* | [**ordersSearch**](docs/Api/OrdersApi.md#orderssearch) | **GET** /api/v2/orders/search | Searches orders based on search criteria
 *OrdersApi* | [**ordersUpdateDeliveryTracking**](docs/Api/OrdersApi.md#ordersupdatedeliverytracking) | **PUT** /api/v2/orders/{id}/deliveryTracking | Updates delivery tracking info for an order
+*OrdersApi* | [**ordersUpdateInternalNotes**](docs/Api/OrdersApi.md#ordersupdateinternalnotes) | **PUT** /api/v2/orders/{id}/internalNotes | Updates internal notes for an order
 *OrdersApi* | [**ordersUpdateStatus**](docs/Api/OrdersApi.md#ordersupdatestatus) | **PUT** /api/v2/orders/{id}/status | Updates the status of an order
 *PlansApi* | [**plansGetAll**](docs/Api/PlansApi.md#plansgetall) | **GET** /api/v1/settings/plans | Get all plans
 *PlansApi* | [**plansGetById**](docs/Api/PlansApi.md#plansgetbyid) | **GET** /api/v1/settings/plans/{id} | Get a plan by id
 *PlansApi* | [**plansGetCurrent**](docs/Api/PlansApi.md#plansgetcurrent) | **GET** /api/v1/settings/plans/current | Get the current users plan
 *ProductAttributeItemsApi* | [**productAttributeItemsCreate**](docs/Api/ProductAttributeItemsApi.md#productattributeitemscreate) | **POST** /api/v1/products/{id}/attributes | Add a attribute item to a product
-*ProductAttributeItemsApi* | [**productAttributeItemsGet**](docs/Api/ProductAttributeItemsApi.md#productattributeitemsget) | **GET** /api/v1/products/{id}/attributes/{attribute_key} | Get a product attribute item
+*ProductAttributeItemsApi* | [**productAttributeItemsGet**](docs/Api/ProductAttributeItemsApi.md#productattributeitemsget) | **GET** /api/v1/products/{id}/attributes/{attribute_id} | Get a product attribute item
 *ProductAttributeItemsApi* | [**productAttributeItemsGetAll**](docs/Api/ProductAttributeItemsApi.md#productattributeitemsgetall) | **GET** /api/v1/products/{id}/attributes | Get all of a products attribute items
-*ProductAttributeItemsApi* | [**productAttributeItemsUpdate**](docs/Api/ProductAttributeItemsApi.md#productattributeitemsupdate) | **PUT** /api/v1/products/{id}/attributes/{attribute_key} | Update a product attribute item
+*ProductAttributeItemsApi* | [**productAttributeItemsUpdate**](docs/Api/ProductAttributeItemsApi.md#productattributeitemsupdate) | **PUT** /api/v1/products/{id}/attributes/{attribute_id} | Update a product attribute item
 *ProductAttributesApi* | [**productAttributesCreate**](docs/Api/ProductAttributesApi.md#productattributescreate) | **POST** /api/v1/settings/productattributes | Add a product attribute
 *ProductAttributesApi* | [**productAttributesDelete**](docs/Api/ProductAttributesApi.md#productattributesdelete) | **DELETE** /api/v1/settings/productattributes/{attribute_key} | Delete a product attribute
 *ProductAttributesApi* | [**productAttributesGet**](docs/Api/ProductAttributesApi.md#productattributesget) | **GET** /api/v1/settings/productattributes/{attribute_key} | Get a product attribute
 *ProductAttributesApi* | [**productAttributesGetAll**](docs/Api/ProductAttributesApi.md#productattributesgetall) | **GET** /api/v1/settings/productattributes | Get all product attributes
 *ProductAttributesApi* | [**productAttributesUpdate**](docs/Api/ProductAttributesApi.md#productattributesupdate) | **PUT** /api/v1/settings/productattributes/{attribute_key} | Update a product attribute
+*ProductMediaApi* | [**productMediaDelete**](docs/Api/ProductMediaApi.md#productmediadelete) | **DELETE** /api/v2/products/{id}/media/{position} | Delete a product&#39;s media by position
+*ProductMediaApi* | [**productMediaGetProductMedia**](docs/Api/ProductMediaApi.md#productmediagetproductmedia) | **GET** /api/v2/products/{id}/media | Get all of a product&#39;s associated media
+*ProductMediaApi* | [**productMediaUpdateProductMedia**](docs/Api/ProductMediaApi.md#productmediaupdateproductmedia) | **POST** /api/v2/products/{id}/media/{position} | Update a product&#39;s media by position
 *ProductOptionItemsApi* | [**productOptionItemsCreate**](docs/Api/ProductOptionItemsApi.md#productoptionitemscreate) | **POST** /api/v1/products/{id}/options/{optionId}/items | Add an item to a product option
 *ProductOptionItemsApi* | [**productOptionItemsDelete**](docs/Api/ProductOptionItemsApi.md#productoptionitemsdelete) | **DELETE** /api/v1/products/{id}/options/{optionId}/items/{optionItemId} | Delete an option item
 *ProductOptionItemsApi* | [**productOptionItemsUpdate**](docs/Api/ProductOptionItemsApi.md#productoptionitemsupdate) | **PUT** /api/v1/products/{id}/options/{optionId}/items/{optionItemId} | Update a product option item
@@ -155,6 +162,7 @@ Class | Method | HTTP request | Description
 *ProductsApi* | [**productsSearch**](docs/Api/ProductsApi.md#productssearch) | **GET** /api/v1/products/search | Searches products based on search criteria
 *ProductsApi* | [**productsSetCategoryManaged**](docs/Api/ProductsApi.md#productssetcategorymanaged) | **POST** /api/v1/products/{id}/categorymanaged/{categoryId} | Set a product to be managed by another category
 *ProductsApi* | [**productsUpdate**](docs/Api/ProductsApi.md#productsupdate) | **PUT** /api/v1/products/{id} | Update a Product
+*ShopInformationApi* | [**shopInformationGet**](docs/Api/ShopInformationApi.md#shopinformationget) | **GET** /api/v1/settings/shop_information | Get information about the shop
 *TaxApi* | [**taxCreateTaxRate**](docs/Api/TaxApi.md#taxcreatetaxrate) | **POST** /api/v1/settings/tax/rates | Add a Tax Rate
 *TaxApi* | [**taxDeleteTaxRate**](docs/Api/TaxApi.md#taxdeletetaxrate) | **DELETE** /api/v1/settings/tax/rates/{id} | Delete a Tax Rate
 *TaxApi* | [**taxGetTaxRate**](docs/Api/TaxApi.md#taxgettaxrate) | **GET** /api/v1/settings/tax/rates/{id} | Get a specific Tax Rate
@@ -162,16 +170,34 @@ Class | Method | HTTP request | Description
 *TaxApi* | [**taxGetTaxSettings**](docs/Api/TaxApi.md#taxgettaxsettings) | **GET** /api/v1/settings/tax | Get the current Tax Settings
 *TaxApi* | [**taxUpdateTaxRate**](docs/Api/TaxApi.md#taxupdatetaxrate) | **PUT** /api/v1/settings/tax/rates/{id} | Update a Tax Rate
 *TaxApi* | [**taxUpdateTaxSettings**](docs/Api/TaxApi.md#taxupdatetaxsettings) | **PUT** /api/v1/settings/tax | Update the current Tax Settings
+*WebPageGroupsApi* | [**webPageGroupsCreate**](docs/Api/WebPageGroupsApi.md#webpagegroupscreate) | **POST** /api/v1/web_page_groups | Create a web page group
+*WebPageGroupsApi* | [**webPageGroupsDelete**](docs/Api/WebPageGroupsApi.md#webpagegroupsdelete) | **DELETE** /api/v1/web_page_groups/{id} | Delete a web page group
+*WebPageGroupsApi* | [**webPageGroupsGet**](docs/Api/WebPageGroupsApi.md#webpagegroupsget) | **GET** /api/v1/web_page_groups/{id} | Get a web page group
+*WebPageGroupsApi* | [**webPageGroupsGetAll**](docs/Api/WebPageGroupsApi.md#webpagegroupsgetall) | **GET** /api/v1/web_page_groups | Get a paginated set of web page groups
+*WebPageGroupsApi* | [**webPageGroupsUpdate**](docs/Api/WebPageGroupsApi.md#webpagegroupsupdate) | **PUT** /api/v1/web_page_groups/{id} | Update a specified web page group
+*WebPagesApi* | [**webPagesCreate**](docs/Api/WebPagesApi.md#webpagescreate) | **POST** /api/v1/web_pages | Create a web page
+*WebPagesApi* | [**webPagesDelete**](docs/Api/WebPagesApi.md#webpagesdelete) | **DELETE** /api/v1/web_pages/{id} | Delete a web page by ID
+*WebPagesApi* | [**webPagesGet**](docs/Api/WebPagesApi.md#webpagesget) | **GET** /api/v1/web_pages/{id} | Get a web page
+*WebPagesApi* | [**webPagesGetAll**](docs/Api/WebPagesApi.md#webpagesgetall) | **GET** /api/v1/web_pages | Get a paginated set of web pages
+*WebPagesApi* | [**webPagesUpdate**](docs/Api/WebPagesApi.md#webpagesupdate) | **PUT** /api/v1/web_pages/{id} | Update a specified web page
+*WebhooksApi* | [**webhooksDelete**](docs/Api/WebhooksApi.md#webhooksdelete) | **DELETE** /api/v2/Webhooks/{id} | Unsubscribe from a webhook
+*WebhooksApi* | [**webhooksGet**](docs/Api/WebhooksApi.md#webhooksget) | **GET** /api/v2/Webhooks/{id} | Get a specific subscription
+*WebhooksApi* | [**webhooksGetAll**](docs/Api/WebhooksApi.md#webhooksgetall) | **GET** /api/v2/Webhooks/webhooks | Get list of existing subscriptions
+*WebhooksApi* | [**webhooksPost**](docs/Api/WebhooksApi.md#webhookspost) | **POST** /api/v2/Webhooks | Subscribe to a webhook
+*WebhooksApi* | [**webhooksPut**](docs/Api/WebhooksApi.md#webhooksput) | **PUT** /api/v2/Webhooks/{id} | Update a webhook subscription
 
 ## Models
 
 - [CountryCodeModel](docs/Model/CountryCodeModel.md)
+- [CurrencySettings](docs/Model/CurrencySettings.md)
 - [DeliveryTax](docs/Model/DeliveryTax.md)
 - [Plan](docs/Model/Plan.md)
 - [PlanRestriction](docs/Model/PlanRestriction.md)
+- [ShopInformation](docs/Model/ShopInformation.md)
 - [TaxRateModel](docs/Model/TaxRateModel.md)
 - [TaxSettings](docs/Model/TaxSettings.md)
 - [TempestLink](docs/Model/TempestLink.md)
+- [TempestResponseCurrencySettings](docs/Model/TempestResponseCurrencySettings.md)
 - [TempestResponseListPlan](docs/Model/TempestResponseListPlan.md)
 - [TempestResponseListTaxRateModel](docs/Model/TempestResponseListTaxRateModel.md)
 - [TempestResponseListV1Category](docs/Model/TempestResponseListV1Category.md)
@@ -183,9 +209,15 @@ Class | Method | HTTP request | Description
 - [TempestResponseListV1ProductOption](docs/Model/TempestResponseListV1ProductOption.md)
 - [TempestResponseListV1ProductVariant](docs/Model/TempestResponseListV1ProductVariant.md)
 - [TempestResponseListV1SubCategory](docs/Model/TempestResponseListV1SubCategory.md)
+- [TempestResponseListV1WebPage](docs/Model/TempestResponseListV1WebPage.md)
+- [TempestResponseListV1WebPageGroup](docs/Model/TempestResponseListV1WebPageGroup.md)
 - [TempestResponseListV2Order](docs/Model/TempestResponseListV2Order.md)
+- [TempestResponseListV2OrderCustomField](docs/Model/TempestResponseListV2OrderCustomField.md)
 - [TempestResponseListV2OrderItem](docs/Model/TempestResponseListV2OrderItem.md)
+- [TempestResponseListV2ProductMedia](docs/Model/TempestResponseListV2ProductMedia.md)
+- [TempestResponseListV2WebhookSubscription](docs/Model/TempestResponseListV2WebhookSubscription.md)
 - [TempestResponsePlan](docs/Model/TempestResponsePlan.md)
+- [TempestResponseShopInformation](docs/Model/TempestResponseShopInformation.md)
 - [TempestResponseTaxRateModel](docs/Model/TempestResponseTaxRateModel.md)
 - [TempestResponseTaxSettings](docs/Model/TempestResponseTaxSettings.md)
 - [TempestResponseTempestValidationError](docs/Model/TempestResponseTempestValidationError.md)
@@ -206,13 +238,18 @@ Class | Method | HTTP request | Description
 - [TempestResponseV1ProductVariant](docs/Model/TempestResponseV1ProductVariant.md)
 - [TempestResponseV1ProductVariantStock](docs/Model/TempestResponseV1ProductVariantStock.md)
 - [TempestResponseV1SubCategory](docs/Model/TempestResponseV1SubCategory.md)
+- [TempestResponseV1WebPage](docs/Model/TempestResponseV1WebPage.md)
+- [TempestResponseV1WebPageGroup](docs/Model/TempestResponseV1WebPageGroup.md)
 - [TempestResponseV2Order](docs/Model/TempestResponseV2Order.md)
 - [TempestResponseV2OrderItem](docs/Model/TempestResponseV2OrderItem.md)
+- [TempestResponseV2WebhookSubscription](docs/Model/TempestResponseV2WebhookSubscription.md)
 - [TempestValidationError](docs/Model/TempestValidationError.md)
 - [V1AddCategory](docs/Model/V1AddCategory.md)
 - [V1AddCustomer](docs/Model/V1AddCustomer.md)
 - [V1AddProduct](docs/Model/V1AddProduct.md)
 - [V1AddProductOption](docs/Model/V1AddProductOption.md)
+- [V1AddWebPage](docs/Model/V1AddWebPage.md)
+- [V1AddWebPageGroup](docs/Model/V1AddWebPageGroup.md)
 - [V1Category](docs/Model/V1Category.md)
 - [V1CategoryFilters](docs/Model/V1CategoryFilters.md)
 - [V1Customer](docs/Model/V1Customer.md)
@@ -240,9 +277,23 @@ Class | Method | HTTP request | Description
 - [V1UpdateCustomer](docs/Model/V1UpdateCustomer.md)
 - [V1UpdateProduct](docs/Model/V1UpdateProduct.md)
 - [V1UpdateProductOption](docs/Model/V1UpdateProductOption.md)
+- [V1UpdateWebPage](docs/Model/V1UpdateWebPage.md)
+- [V1UpdateWebPageGroup](docs/Model/V1UpdateWebPageGroup.md)
 - [V1VariantCombination](docs/Model/V1VariantCombination.md)
+- [V1WebPage](docs/Model/V1WebPage.md)
+- [V1WebPageGroup](docs/Model/V1WebPageGroup.md)
+- [V2AddProductMediaImage](docs/Model/V2AddProductMediaImage.md)
+- [V2AddWebhookSubscription](docs/Model/V2AddWebhookSubscription.md)
 - [V2Order](docs/Model/V2Order.md)
+- [V2OrderCustomField](docs/Model/V2OrderCustomField.md)
+- [V2OrderCustomFieldContent](docs/Model/V2OrderCustomFieldContent.md)
+- [V2OrderInternalNotes](docs/Model/V2OrderInternalNotes.md)
 - [V2OrderItem](docs/Model/V2OrderItem.md)
+- [V2ProductMedia](docs/Model/V2ProductMedia.md)
+- [V2ProductMediaImage](docs/Model/V2ProductMediaImage.md)
+- [V2ProductMediaVideo](docs/Model/V2ProductMediaVideo.md)
+- [V2UpdateWebhookSubscription](docs/Model/V2UpdateWebhookSubscription.md)
+- [V2WebhookSubscription](docs/Model/V2WebhookSubscription.md)
 
 ## Authorization
 
@@ -296,5 +347,5 @@ api-support@ekm.com
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
 - API version: `Latest`
-    - Package version: `0.0.3`
+    - Package version: `0.0.4`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`
