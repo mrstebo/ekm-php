@@ -45,6 +45,7 @@ jobs:
 
       - name: Replace tokens in files
         run: |
+          sed -i '2i\    "name": "GIT_USER_ID/GIT_REPO_ID",\' php-client/composer.json
           sed -i 's/GIT_USER_ID/mrstebo/' php-client/composer.json
           sed -i 's/GIT_REPO_ID/ekm-php/' php-client/composer.json
           sed -i 's/GIT_USER_ID/mrstebo/' php-client/README.md
