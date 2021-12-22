@@ -32,7 +32,7 @@ jobs:
           TAG_VERSION: ${{ github.event.inputs.version }}
 
       - name: Generate Client Library w/ the OpenAPITools Generator
-        uses: triaxtec/openapitools-generator-action@v1.0.0
+        uses: triaxtec/openapitools-generator-action@v1.1.1
         with:
           generator: php
           config-file: .openapi-config/config.json
